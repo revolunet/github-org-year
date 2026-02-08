@@ -121,7 +121,23 @@ export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
   const pr = shuffled[index];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-pink-500/25">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-900 to-red-800 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-blue-500/25">
+      {/* Animated tricolore glow */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background:
+            "linear-gradient(120deg, #002395, #4a5ebd, #ffffff, #e85050, #ED2939)",
+          backgroundSize: "300% 100%",
+          animation: "tricolore 8s ease-in-out infinite",
+        }}
+      />
+      <style>{`
+        @keyframes tricolore {
+          0%, 100% { background-position: 0% 0%; }
+          50% { background-position: 100% 0%; }
+        }
+      `}</style>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)]" />
       <div className="relative">
         <div className="flex items-center justify-between mb-4">
@@ -146,7 +162,7 @@ export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
             rel="noopener noreferrer"
             className="block group"
           >
-            <p className="text-xl sm:text-2xl font-bold group-hover:text-yellow-200 transition-colors leading-snug drop-shadow-sm">
+            <p className="text-xl sm:text-2xl font-bold group-hover:text-blue-200 transition-colors leading-snug drop-shadow-sm">
               {replaceEmojiShortcodes(pr.title)}
             </p>
             <p className="text-white/70 text-sm mt-1">
@@ -158,20 +174,20 @@ export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
             <img
               src={`https://github.com/${pr.author}.png`}
               alt={pr.author}
-              className="w-14 h-14 rounded-full border-3 border-yellow-300 shadow-lg shadow-yellow-300/30 ring-2 ring-white/20"
+              className="w-14 h-14 rounded-full border-3 border-white shadow-lg shadow-white/30 ring-2 ring-blue-400/30"
               loading="lazy"
             />
             <a
               href={`https://github.com/${pr.author}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/90 hover:text-yellow-200 transition-colors font-medium"
+              className="text-white/90 hover:text-blue-200 transition-colors font-medium"
             >
               @{pr.author}
             </a>
-            <span className="ml-auto text-white/70 text-sm bg-white/10 rounded-full px-3 py-1 font-semibold">
+            {/* doesnt work (bad value) <span className="ml-auto text-white/70 text-sm bg-white/10 rounded-full px-3 py-1 font-semibold">
               🔥 {pr.comments} comment{pr.comments !== 1 ? "s" : ""}
-            </span>
+            </span> */}
           </div>
         </div>
       </div>

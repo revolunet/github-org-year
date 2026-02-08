@@ -20,7 +20,8 @@ const EXCLUDED_REPOS = (process.env.EXCLUDED_REPOS ?? "")
   .map((s) => s.trim())
   .filter(Boolean);
 const YEAR = parseInt(process.env.YEAR ?? String(new Date().getFullYear()), 10);
-const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1";
+const OPENAI_BASE_URL =
+  process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -51,16 +52,13 @@ async function checkRateLimit() {
     const resetAt = data.resources.core.reset * 1000;
     const waitMs = Math.max(resetAt - Date.now(), 0) + 1000;
     console.warn(
-      `Rate limit low (${remaining} remaining). Sleeping ${Math.round(waitMs / 1000)}s...`
+      `Rate limit low (${remaining} remaining). Sleeping ${Math.round(waitMs / 1000)}s...`,
     );
     await sleep(waitMs);
   }
 }
 
-async function getCommitCount(
-  owner: string,
-  repo: string
-): Promise<number> {
+async function getCommitCount(owner: string, repo: string): Promise<number> {
   try {
     const res = await octokit.repos.listCommits({
       owner,
@@ -94,15 +92,12 @@ async function getPRCount(owner: string, repo: string): Promise<number> {
   }
 }
 
-async function getContributors(
-  owner: string,
-  repo: string
-): Promise<string[]> {
+async function getContributors(owner: string, repo: string): Promise<string[]> {
   try {
     const commits = await octokit.paginate(
       octokit.repos.listCommits,
       { owner, repo, since, until, per_page: 100 },
-      (response) => response.data
+      (response) => response.data,
     );
 
     const authors = new Set<string>();
@@ -127,16 +122,23 @@ const BOT_COMMIT_PATTERNS = [
   /^renovate\//i,
 ];
 
-const BOT_AUTHORS = ["dependabot[bot]", "renovate[bot]", "dependabot-preview[bot]"];
+const BOT_AUTHORS = [
+  "dependabot[bot]",
+  "renovate[bot]",
+  "dependabot-preview[bot]",
+];
 
-function isDependencyUpdateCommit(message: string, author?: string | null): boolean {
+function isDependencyUpdateCommit(
+  message: string,
+  author?: string | null,
+): boolean {
   if (author && BOT_AUTHORS.includes(author)) return true;
   return BOT_COMMIT_PATTERNS.some((pattern) => pattern.test(message));
 }
 
 async function getCommitMessages(
   owner: string,
-  repo: string
+  repo: string,
 ): Promise<CommitInfo[]> {
   try {
     const commits = await octokit.paginate(
@@ -145,18 +147,22 @@ async function getCommitMessages(
       (response, done) => {
         if (response.data.length >= 100) done();
         return response.data;
-      }
+      },
     );
 
     return commits
       .slice(0, 100)
-      .filter((c) => !isDependencyUpdateCommit(
-        c.commit.message.split("\n")[0],
-        c.author?.login ?? c.commit.author?.name
-      ))
+      .filter(
+        (c) =>
+          !isDependencyUpdateCommit(
+            c.commit.message.split("\n")[0],
+            c.author?.login ?? c.commit.author?.name,
+          ),
+      )
       .map((c) => ({
         message: c.commit.message.split("\n")[0],
         sha: c.sha,
+        timestamp: c.commit.author?.date ?? c.commit.committer?.date ?? "",
       }))
       .filter((c) => c.message);
   } catch {
@@ -164,9 +170,7 @@ async function getCommitMessages(
   }
 }
 
-async function getMostCommentedPRs(
-  org: string
-): Promise<MostCommentedPR[]> {
+async function getMostCommentedPRs(org: string): Promise<MostCommentedPR[]> {
   console.log("Fetching 50 most commented PRs...");
   try {
     const results: MostCommentedPR[] = [];
@@ -322,15 +326,20 @@ function parseLLMJson<T>(text: string): T {
   }
 
   // All attempts failed — log raw response for debugging
-  console.error("Failed to parse LLM JSON response. Raw text (first 2000 chars):");
+  console.error(
+    "Failed to parse LLM JSON response. Raw text (first 2000 chars):",
+  );
   console.error(text.slice(0, 2000));
   throw new Error("Could not parse LLM response as JSON");
 }
 
 const MAX_CHUNK_CHARS = 80_000; // ~20K tokens, safe for most models
 
-function buildMessageChunks(commitMessages: Record<string, CommitInfo[]>): { text: string; repoCount: number; messageCount: number }[] {
-  const chunks: { text: string; repoCount: number; messageCount: number }[] = [];
+function buildMessageChunks(
+  commitMessages: Record<string, CommitInfo[]>,
+): { text: string; repoCount: number; messageCount: number }[] {
+  const chunks: { text: string; repoCount: number; messageCount: number }[] =
+    [];
   let currentParts: string[] = [];
   let currentChars = 0;
   let currentRepoCount = 0;
@@ -338,8 +347,15 @@ function buildMessageChunks(commitMessages: Record<string, CommitInfo[]>): { tex
 
   for (const [repo, msgs] of Object.entries(commitMessages)) {
     const part = `## ${repo}\n${msgs.map((m) => m.message).join("\n")}`;
-    if (currentChars + part.length > MAX_CHUNK_CHARS && currentParts.length > 0) {
-      chunks.push({ text: currentParts.join("\n\n"), repoCount: currentRepoCount, messageCount: currentMessageCount });
+    if (
+      currentChars + part.length > MAX_CHUNK_CHARS &&
+      currentParts.length > 0
+    ) {
+      chunks.push({
+        text: currentParts.join("\n\n"),
+        repoCount: currentRepoCount,
+        messageCount: currentMessageCount,
+      });
       currentParts = [];
       currentChars = 0;
       currentRepoCount = 0;
@@ -351,14 +367,25 @@ function buildMessageChunks(commitMessages: Record<string, CommitInfo[]>): { tex
     currentMessageCount += msgs.length;
   }
   if (currentParts.length > 0) {
-    chunks.push({ text: currentParts.join("\n\n"), repoCount: currentRepoCount, messageCount: currentMessageCount });
+    chunks.push({
+      text: currentParts.join("\n\n"),
+      repoCount: currentRepoCount,
+      messageCount: currentMessageCount,
+    });
   }
 
   const totalRepos = Object.keys(commitMessages).length;
-  const totalMessages = Object.values(commitMessages).reduce((sum, msgs) => sum + msgs.length, 0);
-  console.log(`  LLM: ${totalMessages} messages across ${totalRepos} repos split into ${chunks.length} chunk(s)`);
+  const totalMessages = Object.values(commitMessages).reduce(
+    (sum, msgs) => sum + msgs.length,
+    0,
+  );
+  console.log(
+    `  LLM: ${totalMessages} messages across ${totalRepos} repos split into ${chunks.length} chunk(s)`,
+  );
   for (let i = 0; i < chunks.length; i++) {
-    console.log(`    Chunk ${i + 1}: ${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages, ~${Math.round(chunks[i].text.length / 1000)}K chars`);
+    console.log(
+      `    Chunk ${i + 1}: ${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages, ~${Math.round(chunks[i].text.length / 1000)}K chars`,
+    );
   }
   return chunks;
 }
@@ -371,7 +398,10 @@ function mergeSecurityTopics(all: SecurityTopic[]): SecurityTopic[] {
     if (existing) {
       const repos = new Set([...existing.relatedRepos, ...topic.relatedRepos]);
       existing.relatedRepos = [...repos];
-      if (topic.severity === "high" || (topic.severity === "medium" && existing.severity === "low")) {
+      if (
+        topic.severity === "high" ||
+        (topic.severity === "medium" && existing.severity === "low")
+      ) {
         existing.severity = topic.severity;
       }
     } else {
@@ -387,7 +417,10 @@ function mergeFeatures(all: Feature[]): Feature[] {
     const key = feature.title.toLowerCase();
     const existing = map.get(key);
     if (existing) {
-      const repos = new Set([...existing.relatedRepos, ...feature.relatedRepos]);
+      const repos = new Set([
+        ...existing.relatedRepos,
+        ...feature.relatedRepos,
+      ]);
       existing.relatedRepos = [...repos];
     } else {
       map.set(key, { ...feature, relatedRepos: [...feature.relatedRepos] });
@@ -398,21 +431,23 @@ function mergeFeatures(all: Feature[]): Feature[] {
 
 async function inferSecurityTopics(
   commitMessages: Record<string, CommitInfo[]>,
-  openai: OpenAI
+  openai: OpenAI,
 ): Promise<SecurityTopic[]> {
   console.log("Inferring security topics...");
   const chunks = buildMessageChunks(commitMessages);
   const allTopics: SecurityTopic[] = [];
 
   for (let i = 0; i < chunks.length; i++) {
-    console.log(`  Security topics: processing chunk ${i + 1}/${chunks.length} (${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages)...`);
+    console.log(
+      `  Security topics: processing chunk ${i + 1}/${chunks.length} (${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages)...`,
+    );
     const start = Date.now();
     const response = await openai.chat.completions.create({
       model: OPENAI_MODEL,
       messages: [
         {
           role: "system",
-          content: `You are a security analyst. Analyze commit messages and identify security-related topics, vulnerabilities fixed, or security improvements made. Prefer mapping findings to these well-known security topics when relevant:\n${SECURITY_TOPICS.map((t) => `- ${t}`).join("\n")}\nReturn a JSON array of objects with: title, description, severity (high/medium/low), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
+          content: `You are a security analyst. Analyze commit messages and identify security-related topics, vulnerabilities fixed, or security improvements made.Use only some of these well-known security topics:\n${SECURITY_TOPICS.map((t) => `- ${t}`).join("\n")}\nReturn a JSON array of objects with: title, description, severity (high/medium/low), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
         },
         {
           role: "user",
@@ -426,34 +461,43 @@ async function inferSecurityTopics(
     try {
       const parsed = parseLLMJson<SecurityTopic[]>(text);
       allTopics.push(...parsed);
-      console.log(`    Found ${parsed.length} topics in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+      console.log(
+        `    Found ${parsed.length} topics in ${((Date.now() - start) / 1000).toFixed(1)}s`,
+      );
     } catch (error) {
-      console.warn(`    Failed to parse security topics for chunk ${i + 1}, skipping:`, error);
+      console.warn(
+        `    Failed to parse security topics for chunk ${i + 1}, skipping:`,
+        error,
+      );
     }
   }
 
   const merged = mergeSecurityTopics(allTopics);
-  console.log(`  Security topics: ${allTopics.length} raw -> ${merged.length} after dedup`);
+  console.log(
+    `  Security topics: ${allTopics.length} raw -> ${merged.length} after dedup`,
+  );
   return merged;
 }
 
 async function inferFeatures(
   commitMessages: Record<string, CommitInfo[]>,
-  openai: OpenAI
+  openai: OpenAI,
 ): Promise<Feature[]> {
   console.log("Inferring features...");
   const chunks = buildMessageChunks(commitMessages);
   const allFeatures: Feature[] = [];
 
   for (let i = 0; i < chunks.length; i++) {
-    console.log(`  Features: processing chunk ${i + 1}/${chunks.length} (${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages)...`);
+    console.log(
+      `  Features: processing chunk ${i + 1}/${chunks.length} (${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages)...`,
+    );
     const start = Date.now();
     const response = await openai.chat.completions.create({
       model: OPENAI_MODEL,
       messages: [
         {
           role: "system",
-          content: `You are a software analyst. Analyze commit messages and identify the top features, themes, and major work areas. Prefer mapping findings to these well-known feature categories when relevant:\n${FEATURE_CATEGORIES.map((f) => `- ${f}`).join("\n")}\nReturn a JSON array of objects with: title, description, category (use one of the categories above when possible), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
+          content: `You are a software analyst. Analyze commit messages and identify the top features, themes, and major work areas. Use only some of these well-known features topics:\n${FEATURE_CATEGORIES.map((f) => `- ${f}`).join("\n")}\nReturn a JSON array of objects with: title, description, category (use one of the categories above when possible), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
         },
         {
           role: "user",
@@ -467,14 +511,21 @@ async function inferFeatures(
     try {
       const parsed = parseLLMJson<Feature[]>(text);
       allFeatures.push(...parsed);
-      console.log(`    Found ${parsed.length} features in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+      console.log(
+        `    Found ${parsed.length} features in ${((Date.now() - start) / 1000).toFixed(1)}s`,
+      );
     } catch (error) {
-      console.warn(`    Failed to parse features for chunk ${i + 1}, skipping:`, error);
+      console.warn(
+        `    Failed to parse features for chunk ${i + 1}, skipping:`,
+        error,
+      );
     }
   }
 
   const merged = mergeFeatures(allFeatures);
-  console.log(`  Features: ${allFeatures.length} raw -> ${merged.length} after dedup`);
+  console.log(
+    `  Features: ${allFeatures.length} raw -> ${merged.length} after dedup`,
+  );
   return merged;
 }
 
@@ -493,10 +544,15 @@ async function main() {
   if (fs.existsSync(outPath)) {
     try {
       existingReport = JSON.parse(
-        fs.readFileSync(outPath, "utf-8")
+        fs.readFileSync(outPath, "utf-8"),
       ) as OrgReport;
-      if (existingReport.year !== YEAR || existingReport.orgName !== GITHUB_ORG) {
-        console.log("Existing report is for a different org/year, fetching fresh data...");
+      if (
+        existingReport.year !== YEAR ||
+        existingReport.orgName !== GITHUB_ORG
+      ) {
+        console.log(
+          "Existing report is for a different org/year, fetching fresh data...",
+        );
         existingReport = null;
       }
     } catch {
@@ -512,7 +568,9 @@ async function main() {
   let orgLogin: string;
 
   if (existingReport) {
-    console.log("Using existing repo data from report.json, skipping GitHub API calls...");
+    console.log(
+      "Using existing repo data from report.json, skipping GitHub API calls...",
+    );
     repoActivities = existingReport.repos;
     authors = existingReport.authors;
     allCommitMessages = existingReport.commitMessages ?? {};
@@ -532,11 +590,11 @@ async function main() {
     });
 
     const repos = allRepos.filter(
-      (r) => !r.archived && !r.private && !EXCLUDED_REPOS.includes(r.name)
+      (r) => !r.archived && !r.private && !EXCLUDED_REPOS.includes(r.name),
     );
 
     console.log(
-      `Found ${allRepos.length} repos, processing ${repos.length} after filtering...`
+      `Found ${allRepos.length} repos, processing ${repos.length} after filtering...`,
     );
 
     // Process repos
@@ -601,12 +659,16 @@ async function main() {
 
     // Get per-author commit counts
     const repoNames = Object.keys(allCommitMessages);
-    console.log(`Calculating per-author commit counts for ${repoNames.length} repos...`);
+    console.log(
+      `Calculating per-author commit counts for ${repoNames.length} repos...`,
+    );
     for (let i = 0; i < repoNames.length; i++) {
       const repoName = repoNames[i];
       await checkRateLimit();
       const start = Date.now();
-      console.log(`  [${i + 1}/${repoNames.length}] Fetching commits for ${repoName}...`);
+      console.log(
+        `  [${i + 1}/${repoNames.length}] Fetching commits for ${repoName}...`,
+      );
       try {
         const commits = await octokit.paginate(
           octokit.repos.listCommits,
@@ -617,7 +679,7 @@ async function main() {
             until,
             per_page: 100,
           },
-          (response) => response.data
+          (response) => response.data,
         );
 
         let newAuthors = 0;
@@ -638,7 +700,9 @@ async function main() {
           }
         }
         const elapsed = ((Date.now() - start) / 1000).toFixed(1);
-        console.log(`    ${commits.length} commits, ${newAuthors} new authors (${elapsed}s)`);
+        console.log(
+          `    ${commits.length} commits, ${newAuthors} new authors (${elapsed}s)`,
+        );
       } catch (error) {
         console.warn(`    Failed to fetch commits for ${repoName}:`, error);
       }
@@ -667,7 +731,9 @@ async function main() {
   let features: Feature[] = existingReport?.features ?? [];
 
   if (securityTopics.length > 0 || features.length > 0) {
-    console.log(`Using existing LLM data (${securityTopics.length} security topics, ${features.length} features)`);
+    console.log(
+      `Using existing LLM data (${securityTopics.length} security topics, ${features.length} features)`,
+    );
   } else if (OPENAI_API_KEY && Object.keys(allCommitMessages).length > 0) {
     console.log("Running LLM inference...");
     const openai = new OpenAI({
@@ -681,7 +747,7 @@ async function main() {
         inferFeatures(allCommitMessages, openai),
       ]);
       console.log(
-        `  Found ${securityTopics.length} security topics, ${features.length} features`
+        `  Found ${securityTopics.length} security topics, ${features.length} features`,
       );
     } catch (error) {
       console.warn("LLM inference failed:", error);
@@ -709,7 +775,7 @@ async function main() {
   fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
   console.log(`Report written to ${outPath}`);
   console.log(
-    `  ${repoActivities.length} repos, ${authors.length} authors, ${securityTopics.length} security topics, ${features.length} features`
+    `  ${repoActivities.length} repos, ${authors.length} authors, ${securityTopics.length} security topics, ${features.length} features`,
   );
 }
 

@@ -128,7 +128,14 @@ export const owaspCategories: OwaspCategory[] = [
     title: "A08:2025 - Software or Data Integrity Failures",
     icon: "\uD83D\uDEE0\uFE0F",
     color: "bg-teal-100 text-teal-800 border-teal-200",
-    keywords: [/integrity failure/i, /deserializ/i, /tamper/i, /code signing/i],
+
+    keywords: [
+      /integrity failure/i,
+      /deserializ/i,
+      /tamper/i,
+      /code signing/i,
+      /upload/i,
+    ],
   },
   {
     id: "A09",

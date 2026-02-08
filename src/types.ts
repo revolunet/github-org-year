@@ -33,6 +33,7 @@ export interface AuthorActivity {
 export interface CommitInfo {
   message: string;
   sha: string;
+  timestamp: string;
 }
 
 export interface MostCommentedPR {
