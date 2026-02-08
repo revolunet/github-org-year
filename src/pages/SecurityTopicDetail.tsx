@@ -93,18 +93,26 @@ export function SecurityTopicDetail({ data }: SecurityTopicDetailProps) {
                 </div>
 
                 {messages && messages.length > 0 && (
-                  <details className="mt-2">
-                    <summary className="text-sm text-gray-500 cursor-pointer hover:text-gray-700">
-                      Commit messages ({messages.length})
-                    </summary>
-                    <ul className="mt-2 max-h-60 overflow-y-auto space-y-1 text-sm text-gray-600 border-l-2 border-gray-200 pl-3">
-                      {messages.map((msg, j) => (
+                  <div className="mt-2">
+                    <h3 className="text-sm text-gray-500 mb-2">
+                      Commits ({messages.length})
+                    </h3>
+                    <ul className="max-h-60 overflow-y-auto space-y-1 text-sm text-gray-600 border-l-2 border-gray-200 pl-3">
+                      {messages.map((commit, j) => (
                         <li key={j} className="font-mono text-xs">
-                          {msg}
+                          <a
+                            href={`${repo.url}/commit/${commit.sha}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                          >
+                            {commit.sha.slice(0, 7)}
+                          </a>{" "}
+                          {commit.message}
                         </li>
                       ))}
                     </ul>
-                  </details>
+                  </div>
                 )}
               </div>
             );

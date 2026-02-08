@@ -30,6 +30,11 @@ export interface AuthorActivity {
   repos: string[];
 }
 
+export interface CommitInfo {
+  message: string;
+  sha: string;
+}
+
 export interface OrgReport {
   orgName: string;
   orgAvatarUrl: string;
@@ -40,5 +45,5 @@ export interface OrgReport {
   securityTopics: SecurityTopic[];
   features: Feature[];
   authors: AuthorActivity[];
-  commitMessages?: Record<string, string[]>;
+  commitMessages?: Record<string, CommitInfo[]>;
 }

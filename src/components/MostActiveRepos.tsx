@@ -9,6 +9,7 @@ export function MostActiveRepos({ repos }: MostActiveReposProps) {
     return null;
   }
 
+  const filteredRepos = repos.slice(0, 25);
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">Most Active Repositories</h2>
@@ -17,16 +18,27 @@ export function MostActiveRepos({ repos }: MostActiveReposProps) {
           <thead>
             <tr className="border-b border-gray-200">
               <th className="py-3 px-4 font-semibold">Repository</th>
-              <th className="py-3 px-4 font-semibold hidden sm:table-cell">Description</th>
+              <th className="py-3 px-4 font-semibold hidden sm:table-cell">
+                Description
+              </th>
               <th className="py-3 px-4 font-semibold text-right">Commits</th>
-              <th className="py-3 px-4 font-semibold text-right hidden md:table-cell">PRs</th>
-              <th className="py-3 px-4 font-semibold text-right hidden md:table-cell">Stars</th>
-              <th className="py-3 px-4 font-semibold hidden lg:table-cell">Language</th>
+              <th className="py-3 px-4 font-semibold text-right hidden md:table-cell">
+                PRs
+              </th>
+              <th className="py-3 px-4 font-semibold text-right hidden md:table-cell">
+                Stars
+              </th>
+              <th className="py-3 px-4 font-semibold hidden lg:table-cell">
+                Language
+              </th>
             </tr>
           </thead>
           <tbody>
-            {repos.map((repo) => (
-              <tr key={repo.name} className="border-b border-gray-100 hover:bg-gray-50">
+            {filteredRepos.map((repo) => (
+              <tr
+                key={repo.name}
+                className="border-b border-gray-100 hover:bg-gray-50"
+              >
                 <td className="py-3 px-4">
                   <a
                     href={repo.url}

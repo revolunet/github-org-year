@@ -1,12 +1,30 @@
+import { useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useReportData } from "./hooks/useReportData.ts";
 import { Header } from "./components/Header.tsx";
 import { HomePage } from "./pages/HomePage.tsx";
 import { SecurityTopicDetail } from "./pages/SecurityTopicDetail.tsx";
 import { FeatureDetail } from "./pages/FeatureDetail.tsx";
+import type { OrgReport } from "./types.ts";
+
+function filterExcludedRepos(data: OrgReport): OrgReport {
+  const excluded = new Set(data.excludedRepos);
+  if (excluded.size === 0) return data;
+
+  const repos = data.repos.filter((r) => !excluded.has(r.name));
+  const authors = data.authors
+    .map((a) => ({
+      ...a,
+      repos: a.repos.filter((r) => !excluded.has(r)),
+    }))
+    .filter((a) => a.repos.length > 0);
+
+  return { ...data, repos, authors };
+}
 
 function App() {
-  const { data, loading, error } = useReportData();
+  const { data: rawData, loading, error } = useReportData();
+  const data = useMemo(() => rawData && filterExcludedRepos(rawData), [rawData]);
 
   if (loading) {
     return (

@@ -8,6 +8,7 @@ import type {
   AuthorActivity,
   SecurityTopic,
   Feature,
+  CommitInfo,
 } from "../src/types.ts";
 
 // --- Config from env ---
@@ -115,10 +116,27 @@ async function getContributors(
   }
 }
 
+const BOT_COMMIT_PATTERNS = [
+  /^(chore|build)\(deps(-dev)?\):/i,
+  /^bump /i,
+  /^update .+ to /i,
+  /^upgrade .+ from .+ to /i,
+  /^\[dependabot\]/i,
+  /^\[renovate\]/i,
+  /^renovate\//i,
+];
+
+const BOT_AUTHORS = ["dependabot[bot]", "renovate[bot]", "dependabot-preview[bot]"];
+
+function isDependencyUpdateCommit(message: string, author?: string | null): boolean {
+  if (author && BOT_AUTHORS.includes(author)) return true;
+  return BOT_COMMIT_PATTERNS.some((pattern) => pattern.test(message));
+}
+
 async function getCommitMessages(
   owner: string,
   repo: string
-): Promise<string[]> {
+): Promise<CommitInfo[]> {
   try {
     const commits = await octokit.paginate(
       octokit.repos.listCommits,
@@ -131,8 +149,15 @@ async function getCommitMessages(
 
     return commits
       .slice(0, 100)
-      .map((c) => c.commit.message.split("\n")[0])
-      .filter(Boolean);
+      .filter((c) => !isDependencyUpdateCommit(
+        c.commit.message.split("\n")[0],
+        c.author?.login ?? c.commit.author?.name
+      ))
+      .map((c) => ({
+        message: c.commit.message.split("\n")[0],
+        sha: c.sha,
+      }))
+      .filter((c) => c.message);
   } catch {
     return [];
   }
@@ -242,58 +267,147 @@ function parseLLMJson<T>(text: string): T {
   }
 }
 
+const MAX_CHUNK_CHARS = 80_000; // ~20K tokens, safe for most models
+
+function buildMessageChunks(commitMessages: Record<string, CommitInfo[]>): { text: string; repoCount: number; messageCount: number }[] {
+  const chunks: { text: string; repoCount: number; messageCount: number }[] = [];
+  let currentParts: string[] = [];
+  let currentChars = 0;
+  let currentRepoCount = 0;
+  let currentMessageCount = 0;
+
+  for (const [repo, msgs] of Object.entries(commitMessages)) {
+    const part = `## ${repo}\n${msgs.map((m) => m.message).join("\n")}`;
+    if (currentChars + part.length > MAX_CHUNK_CHARS && currentParts.length > 0) {
+      chunks.push({ text: currentParts.join("\n\n"), repoCount: currentRepoCount, messageCount: currentMessageCount });
+      currentParts = [];
+      currentChars = 0;
+      currentRepoCount = 0;
+      currentMessageCount = 0;
+    }
+    currentParts.push(part);
+    currentChars += part.length;
+    currentRepoCount++;
+    currentMessageCount += msgs.length;
+  }
+  if (currentParts.length > 0) {
+    chunks.push({ text: currentParts.join("\n\n"), repoCount: currentRepoCount, messageCount: currentMessageCount });
+  }
+
+  const totalRepos = Object.keys(commitMessages).length;
+  const totalMessages = Object.values(commitMessages).reduce((sum, msgs) => sum + msgs.length, 0);
+  console.log(`  LLM: ${totalMessages} messages across ${totalRepos} repos split into ${chunks.length} chunk(s)`);
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`    Chunk ${i + 1}: ${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages, ~${Math.round(chunks[i].text.length / 1000)}K chars`);
+  }
+  return chunks;
+}
+
+function mergeSecurityTopics(all: SecurityTopic[]): SecurityTopic[] {
+  const map = new Map<string, SecurityTopic>();
+  for (const topic of all) {
+    const key = topic.title.toLowerCase();
+    const existing = map.get(key);
+    if (existing) {
+      const repos = new Set([...existing.relatedRepos, ...topic.relatedRepos]);
+      existing.relatedRepos = [...repos];
+      if (topic.severity === "high" || (topic.severity === "medium" && existing.severity === "low")) {
+        existing.severity = topic.severity;
+      }
+    } else {
+      map.set(key, { ...topic, relatedRepos: [...topic.relatedRepos] });
+    }
+  }
+  return [...map.values()];
+}
+
+function mergeFeatures(all: Feature[]): Feature[] {
+  const map = new Map<string, Feature>();
+  for (const feature of all) {
+    const key = feature.title.toLowerCase();
+    const existing = map.get(key);
+    if (existing) {
+      const repos = new Set([...existing.relatedRepos, ...feature.relatedRepos]);
+      existing.relatedRepos = [...repos];
+    } else {
+      map.set(key, { ...feature, relatedRepos: [...feature.relatedRepos] });
+    }
+  }
+  return [...map.values()];
+}
+
 async function inferSecurityTopics(
-  commitMessages: Record<string, string[]>,
+  commitMessages: Record<string, CommitInfo[]>,
   openai: OpenAI
 ): Promise<SecurityTopic[]> {
-  const messagesSummary = Object.entries(commitMessages)
-    .map(([repo, msgs]) => `## ${repo}\n${msgs.join("\n")}`)
-    .join("\n\n");
+  console.log("Inferring security topics...");
+  const chunks = buildMessageChunks(commitMessages);
+  const allTopics: SecurityTopic[] = [];
 
-  const response = await openai.chat.completions.create({
-    model: OPENAI_MODEL,
-    messages: [
-      {
-        role: "system",
-        content: `You are a security analyst. Analyze commit messages and identify security-related topics, vulnerabilities fixed, or security improvements made. Prefer mapping findings to these well-known security topics when relevant:\n${SECURITY_TOPICS.map((t) => `- ${t}`).join("\n")}\nReturn a JSON array of objects with: title, description, severity (high/medium/low), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
-      },
-      {
-        role: "user",
-        content: `Analyze these commit messages from a GitHub organization in ${YEAR} and identify security topics:\n\n${messagesSummary}`,
-      },
-    ],
-    temperature: 0.3,
-  });
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`  Security topics: processing chunk ${i + 1}/${chunks.length} (${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages)...`);
+    const start = Date.now();
+    const response = await openai.chat.completions.create({
+      model: OPENAI_MODEL,
+      messages: [
+        {
+          role: "system",
+          content: `You are a security analyst. Analyze commit messages and identify security-related topics, vulnerabilities fixed, or security improvements made. Prefer mapping findings to these well-known security topics when relevant:\n${SECURITY_TOPICS.map((t) => `- ${t}`).join("\n")}\nReturn a JSON array of objects with: title, description, severity (high/medium/low), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
+        },
+        {
+          role: "user",
+          content: `Analyze these commit messages from a GitHub organization in ${YEAR} and identify security topics:\n\n${chunks[i].text}`,
+        },
+      ],
+      temperature: 0.3,
+    });
 
-  const text = response.choices[0]?.message?.content ?? "[]";
-  return parseLLMJson<SecurityTopic[]>(text);
+    const text = response.choices[0]?.message?.content ?? "[]";
+    const parsed = parseLLMJson<SecurityTopic[]>(text);
+    allTopics.push(...parsed);
+    console.log(`    Found ${parsed.length} topics in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+  }
+
+  const merged = mergeSecurityTopics(allTopics);
+  console.log(`  Security topics: ${allTopics.length} raw -> ${merged.length} after dedup`);
+  return merged;
 }
 
 async function inferFeatures(
-  commitMessages: Record<string, string[]>,
+  commitMessages: Record<string, CommitInfo[]>,
   openai: OpenAI
 ): Promise<Feature[]> {
-  const messagesSummary = Object.entries(commitMessages)
-    .map(([repo, msgs]) => `## ${repo}\n${msgs.join("\n")}`)
-    .join("\n\n");
+  console.log("Inferring features...");
+  const chunks = buildMessageChunks(commitMessages);
+  const allFeatures: Feature[] = [];
 
-  const response = await openai.chat.completions.create({
-    model: OPENAI_MODEL,
-    messages: [
-      {
-        role: "system",
-        content: `You are a software analyst. Analyze commit messages and identify the top features, themes, and major work areas. Prefer mapping findings to these well-known feature categories when relevant:\n${FEATURE_CATEGORIES.map((f) => `- ${f}`).join("\n")}\nReturn a JSON array of objects with: title, description, category (use one of the categories above when possible), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
-      },
-      {
-        role: "user",
-        content: `Analyze these commit messages from a GitHub organization in ${YEAR} and identify the top features and themes:\n\n${messagesSummary}`,
-      },
-    ],
-    temperature: 0.3,
-  });
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`  Features: processing chunk ${i + 1}/${chunks.length} (${chunks[i].repoCount} repos, ${chunks[i].messageCount} messages)...`);
+    const start = Date.now();
+    const response = await openai.chat.completions.create({
+      model: OPENAI_MODEL,
+      messages: [
+        {
+          role: "system",
+          content: `You are a software analyst. Analyze commit messages and identify the top features, themes, and major work areas. Prefer mapping findings to these well-known feature categories when relevant:\n${FEATURE_CATEGORIES.map((f) => `- ${f}`).join("\n")}\nReturn a JSON array of objects with: title, description, category (use one of the categories above when possible), relatedRepos (array of repo names). Return only the JSON array, no markdown.`,
+        },
+        {
+          role: "user",
+          content: `Analyze these commit messages from a GitHub organization in ${YEAR} and identify the top features and themes:\n\n${chunks[i].text}`,
+        },
+      ],
+      temperature: 0.3,
+    });
 
-  const text = response.choices[0]?.message?.content ?? "[]";
-  return parseLLMJson<Feature[]>(text);
+    const text = response.choices[0]?.message?.content ?? "[]";
+    const parsed = parseLLMJson<Feature[]>(text);
+    allFeatures.push(...parsed);
+    console.log(`    Found ${parsed.length} features in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+  }
+
+  const merged = mergeFeatures(allFeatures);
+  console.log(`  Features: ${allFeatures.length} raw -> ${merged.length} after dedup`);
+  return merged;
 }
 
 // --- Main ---
@@ -302,133 +416,170 @@ async function main() {
   console.log(`Generating report for ${GITHUB_ORG} (${YEAR})...`);
   console.log(`Excluded repos: ${EXCLUDED_REPOS.join(", ") || "none"}`);
 
-  // Get org info
-  const { data: orgData } = await octokit.orgs.get({ org: GITHUB_ORG });
+  const outDir = path.join(import.meta.dirname, "..", "public", "data");
+  fs.mkdirSync(outDir, { recursive: true });
+  const outPath = path.join(outDir, "report.json");
 
-  // Fetch all repos
-  const allRepos = await octokit.paginate(octokit.repos.listForOrg, {
-    org: GITHUB_ORG,
-    type: "public",
-    per_page: 100,
-  });
-
-  const repos = allRepos.filter(
-    (r) => !r.archived && !r.private && !EXCLUDED_REPOS.includes(r.name)
-  );
-
-  console.log(
-    `Found ${allRepos.length} repos, processing ${repos.length} after filtering...`
-  );
-
-  // Process repos
-  const repoActivities: RepoActivity[] = [];
-  const allCommitMessages: Record<string, string[]> = {};
-  const authorMap = new Map<
-    string,
-    { login: string; avatarUrl: string; commits: number; repos: Set<string> }
-  >();
-
-  for (const repo of repos) {
-    await checkRateLimit();
-    console.log(`  Processing ${repo.name}...`);
-
+  // Check if existing report is available to skip GitHub API calls
+  let existingReport: OrgReport | null = null;
+  if (fs.existsSync(outPath)) {
     try {
-      const [commitCount, prCount, contributors, commitMessages] =
-        await Promise.all([
-          getCommitCount(GITHUB_ORG, repo.name),
-          getPRCount(GITHUB_ORG, repo.name),
-          getContributors(GITHUB_ORG, repo.name),
-          getCommitMessages(GITHUB_ORG, repo.name),
-        ]);
-
-      if (commitCount === 0) {
-        console.log(`    Skipping ${repo.name} (no commits in ${YEAR})`);
-        continue;
-      }
-
-      repoActivities.push({
-        name: repo.name,
-        description: repo.description,
-        url: repo.html_url,
-        language: repo.language,
-        stars: repo.stargazers_count ?? 0,
-        commits: commitCount,
-        pullRequests: prCount,
-        contributors,
-      });
-
-      if (commitMessages.length > 0) {
-        allCommitMessages[repo.name] = commitMessages;
-      }
-
-      // Build author stats from contributors + commits
-      for (const login of contributors) {
-        const existing = authorMap.get(login);
-        if (existing) {
-          existing.repos.add(repo.name);
-        } else {
-          authorMap.set(login, {
-            login,
-            avatarUrl: `https://github.com/${login}.png`,
-            commits: 0,
-            repos: new Set([repo.name]),
-          });
-        }
-      }
-    } catch (error) {
-      console.warn(`  Warning: failed to process ${repo.name}:`, error);
-    }
-  }
-
-  // Get per-author commit counts
-  console.log("Calculating per-author commit counts...");
-  for (const [repoName] of Object.entries(allCommitMessages)) {
-    await checkRateLimit();
-    try {
-      const commits = await octokit.paginate(
-        octokit.repos.listCommits,
-        {
-          owner: GITHUB_ORG,
-          repo: repoName,
-          since,
-          until,
-          per_page: 100,
-        },
-        (response) => response.data
-      );
-
-      for (const commit of commits) {
-        const login = commit.author?.login;
-        if (!login) continue;
-        const existing = authorMap.get(login);
-        if (existing) {
-          existing.commits++;
-        } else {
-          authorMap.set(login, {
-            login,
-            avatarUrl: `https://github.com/${login}.png`,
-            commits: 1,
-            repos: new Set([repoName]),
-          });
-        }
+      existingReport = JSON.parse(
+        fs.readFileSync(outPath, "utf-8")
+      ) as OrgReport;
+      if (existingReport.year !== YEAR || existingReport.orgName !== GITHUB_ORG) {
+        console.log("Existing report is for a different org/year, fetching fresh data...");
+        existingReport = null;
       }
     } catch {
-      // skip
+      console.log("Could not parse existing report, fetching fresh data...");
     }
   }
 
-  // Sort repos by commit count
-  repoActivities.sort((a, b) => b.commits - a.commits);
+  let repoActivities: RepoActivity[];
+  let authors: AuthorActivity[];
+  let allCommitMessages: Record<string, CommitInfo[]>;
+  let orgAvatarUrl: string;
+  let orgLogin: string;
 
-  // Build authors list
-  const authors: AuthorActivity[] = [...authorMap.values()]
-    .map((a) => ({
-      login: a.login,
-      avatarUrl: a.avatarUrl,
-      commits: a.commits,
-      repos: [...a.repos],
-    }))
-    .sort((a, b) => b.commits - a.commits);
+  if (existingReport) {
+    console.log("Using existing repo data from report.json, skipping GitHub API calls...");
+    repoActivities = existingReport.repos;
+    authors = existingReport.authors;
+    allCommitMessages = existingReport.commitMessages ?? {};
+    orgAvatarUrl = existingReport.orgAvatarUrl;
+    orgLogin = existingReport.orgName;
+  } else {
+    // Get org info
+    const { data: orgData } = await octokit.orgs.get({ org: GITHUB_ORG });
+    orgAvatarUrl = orgData.avatar_url;
+    orgLogin = orgData.login;
+
+    // Fetch all repos
+    const allRepos = await octokit.paginate(octokit.repos.listForOrg, {
+      org: GITHUB_ORG,
+      type: "public",
+      per_page: 100,
+    });
+
+    const repos = allRepos.filter(
+      (r) => !r.archived && !r.private && !EXCLUDED_REPOS.includes(r.name)
+    );
+
+    console.log(
+      `Found ${allRepos.length} repos, processing ${repos.length} after filtering...`
+    );
+
+    // Process repos
+    repoActivities = [];
+    allCommitMessages = {};
+    const authorMap = new Map<
+      string,
+      { login: string; avatarUrl: string; commits: number; repos: Set<string> }
+    >();
+
+    for (const repo of repos) {
+      await checkRateLimit();
+      console.log(`  Processing ${repo.name}...`);
+
+      try {
+        const [commitCount, prCount, contributors, commitMessages] =
+          await Promise.all([
+            getCommitCount(GITHUB_ORG, repo.name),
+            getPRCount(GITHUB_ORG, repo.name),
+            getContributors(GITHUB_ORG, repo.name),
+            getCommitMessages(GITHUB_ORG, repo.name),
+          ]);
+
+        if (commitCount === 0) {
+          console.log(`    Skipping ${repo.name} (no commits in ${YEAR})`);
+          continue;
+        }
+
+        repoActivities.push({
+          name: repo.name,
+          description: repo.description,
+          url: repo.html_url,
+          language: repo.language,
+          stars: repo.stargazers_count ?? 0,
+          commits: commitCount,
+          pullRequests: prCount,
+          contributors,
+        });
+
+        if (commitMessages.length > 0) {
+          allCommitMessages[repo.name] = commitMessages;
+        }
+
+        // Build author stats from contributors + commits
+        for (const login of contributors) {
+          const existing = authorMap.get(login);
+          if (existing) {
+            existing.repos.add(repo.name);
+          } else {
+            authorMap.set(login, {
+              login,
+              avatarUrl: `https://github.com/${login}.png`,
+              commits: 0,
+              repos: new Set([repo.name]),
+            });
+          }
+        }
+      } catch (error) {
+        console.warn(`  Warning: failed to process ${repo.name}:`, error);
+      }
+    }
+
+    // Get per-author commit counts
+    console.log("Calculating per-author commit counts...");
+    for (const [repoName] of Object.entries(allCommitMessages)) {
+      await checkRateLimit();
+      try {
+        const commits = await octokit.paginate(
+          octokit.repos.listCommits,
+          {
+            owner: GITHUB_ORG,
+            repo: repoName,
+            since,
+            until,
+            per_page: 100,
+          },
+          (response) => response.data
+        );
+
+        for (const commit of commits) {
+          const login = commit.author?.login;
+          if (!login) continue;
+          const existing = authorMap.get(login);
+          if (existing) {
+            existing.commits++;
+          } else {
+            authorMap.set(login, {
+              login,
+              avatarUrl: `https://github.com/${login}.png`,
+              commits: 1,
+              repos: new Set([repoName]),
+            });
+          }
+        }
+      } catch {
+        // skip
+      }
+    }
+
+    // Sort repos by commit count
+    repoActivities.sort((a, b) => b.commits - a.commits);
+
+    // Build authors list
+    authors = [...authorMap.values()]
+      .map((a) => ({
+        login: a.login,
+        avatarUrl: a.avatarUrl,
+        commits: a.commits,
+        repos: [...a.repos],
+      }))
+      .sort((a, b) => b.commits - a.commits);
+  }
 
   // LLM inference
   let securityTopics: SecurityTopic[] = [];
@@ -458,8 +609,8 @@ async function main() {
 
   // Assemble report
   const report: OrgReport = {
-    orgName: orgData.login,
-    orgAvatarUrl: orgData.avatar_url,
+    orgName: orgLogin,
+    orgAvatarUrl,
     year: YEAR,
     generatedAt: new Date().toISOString(),
     excludedRepos: EXCLUDED_REPOS,
@@ -471,9 +622,6 @@ async function main() {
   };
 
   // Write output
-  const outDir = path.join(import.meta.dirname, "..", "public", "data");
-  fs.mkdirSync(outDir, { recursive: true });
-  const outPath = path.join(outDir, "report.json");
   fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
   console.log(`Report written to ${outPath}`);
   console.log(

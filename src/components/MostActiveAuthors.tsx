@@ -9,7 +9,16 @@ export function MostActiveAuthors({ authors }: MostActiveAuthorsProps) {
     return null;
   }
 
-  const top = authors.slice(0, 20);
+  const top = authors
+    .filter(
+      (a) =>
+        ![
+          "DashlordBetaGouvBot",
+          "dependabot[bot]",
+          "github-actions[bot]",
+        ].includes(a.login),
+    )
+    .slice(0, 50);
 
   return (
     <section>
@@ -36,7 +45,8 @@ export function MostActiveAuthors({ authors }: MostActiveAuthorsProps) {
               {author.commits.toLocaleString()} commits
             </span>
             <span className="text-gray-400 text-xs">
-              {author.repos.length} {author.repos.length === 1 ? "repo" : "repos"}
+              {author.repos.length}{" "}
+              {author.repos.length === 1 ? "repo" : "repos"}
             </span>
           </a>
         ))}

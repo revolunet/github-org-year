@@ -30,7 +30,7 @@
 
 > **This repository is a GitHub Template.** Click the green **"Use this template"** button above to create your own copy, then follow the setup below. Your org's yearly report will be live in minutes.
 
----
+Example deployment : https://revolunet.github.io/github-org-year
 
 ## Features
 
