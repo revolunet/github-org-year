@@ -1,0 +1,167 @@
+import { useState, useEffect } from "react";
+import type { MostCommentedPR } from "../types.ts";
+
+interface MostCommentedPRsProps {
+  prs: MostCommentedPR[];
+}
+
+const CYCLE_MS = 5_000;
+const FADE_MS = 300;
+
+const EMOJI_MAP: Record<string, string> = {
+  construction: "\u{1F6A7}",
+  bug: "\u{1F41B}",
+  fire: "\u{1F525}",
+  sparkles: "\u{2728}",
+  rocket: "\u{1F680}",
+  memo: "\u{1F4DD}",
+  art: "\u{1F3A8}",
+  zap: "\u{26A1}",
+  tada: "\u{1F389}",
+  white_check_mark: "\u{2705}",
+  lock: "\u{1F512}",
+  bookmark: "\u{1F516}",
+  rotating_light: "\u{1F6A8}",
+  ambulance: "\u{1F691}",
+  lipstick: "\u{1F484}",
+  boom: "\u{1F4A5}",
+  wrench: "\u{1F527}",
+  hammer: "\u{1F528}",
+  package: "\u{1F4E6}",
+  truck: "\u{1F69A}",
+  apple: "\u{1F34E}",
+  penguin: "\u{1F427}",
+  checkered_flag: "\u{1F3C1}",
+  robot: "\u{1F916}",
+  green_heart: "\u{1F49A}",
+  arrow_down: "\u{2B07}\u{FE0F}",
+  arrow_up: "\u{2B06}\u{FE0F}",
+  pushpin: "\u{1F4CC}",
+  construction_worker: "\u{1F477}",
+  chart_with_upwards_trend: "\u{1F4C8}",
+  recycle: "\u{267B}\u{FE0F}",
+  heavy_plus_sign: "\u{2795}",
+  heavy_minus_sign: "\u{2796}",
+  globe_with_meridians: "\u{1F310}",
+  pencil2: "\u{270F}\u{FE0F}",
+  poop: "\u{1F4A9}",
+  rewind: "\u{23EA}",
+  twisted_rightwards_arrows: "\u{1F500}",
+  card_file_box: "\u{1F5C3}\u{FE0F}",
+  loud_sound: "\u{1F50A}",
+  mute: "\u{1F507}",
+  busts_in_silhouette: "\u{1F465}",
+  children_crossing: "\u{1F6B8}",
+  building_construction: "\u{1F3D7}\u{FE0F}",
+  iphone: "\u{1F4F1}",
+  clown_face: "\u{1F921}",
+  egg: "\u{1F95A}",
+  see_no_evil: "\u{1F648}",
+  camera_flash: "\u{1F4F8}",
+  alembic: "\u{2697}\u{FE0F}",
+  mag: "\u{1F50D}",
+  label: "\u{1F3F7}\u{FE0F}",
+  seedling: "\u{1F331}",
+  triangular_flag_on_post: "\u{1F6A9}",
+  goal_net: "\u{1F945}",
+  dizzy: "\u{1F4AB}",
+  wastebasket: "\u{1F5D1}\u{FE0F}",
+  passport_control: "\u{1F6C2}",
+  adhesive_bandage: "\u{1FA79}",
+  monocle_face: "\u{1F9D0}",
+  coffin: "\u{26B0}\u{FE0F}",
+  test_tube: "\u{1F9EA}",
+  necktie: "\u{1F454}",
+  stethoscope: "\u{1FA7A}",
+  bricks: "\u{1F9F1}",
+  technologist: "\u{1F9D1}\u{200D}\u{1F4BB}",
+  money_with_wings: "\u{1F4B8}",
+  thread: "\u{1F9F5}",
+  safety_vest: "\u{1F9BA}",
+};
+
+function replaceEmojiShortcodes(text: string): string {
+  return text.replace(/:([a-z0-9_+-]+):/g, (match, code: string) => {
+    return EMOJI_MAP[code] ?? match;
+  });
+}
+
+export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    if (prs.length <= 1) return;
+
+    const interval = setInterval(() => {
+      // fade out
+      setVisible(false);
+      // after fade-out, switch item and fade in
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % prs.length);
+        setVisible(true);
+      }, FADE_MS);
+    }, CYCLE_MS);
+
+    return () => clearInterval(interval);
+  }, [prs.length]);
+
+  if (prs.length === 0) return null;
+
+  const pr = prs[index];
+
+  return (
+    <section className="bg-gray-900 text-white rounded-xl p-6 sm:p-8">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold text-gray-300">
+          Most Commented PRs
+        </h2>
+        <span className="text-sm text-gray-500">
+          {index + 1} / {prs.length}
+        </span>
+      </div>
+
+      <div
+        className="transition-opacity ease-in-out"
+        style={{
+          opacity: visible ? 1 : 0,
+          transitionDuration: `${FADE_MS}ms`,
+        }}
+      >
+        <a
+          href={pr.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
+        >
+          <p className="text-xl sm:text-2xl font-bold group-hover:text-blue-400 transition-colors leading-snug">
+            {replaceEmojiShortcodes(pr.title)}
+          </p>
+          <p className="text-gray-400 text-sm mt-1">
+            {pr.repo}#{pr.number}
+          </p>
+        </a>
+
+        <div className="flex items-center gap-3 mt-4">
+          <img
+            src={`https://github.com/${pr.author}.png`}
+            alt={pr.author}
+            className="w-14 h-14 rounded-full border-2 border-yellow-400 shadow-lg shadow-yellow-400/20"
+            loading="lazy"
+          />
+          <a
+            href={`https://github.com/${pr.author}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white transition-colors font-medium"
+          >
+            @{pr.author}
+          </a>
+          <span className="ml-auto text-gray-500 text-sm">
+            {pr.comments} comment{pr.comments !== 1 ? "s" : ""}
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}

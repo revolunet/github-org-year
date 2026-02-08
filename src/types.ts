@@ -35,6 +35,15 @@ export interface CommitInfo {
   sha: string;
 }
 
+export interface MostCommentedPR {
+  repo: string;
+  number: number;
+  title: string;
+  url: string;
+  author: string;
+  comments: number;
+}
+
 export interface OrgReport {
   orgName: string;
   orgAvatarUrl: string;
@@ -46,4 +55,5 @@ export interface OrgReport {
   features: Feature[];
   authors: AuthorActivity[];
   commitMessages?: Record<string, CommitInfo[]>;
+  mostCommentedPRs?: MostCommentedPR[];
 }

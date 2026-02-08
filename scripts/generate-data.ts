@@ -9,6 +9,7 @@ import type {
   SecurityTopic,
   Feature,
   CommitInfo,
+  MostCommentedPR,
 } from "../src/types.ts";
 
 // --- Config from env ---
@@ -163,6 +164,41 @@ async function getCommitMessages(
   }
 }
 
+async function getMostCommentedPRs(
+  org: string
+): Promise<MostCommentedPR[]> {
+  console.log("Fetching 50 most commented PRs...");
+  try {
+    const results: MostCommentedPR[] = [];
+    // GitHub Search API returns max 100 per page; we need 50
+    const { data } = await octokit.search.issuesAndPullRequests({
+      q: `org:${org} is:pr created:${YEAR}-01-01..${YEAR}-12-31`,
+      sort: "comments",
+      order: "desc",
+      per_page: 50,
+    });
+
+    for (const item of data.items) {
+      // Extract repo name from repository_url (e.g. "https://api.github.com/repos/org/repo")
+      const repoName = item.repository_url.split("/").pop() ?? "";
+      results.push({
+        repo: repoName,
+        number: item.number,
+        title: item.title,
+        url: item.html_url,
+        author: item.user?.login ?? "unknown",
+        comments: item.comments,
+      });
+    }
+
+    console.log(`  Found ${results.length} most commented PRs`);
+    return results;
+  } catch (error) {
+    console.warn("Failed to fetch most commented PRs:", error);
+    return [];
+  }
+}
+
 // --- Preferred topics & categories for LLM suggestions ---
 
 const SECURITY_TOPICS = [
@@ -248,23 +284,47 @@ const FEATURE_CATEGORIES = [
 
 // --- LLM ---
 
+function sanitizeLLMJson(text: string): string {
+  // Remove trailing commas before } or ]
+  return text.replace(/,\s*([}\]])/g, "$1");
+}
+
 function parseLLMJson<T>(text: string): T {
-  // Try direct parse first
-  try {
-    return JSON.parse(text) as T;
-  } catch {
-    // Try to extract JSON from markdown code blocks
-    const jsonMatch = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?```/);
-    if (jsonMatch) {
-      return JSON.parse(jsonMatch[1]) as T;
-    }
-    // Try to find array/object in text
-    const bracketMatch = text.match(/[\[{][\s\S]*[\]}]/);
-    if (bracketMatch) {
-      return JSON.parse(bracketMatch[0]) as T;
-    }
-    throw new Error("Could not parse LLM response as JSON");
+  const attempts: { label: string; input: string }[] = [];
+
+  // 1. Try direct parse
+  attempts.push({ label: "direct", input: text });
+
+  // 2. Try extracting from markdown code blocks
+  const jsonMatch = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?```/);
+  if (jsonMatch) {
+    attempts.push({ label: "code block", input: jsonMatch[1] });
   }
+
+  // 3. Try to find array/object in text
+  const bracketMatch = text.match(/[\[{][\s\S]*[\]}]/);
+  if (bracketMatch) {
+    attempts.push({ label: "bracket extract", input: bracketMatch[0] });
+  }
+
+  for (const { input } of attempts) {
+    // Try raw, then sanitized
+    for (const [, candidate] of [
+      ["raw", input],
+      ["sanitized", sanitizeLLMJson(input)],
+    ] as const) {
+      try {
+        return JSON.parse(candidate) as T;
+      } catch {
+        // continue to next attempt
+      }
+    }
+  }
+
+  // All attempts failed — log raw response for debugging
+  console.error("Failed to parse LLM JSON response. Raw text (first 2000 chars):");
+  console.error(text.slice(0, 2000));
+  throw new Error("Could not parse LLM response as JSON");
 }
 
 const MAX_CHUNK_CHARS = 80_000; // ~20K tokens, safe for most models
@@ -363,9 +423,13 @@ async function inferSecurityTopics(
     });
 
     const text = response.choices[0]?.message?.content ?? "[]";
-    const parsed = parseLLMJson<SecurityTopic[]>(text);
-    allTopics.push(...parsed);
-    console.log(`    Found ${parsed.length} topics in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+    try {
+      const parsed = parseLLMJson<SecurityTopic[]>(text);
+      allTopics.push(...parsed);
+      console.log(`    Found ${parsed.length} topics in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+    } catch (error) {
+      console.warn(`    Failed to parse security topics for chunk ${i + 1}, skipping:`, error);
+    }
   }
 
   const merged = mergeSecurityTopics(allTopics);
@@ -400,9 +464,13 @@ async function inferFeatures(
     });
 
     const text = response.choices[0]?.message?.content ?? "[]";
-    const parsed = parseLLMJson<Feature[]>(text);
-    allFeatures.push(...parsed);
-    console.log(`    Found ${parsed.length} features in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+    try {
+      const parsed = parseLLMJson<Feature[]>(text);
+      allFeatures.push(...parsed);
+      console.log(`    Found ${parsed.length} features in ${((Date.now() - start) / 1000).toFixed(1)}s`);
+    } catch (error) {
+      console.warn(`    Failed to parse features for chunk ${i + 1}, skipping:`, error);
+    }
   }
 
   const merged = mergeFeatures(allFeatures);
@@ -439,6 +507,7 @@ async function main() {
   let repoActivities: RepoActivity[];
   let authors: AuthorActivity[];
   let allCommitMessages: Record<string, CommitInfo[]>;
+  let mostCommentedPRs: MostCommentedPR[];
   let orgAvatarUrl: string;
   let orgLogin: string;
 
@@ -531,9 +600,13 @@ async function main() {
     }
 
     // Get per-author commit counts
-    console.log("Calculating per-author commit counts...");
-    for (const [repoName] of Object.entries(allCommitMessages)) {
+    const repoNames = Object.keys(allCommitMessages);
+    console.log(`Calculating per-author commit counts for ${repoNames.length} repos...`);
+    for (let i = 0; i < repoNames.length; i++) {
+      const repoName = repoNames[i];
       await checkRateLimit();
+      const start = Date.now();
+      console.log(`  [${i + 1}/${repoNames.length}] Fetching commits for ${repoName}...`);
       try {
         const commits = await octokit.paginate(
           octokit.repos.listCommits,
@@ -547,6 +620,7 @@ async function main() {
           (response) => response.data
         );
 
+        let newAuthors = 0;
         for (const commit of commits) {
           const login = commit.author?.login;
           if (!login) continue;
@@ -554,6 +628,7 @@ async function main() {
           if (existing) {
             existing.commits++;
           } else {
+            newAuthors++;
             authorMap.set(login, {
               login,
               avatarUrl: `https://github.com/${login}.png`,
@@ -562,10 +637,13 @@ async function main() {
             });
           }
         }
-      } catch {
-        // skip
+        const elapsed = ((Date.now() - start) / 1000).toFixed(1);
+        console.log(`    ${commits.length} commits, ${newAuthors} new authors (${elapsed}s)`);
+      } catch (error) {
+        console.warn(`    Failed to fetch commits for ${repoName}:`, error);
       }
     }
+    console.log(`  Done. Total unique authors so far: ${authorMap.size}`);
 
     // Sort repos by commit count
     repoActivities.sort((a, b) => b.commits - a.commits);
@@ -581,11 +659,16 @@ async function main() {
       .sort((a, b) => b.commits - a.commits);
   }
 
-  // LLM inference
-  let securityTopics: SecurityTopic[] = [];
-  let features: Feature[] = [];
+  // Always fetch most commented PRs
+  mostCommentedPRs = await getMostCommentedPRs(GITHUB_ORG);
 
-  if (OPENAI_API_KEY && Object.keys(allCommitMessages).length > 0) {
+  // LLM inference — skip if already present in existing report
+  let securityTopics: SecurityTopic[] = existingReport?.securityTopics ?? [];
+  let features: Feature[] = existingReport?.features ?? [];
+
+  if (securityTopics.length > 0 || features.length > 0) {
+    console.log(`Using existing LLM data (${securityTopics.length} security topics, ${features.length} features)`);
+  } else if (OPENAI_API_KEY && Object.keys(allCommitMessages).length > 0) {
     console.log("Running LLM inference...");
     const openai = new OpenAI({
       apiKey: OPENAI_API_KEY,
@@ -619,6 +702,7 @@ async function main() {
     features,
     authors,
     commitMessages: allCommitMessages,
+    mostCommentedPRs,
   };
 
   // Write output
