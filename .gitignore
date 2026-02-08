@@ -13,7 +13,6 @@ dist-ssr
 *.local
 
 # Generated data
-public/data/report.json
 .env
 
 # Editor directories and files
