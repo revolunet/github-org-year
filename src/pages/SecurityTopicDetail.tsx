@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import type { OrgReport } from "../types.ts";
+import type { OrgReport, SecurityTopic, CommitInfo } from "../types.ts";
+import { mapTopicToOwasp } from "../owaspMapping.ts";
 
 interface SecurityTopicDetailProps {
   data: OrgReport;
@@ -11,10 +12,38 @@ const severityColors: Record<string, string> = {
   low: "bg-green-100 text-green-800",
 };
 
+const stopWords = new Set([
+  "a", "an", "the", "in", "of", "to", "for", "and", "or", "is", "are", "was",
+  "be", "been", "being", "have", "has", "had", "do", "does", "did", "will",
+  "would", "could", "should", "may", "might", "can", "with", "at", "by",
+  "from", "that", "this", "it", "its", "on", "not", "but", "if", "as",
+  "into", "than", "then", "they", "them", "there", "these", "those", "when",
+  "where", "which", "while", "about", "after", "also", "other", "their",
+  "likely", "related", "potentially", "without", "using", "such",
+]);
+
+function getRelevantCommits(
+  commits: CommitInfo[],
+  topic: SecurityTopic,
+): CommitInfo[] {
+  const keywords = `${topic.title} ${topic.description}`
+    .toLowerCase()
+    .split(/[\s\-–—/,.:;()"']+/)
+    .filter((w) => w.length > 2 && !stopWords.has(w));
+
+  const uniqueKeywords = [...new Set(keywords)];
+
+  return commits.filter((commit) => {
+    const msg = commit.message.toLowerCase();
+    return uniqueKeywords.some((kw) => msg.includes(kw));
+  });
+}
+
 export function SecurityTopicDetail({ data }: SecurityTopicDetailProps) {
   const { index } = useParams<{ index: string }>();
   const i = Number(index);
   const topic = data.securityTopics[i];
+  const owaspCategory = topic ? mapTopicToOwasp(topic) : null;
 
   if (!topic) {
     return (
@@ -49,6 +78,11 @@ export function SecurityTopicDetail({ data }: SecurityTopicDetailProps) {
             {topic.severity}
           </span>
         </div>
+        {owaspCategory && (
+          <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-blue-100 text-blue-800 mb-3">
+            {owaspCategory.title}
+          </span>
+        )}
         <p className="text-gray-600 text-lg mb-8">{topic.description}</p>
 
         <h2 className="text-xl font-semibold mb-4">
@@ -57,7 +91,8 @@ export function SecurityTopicDetail({ data }: SecurityTopicDetailProps) {
 
         <div className="space-y-4">
           {relatedRepoDetails.map((repo) => {
-            const messages = data.commitMessages?.[repo.name];
+            const allMessages = data.commitMessages?.[repo.name];
+            const messages = allMessages ? getRelevantCommits(allMessages, topic) : undefined;
             return (
               <div
                 key={repo.name}

@@ -18,7 +18,7 @@ export function MostActiveAuthors({ authors }: MostActiveAuthorsProps) {
           "github-actions[bot]",
         ].includes(a.login),
     )
-    .slice(0, 50);
+    .slice(0, 100);
 
   return (
     <section>

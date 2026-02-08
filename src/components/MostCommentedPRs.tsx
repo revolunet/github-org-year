@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type { MostCommentedPR } from "../types.ts";
 
 interface MostCommentedPRsProps {
@@ -86,80 +86,93 @@ function replaceEmojiShortcodes(text: string): string {
   });
 }
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
+  const shuffled = useMemo(() => shuffle(prs), [prs]);
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    if (prs.length <= 1) return;
+    if (shuffled.length <= 1) return;
 
     const interval = setInterval(() => {
       // fade out
       setVisible(false);
       // after fade-out, switch item and fade in
       setTimeout(() => {
-        setIndex((prev) => (prev + 1) % prs.length);
+        setIndex((prev) => (prev + 1) % shuffled.length);
         setVisible(true);
       }, FADE_MS);
     }, CYCLE_MS);
 
     return () => clearInterval(interval);
-  }, [prs.length]);
+  }, [shuffled.length]);
 
-  if (prs.length === 0) return null;
+  if (shuffled.length === 0) return null;
 
-  const pr = prs[index];
+  const pr = shuffled[index];
 
   return (
-    <section className="bg-gray-900 text-white rounded-xl p-6 sm:p-8">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold text-gray-300">
-          Most Commented PRs
-        </h2>
-        <span className="text-sm text-gray-500">
-          {index + 1} / {prs.length}
-        </span>
-      </div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-pink-500/25">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)]" />
+      <div className="relative">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-white/90 flex items-center gap-2">
+            <span className="text-2xl">💬</span> Most Commented PRs
+          </h2>
+          <span className="text-sm text-white/60 bg-white/10 rounded-full px-3 py-0.5">
+            {index + 1} / {shuffled.length}
+          </span>
+        </div>
 
-      <div
-        className="transition-opacity ease-in-out"
-        style={{
-          opacity: visible ? 1 : 0,
-          transitionDuration: `${FADE_MS}ms`,
-        }}
-      >
-        <a
-          href={pr.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block group"
+        <div
+          className="transition-opacity ease-in-out"
+          style={{
+            opacity: visible ? 1 : 0,
+            transitionDuration: `${FADE_MS}ms`,
+          }}
         >
-          <p className="text-xl sm:text-2xl font-bold group-hover:text-blue-400 transition-colors leading-snug">
-            {replaceEmojiShortcodes(pr.title)}
-          </p>
-          <p className="text-gray-400 text-sm mt-1">
-            {pr.repo}#{pr.number}
-          </p>
-        </a>
-
-        <div className="flex items-center gap-3 mt-4">
-          <img
-            src={`https://github.com/${pr.author}.png`}
-            alt={pr.author}
-            className="w-14 h-14 rounded-full border-2 border-yellow-400 shadow-lg shadow-yellow-400/20"
-            loading="lazy"
-          />
           <a
-            href={`https://github.com/${pr.author}`}
+            href={pr.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white transition-colors font-medium"
+            className="block group"
           >
-            @{pr.author}
+            <p className="text-xl sm:text-2xl font-bold group-hover:text-yellow-200 transition-colors leading-snug drop-shadow-sm">
+              {replaceEmojiShortcodes(pr.title)}
+            </p>
+            <p className="text-white/70 text-sm mt-1">
+              {pr.repo}#{pr.number}
+            </p>
           </a>
-          <span className="ml-auto text-gray-500 text-sm">
-            {pr.comments} comment{pr.comments !== 1 ? "s" : ""}
-          </span>
+
+          <div className="flex items-center gap-3 mt-4">
+            <img
+              src={`https://github.com/${pr.author}.png`}
+              alt={pr.author}
+              className="w-14 h-14 rounded-full border-3 border-yellow-300 shadow-lg shadow-yellow-300/30 ring-2 ring-white/20"
+              loading="lazy"
+            />
+            <a
+              href={`https://github.com/${pr.author}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/90 hover:text-yellow-200 transition-colors font-medium"
+            >
+              @{pr.author}
+            </a>
+            <span className="ml-auto text-white/70 text-sm bg-white/10 rounded-full px-3 py-1 font-semibold">
+              🔥 {pr.comments} comment{pr.comments !== 1 ? "s" : ""}
+            </span>
+          </div>
         </div>
       </div>
     </section>
