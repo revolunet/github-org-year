@@ -1,0 +1,49 @@
+name: Generate Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Year to generate report for"
+        required: false
+        default: ""
+      excluded_repos:
+        description: "Comma-separated list of repos to exclude"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 6 * * 1" # Weekly on Monday at 6am UTC
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Generate report data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_ORG: ${{ github.repository_owner }}
+          YEAR: ${{ github.event.inputs.year }}
+          EXCLUDED_REPOS: ${{ github.event.inputs.excluded_repos }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+        run: npm run generate-data
+
+      - name: Commit report.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/report.json
+          git diff --staged --quiet || git commit -m "chore: update report.json [skip ci]"
+          git push

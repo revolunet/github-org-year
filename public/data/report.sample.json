@@ -1,0 +1,261 @@
+{
+  "orgName": "acme-corp",
+  "orgAvatarUrl": "https://avatars.githubusercontent.com/u/583231?v=4",
+  "year": 2024,
+  "generatedAt": "2024-12-15T10:30:00Z",
+  "excludedRepos": ["legacy-app", "internal-docs"],
+  "repos": [
+    {
+      "name": "web-platform",
+      "description": "Main web application platform",
+      "url": "https://github.com/acme-corp/web-platform",
+      "language": "TypeScript",
+      "stars": 142,
+      "commits": 1247,
+      "pullRequests": 389,
+      "contributors": ["alice", "bob", "charlie", "diana"]
+    },
+    {
+      "name": "api-gateway",
+      "description": "Central API gateway service",
+      "url": "https://github.com/acme-corp/api-gateway",
+      "language": "Go",
+      "stars": 89,
+      "commits": 834,
+      "pullRequests": 201,
+      "contributors": ["bob", "eve", "frank"]
+    },
+    {
+      "name": "mobile-app",
+      "description": "Cross-platform mobile application",
+      "url": "https://github.com/acme-corp/mobile-app",
+      "language": "TypeScript",
+      "stars": 56,
+      "commits": 623,
+      "pullRequests": 178,
+      "contributors": ["charlie", "diana", "grace"]
+    },
+    {
+      "name": "data-pipeline",
+      "description": "ETL and data processing pipeline",
+      "url": "https://github.com/acme-corp/data-pipeline",
+      "language": "Python",
+      "stars": 34,
+      "commits": 412,
+      "pullRequests": 95,
+      "contributors": ["eve", "frank", "heidi"]
+    },
+    {
+      "name": "design-system",
+      "description": "Shared UI component library",
+      "url": "https://github.com/acme-corp/design-system",
+      "language": "TypeScript",
+      "stars": 78,
+      "commits": 356,
+      "pullRequests": 134,
+      "contributors": ["alice", "grace", "ivan"]
+    },
+    {
+      "name": "infra-config",
+      "description": "Infrastructure as code and deployment configs",
+      "url": "https://github.com/acme-corp/infra-config",
+      "language": "HCL",
+      "stars": 12,
+      "commits": 189,
+      "pullRequests": 67,
+      "contributors": ["frank", "heidi"]
+    }
+  ],
+  "securityTopics": [
+    {
+      "title": "Broken Authentication",
+      "description": "Strengthened OAuth2 flows, added MFA support, and fixed token refresh vulnerabilities across authentication services.",
+      "severity": "high",
+      "relatedRepos": ["web-platform", "api-gateway"]
+    },
+    {
+      "title": "Dependency Vulnerabilities",
+      "description": "Regular updates of third-party dependencies to patch known CVEs, particularly in npm and Go modules.",
+      "severity": "medium",
+      "relatedRepos": ["web-platform", "mobile-app", "api-gateway"]
+    },
+    {
+      "title": "Input Validation & Sanitization",
+      "description": "Added stricter input validation and sanitization across API endpoints to prevent injection attacks.",
+      "severity": "high",
+      "relatedRepos": ["api-gateway", "web-platform"]
+    },
+    {
+      "title": "Secrets Management",
+      "description": "Migration from environment variables to a centralized secrets manager with automatic rotation.",
+      "severity": "medium",
+      "relatedRepos": ["infra-config", "api-gateway"]
+    },
+    {
+      "title": "Cross-Site Scripting (XSS)",
+      "description": "Fixed reflected and stored XSS vulnerabilities in user-generated content rendering and form inputs.",
+      "severity": "high",
+      "relatedRepos": ["web-platform", "design-system"]
+    },
+    {
+      "title": "API Security",
+      "description": "Refined CORS policies, added request signing, and enforced strict schema validation on all API endpoints.",
+      "severity": "medium",
+      "relatedRepos": ["api-gateway"]
+    },
+    {
+      "title": "Content Security Policy (CSP)",
+      "description": "Deployed strict CSP headers across all web properties to mitigate XSS and data injection attacks.",
+      "severity": "low",
+      "relatedRepos": ["web-platform"]
+    },
+    {
+      "title": "CI/CD Pipeline Security",
+      "description": "Added SAST/DAST scanning to CI pipelines, enforced signed commits, and restricted deployment permissions.",
+      "severity": "medium",
+      "relatedRepos": ["infra-config", "web-platform", "api-gateway"]
+    },
+    {
+      "title": "Broken Access Control",
+      "description": "Fixed privilege escalation issues in admin endpoints and enforced role-based access checks on all routes.",
+      "severity": "high",
+      "relatedRepos": ["api-gateway", "web-platform"]
+    },
+    {
+      "title": "HTTPS / TLS Configuration",
+      "description": "Enforced TLS 1.3 minimum, enabled HSTS preloading, and removed support for weak cipher suites.",
+      "severity": "low",
+      "relatedRepos": ["infra-config", "api-gateway"]
+    }
+  ],
+  "features": [
+    {
+      "title": "Real-Time Updates (WebSockets)",
+      "description": "Implemented WebSocket-based real-time notification system across web and mobile platforms.",
+      "category": "Real-Time Updates (WebSockets)",
+      "relatedRepos": ["web-platform", "mobile-app", "api-gateway"]
+    },
+    {
+      "title": "CI/CD Pipeline",
+      "description": "Migrated from Jenkins to GitHub Actions with parallel testing, automated deployments, and rollback capabilities.",
+      "category": "CI/CD Pipeline",
+      "relatedRepos": ["infra-config", "web-platform", "api-gateway"]
+    },
+    {
+      "title": "Dark Mode / Theming",
+      "description": "Major redesign of the component library with dark mode support, theme tokens, and responsive layouts.",
+      "category": "Dark Mode / Theming",
+      "relatedRepos": ["design-system", "web-platform"]
+    },
+    {
+      "title": "Dashboard & Analytics",
+      "description": "Built new analytics dashboard with interactive charts, custom date ranges, and export capabilities.",
+      "category": "Dashboard & Analytics",
+      "relatedRepos": ["data-pipeline", "web-platform"]
+    },
+    {
+      "title": "Rate Limiting",
+      "description": "Implemented tiered rate limiting with Redis-backed counters and per-client configuration.",
+      "category": "Rate Limiting",
+      "relatedRepos": ["api-gateway"]
+    },
+    {
+      "title": "Automated Testing",
+      "description": "Increased test coverage from 45% to 82% with new integration tests and E2E test suites.",
+      "category": "Automated Testing",
+      "relatedRepos": ["web-platform", "mobile-app", "api-gateway"]
+    },
+    {
+      "title": "Accessibility (a11y)",
+      "description": "Comprehensive accessibility audit and fixes including ARIA labels, keyboard navigation, and screen reader support.",
+      "category": "Accessibility (a11y)",
+      "relatedRepos": ["design-system", "web-platform", "mobile-app"]
+    },
+    {
+      "title": "User Authentication & Login",
+      "description": "Revamped login flow with SSO integration, session management improvements, and remember-me functionality.",
+      "category": "User Authentication & Login",
+      "relatedRepos": ["web-platform", "api-gateway"]
+    },
+    {
+      "title": "Internationalization (i18n)",
+      "description": "Added multi-language support with locale detection, RTL layout handling, and translation management tooling.",
+      "category": "Internationalization (i18n)",
+      "relatedRepos": ["web-platform", "mobile-app"]
+    },
+    {
+      "title": "Data Export (CSV/PDF)",
+      "description": "Added bulk data export functionality supporting CSV and PDF formats with custom filtering options.",
+      "category": "Data Export (CSV/PDF)",
+      "relatedRepos": ["data-pipeline", "web-platform"]
+    },
+    {
+      "title": "Health Checks & Monitoring",
+      "description": "Deployed structured logging, health check endpoints, and Prometheus metrics across all services.",
+      "category": "Health Checks & Monitoring",
+      "relatedRepos": ["api-gateway", "infra-config", "data-pipeline"]
+    },
+    {
+      "title": "Docker / Containerization",
+      "description": "Containerized all services with multi-stage Docker builds and optimized image sizes by 60%.",
+      "category": "Docker / Containerization",
+      "relatedRepos": ["infra-config", "api-gateway", "data-pipeline"]
+    }
+  ],
+  "authors": [
+    {
+      "login": "alice",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1?v=4",
+      "commits": 487,
+      "repos": ["web-platform", "design-system"]
+    },
+    {
+      "login": "bob",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/2?v=4",
+      "commits": 412,
+      "repos": ["web-platform", "api-gateway"]
+    },
+    {
+      "login": "charlie",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/3?v=4",
+      "commits": 356,
+      "repos": ["web-platform", "mobile-app"]
+    },
+    {
+      "login": "eve",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/4?v=4",
+      "commits": 298,
+      "repos": ["api-gateway", "data-pipeline"]
+    },
+    {
+      "login": "frank",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/5?v=4",
+      "commits": 276,
+      "repos": ["api-gateway", "data-pipeline", "infra-config"]
+    },
+    {
+      "login": "diana",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/6?v=4",
+      "commits": 234,
+      "repos": ["web-platform", "mobile-app"]
+    },
+    {
+      "login": "grace",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/7?v=4",
+      "commits": 198,
+      "repos": ["mobile-app", "design-system"]
+    },
+    {
+      "login": "heidi",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/8?v=4",
+      "commits": 167,
+      "repos": ["data-pipeline", "infra-config"]
+    },
+    {
+      "login": "ivan",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/9?v=4",
+      "commits": 134,
+      "repos": ["design-system"]
+    }
+  ]
+}
