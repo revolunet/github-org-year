@@ -1,17 +1,23 @@
-create a new static react+tailwind single page application application : "GitHub yearly organisation review"
+create a new static react+tailwind single page application : "GitHub yearly organisation review"
 
 the app will present a github organisation yearly activity
 
-- Most active repos
-- Top security topics (use LLM to infer from the commits)
-- Top features (use LLM to infer from the commits)
-- Most active authors
+- Most commented PRs (animated carousel with gitmoji support)
+- Most active repos (ranked by commits, PRs, contributors)
+- Top security topics (LLM-inferred from commits, grouped by OWASP Top 10 2025 categories)
+- Top features (LLM-inferred from commits, grouped by thematic categories)
+- Most active authors (leaderboard with avatars, commit counts, repo contributions)
+- Drill-down pages for each feature and security topic
 
 Notes:
 
-- Use GitHub API if needed
-- Use openai compatible endpoints if you need LLMs calls
-- Add an option to exlude some repos
+- Use GitHub API (Octokit) for data collection
+- Use openai compatible endpoints for LLM commit analysis
+- Add an option to exclude some repos
+- Filter out bot/dependency update commits (dependabot, renovate) from LLM analysis
+- Support incremental data generation (reuse existing report.json to skip API calls)
+- Handle GitHub API rate limits automatically
+- Chunk large commit sets for LLM inference and merge/deduplicate results
 
 Scripts:
 
@@ -19,5 +25,5 @@ Scripts:
 
 GitHub workflows:
 
-- generate-data.yml // run the script, use current org as default
-- deploy-github-pages.yml // buid and publish the app on github-pages
+- generate-data.yml // run the script weekly (Monday 6am UTC) or manually, use current org as default
+- deploy-github-pages.yml // build and publish the app on github-pages on every push to main

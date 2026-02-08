@@ -34,16 +34,19 @@ Example deployment : https://revolunet.github.io/github-org-year
 
 ## Features
 
-|                         | Feature                                                          | Description |
-| ----------------------- | ---------------------------------------------------------------- | ----------- |
-| **Most Active Repos**   | Ranked by commits, PRs, and contributors for the year            |
-| **Top Features**        | AI-inferred themes and major work areas from commit messages     |
-| **Security Topics**     | AI-detected security fixes, hardening, and vulnerability patches |
-| **Most Active Authors** | Leaderboard with avatars, commit counts, and repo contributions  |
-| **Exclude Repos**       | Filter out irrelevant or internal repos from the report          |
-| **Drill-Down Pages**    | Click into any feature or security topic for details             |
-| **Fully Static**        | No backend needed &mdash; just a JSON file and a static site     |
-| **Auto-Refresh**        | Weekly GitHub Actions workflow keeps data up to date             |
+|                            | Feature                                                                            |
+| -------------------------- | ---------------------------------------------------------------------------------- |
+| **Most Commented PRs**     | Animated carousel of the most discussed PRs, with gitmoji rendering                |
+| **Most Active Repos**      | Ranked by commits, PRs, and contributors for the year                              |
+| **Security Topics**        | AI-detected security fixes, grouped by OWASP Top 10 2025 categories                |
+| **Top Features**           | AI-inferred themes and work areas, grouped by thematic categories                  |
+| **Most Active Authors**    | Leaderboard with avatars, commit counts, and repo contributions                    |
+| **Exclude Repos**          | Filter out irrelevant or internal repos from the report                            |
+| **Drill-Down Pages**       | Click into any feature or security topic for details                               |
+| **Bot Commit Filtering**   | Automatically excludes dependabot/renovate commits from analysis                   |
+| **Incremental Generation** | Reuses existing report.json to skip GitHub API calls and re-run only LLM inference |
+| **Fully Static**           | No backend needed &mdash; just a JSON file and a static site                       |
+| **Auto-Refresh**           | Weekly GitHub Actions workflow keeps data up to date                                |
 
 ---
 
@@ -143,14 +146,17 @@ npm run dev
               ┌────────────────────────┐
               │   generate-data.ts     │
               │                        │
-              │  1. Fetch all org repos│
-              │  2. Count commits, PRs │
-              │  3. Map contributors   │
+              │  1. Fetch all org repos │
+              │  2. Count commits, PRs  │
+              │  3. Map contributors    │
               │  4. Collect messages    │
-              │  5. LLM inference      │
-              │     ├─ Security topics │
-              │     └─ Top features    │
-              │  6. Write report.json  │
+              │     (filter bot commits)│
+              │  5. Fetch top PRs       │
+              │  6. LLM inference       │
+              │     ├─ Security topics  │
+              │     └─ Top features     │
+              │  7. Merge & deduplicate │
+              │  8. Write report.json   │
               └────────────┬───────────┘
                            │
                            ▼
@@ -164,11 +170,12 @@ npm run dev
               │  React + Tailwind SPA  │
               │  (deployed on GH Pages)│
               │                        │
-              │  ├─ Dashboard overview  │
+              │  ├─ Most commented PRs │
               │  ├─ Repo leaderboard   │
+              │  ├─ Security (OWASP)   │
+              │  ├─ Features (grouped) │
               │  ├─ Author stats       │
-              │  ├─ Feature drill-down │
-              │  └─ Security details   │
+              │  └─ Drill-down pages   │
               └────────────────────────┘
 ```
 
@@ -209,18 +216,33 @@ OPENAI_BASE_URL=https://my-proxy.example.com/v1
 ```
 .
 ├── .github/workflows/
-│   ├── generate-data.yml       # Data generation (weekly + manual)
-│   └── deploy-github-pages.yml # Build & deploy static site
+│   ├── generate-data.yml        # Data generation (weekly + manual)
+│   └── deploy-github-pages.yml  # Build & deploy static site
 ├── scripts/
-│   └── generate-data.ts        # Fetches GitHub data + LLM analysis
+│   └── generate-data.ts         # Fetches GitHub data + LLM analysis
 ├── public/data/
-│   ├── report.json             # Generated report (gitignored)
-│   └── report.sample.json      # Sample data for local dev
+│   ├── report.json              # Generated report (gitignored)
+│   └── report.sample.json       # Sample data for local dev
 ├── src/
-│   ├── components/             # React components
-│   ├── pages/                  # Route pages
-│   ├── hooks/                  # Data fetching hooks
-│   └── types.ts                # TypeScript interfaces
+│   ├── components/
+│   │   ├── MostCommentedPRs.tsx # Animated PR carousel with gitmoji
+│   │   ├── MostActiveRepos.tsx  # Repo leaderboard
+│   │   ├── SecurityTopics.tsx   # OWASP-grouped security view
+│   │   ├── TopFeatures.tsx      # Category-grouped features view
+│   │   ├── MostActiveAuthors.tsx# Author leaderboard
+│   │   ├── Header.tsx           # Org header with avatar
+│   │   └── ExcludeReposFilter.tsx
+│   ├── pages/
+│   │   ├── HomePage.tsx         # Dashboard overview
+│   │   ├── FeatureDetail.tsx    # Feature drill-down page
+│   │   └── SecurityTopicDetail.tsx # Security topic drill-down page
+│   ├── hooks/
+│   │   └── useReportData.ts     # Fetches report.json
+│   ├── featureGroupMapping.ts   # Maps features to thematic groups
+│   ├── owaspMapping.ts          # Maps security topics to OWASP Top 10
+│   ├── types.ts                 # TypeScript interfaces
+│   ├── App.tsx                  # Router + excluded repos filtering
+│   └── main.tsx                 # Entry point
 └── package.json
 ```
 
