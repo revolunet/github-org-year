@@ -3,10 +3,7 @@
   "orgAvatarUrl": "https://avatars.githubusercontent.com/u/7874148?v=4",
   "year": 2025,
   "generatedAt": "2026-02-08T18:16:59.827Z",
-  "excludedRepos": [
-    "dashlord",
-    "sentry"
-  ],
+  "excludedRepos": ["dashlord", "sentry"],
   "repos": [
     {
       "name": "reva",
@@ -68,11 +65,7 @@
       "stars": 14,
       "commits": 2376,
       "pullRequests": 215,
-      "contributors": [
-        "totakoko",
-        "martinratinaud",
-        "dependabot[bot]"
-      ]
+      "contributors": ["totakoko", "martinratinaud", "dependabot[bot]"]
     },
     {
       "name": "ComparIA",
@@ -127,12 +120,7 @@
       "stars": 3,
       "commits": 1867,
       "pullRequests": 0,
-      "contributors": [
-        "maximallain",
-        "tut-tuuut",
-        "jillro",
-        "dependabot[bot]"
-      ]
+      "contributors": ["maximallain", "tut-tuuut", "jillro", "dependabot[bot]"]
     },
     {
       "name": "anssi-portail",
@@ -165,12 +153,7 @@
       "stars": 2,
       "commits": 1599,
       "pullRequests": 349,
-      "contributors": [
-        "dependabot[bot]",
-        "fitchMitch",
-        "pierrax",
-        "adjbrt"
-      ]
+      "contributors": ["dependabot[bot]", "fitchMitch", "pierrax", "adjbrt"]
     },
     {
       "name": "reno",
@@ -324,11 +307,7 @@
       "stars": 5,
       "commits": 998,
       "pullRequests": 0,
-      "contributors": [
-        "WoWo79",
-        "EmileRolley",
-        "dependabot[bot]"
-      ]
+      "contributors": ["WoWo79", "EmileRolley", "dependabot[bot]"]
     },
     {
       "name": "eva-serveur",
@@ -443,12 +422,7 @@
       "stars": 16,
       "commits": 883,
       "pullRequests": 219,
-      "contributors": [
-        "n-b",
-        "LucienMLD",
-        "dependabot[bot]",
-        "clairezed"
-      ]
+      "contributors": ["n-b", "LucienMLD", "dependabot[bot]", "clairezed"]
     },
     {
       "name": "mon-aide-cyber",
@@ -496,11 +470,7 @@
       "stars": 1,
       "commits": 862,
       "pullRequests": 0,
-      "contributors": [
-        "tangimds",
-        "arnaudambro",
-        "dependabot[bot]"
-      ]
+      "contributors": ["tangimds", "arnaudambro", "dependabot[bot]"]
     },
     {
       "name": "euphrosyne",
@@ -510,11 +480,7 @@
       "stars": 4,
       "commits": 707,
       "pullRequests": 397,
-      "contributors": [
-        "wiwski",
-        "github-actions[bot]",
-        "dependabot[bot]"
-      ]
+      "contributors": ["wiwski", "github-actions[bot]", "dependabot[bot]"]
     },
     {
       "name": "service-national-universel",
@@ -545,11 +511,7 @@
       "stars": 7,
       "commits": 647,
       "pullRequests": 477,
-      "contributors": [
-        "dependabot[bot]",
-        "lsaudon",
-        "EmileRolley"
-      ]
+      "contributors": ["dependabot[bot]", "lsaudon", "EmileRolley"]
     },
     {
       "name": "lab-anssi-ui-kit",
@@ -613,12 +575,7 @@
       "stars": 6,
       "commits": 534,
       "pullRequests": 115,
-      "contributors": [
-        "NVaissaud",
-        "Ijahman",
-        "JeremyPinto",
-        "dependabot[bot]"
-      ]
+      "contributors": ["NVaissaud", "Ijahman", "JeremyPinto", "dependabot[bot]"]
     },
     {
       "name": "agir-front",
@@ -661,9 +618,7 @@
       "stars": 1,
       "commits": 492,
       "pullRequests": 72,
-      "contributors": [
-        "pierrelemee"
-      ]
+      "contributors": ["pierrelemee"]
     },
     {
       "name": "diagbruit.beta.gouv.fr",
@@ -673,9 +628,7 @@
       "stars": 1,
       "commits": 480,
       "pullRequests": 34,
-      "contributors": [
-        "ClementNumericite"
-      ]
+      "contributors": ["ClementNumericite"]
     },
     {
       "name": "monprojetsup",
@@ -748,12 +701,7 @@
       "stars": 6,
       "commits": 434,
       "pullRequests": 58,
-      "contributors": [
-        "ShallowRed",
-        "MichelJautzy",
-        "johangirod",
-        "yowamuzadi"
-      ]
+      "contributors": ["ShallowRed", "MichelJautzy", "johangirod", "yowamuzadi"]
     },
     {
       "name": "mission-transition-ecologique",
@@ -781,11 +729,7 @@
       "stars": 0,
       "commits": 391,
       "pullRequests": 392,
-      "contributors": [
-        "jrivals",
-        "vmaubert",
-        "dependabot[bot]"
-      ]
+      "contributors": ["jrivals", "vmaubert", "dependabot[bot]"]
     },
     {
       "name": "api-subventions-asso",
@@ -812,10 +756,7 @@
       "stars": 6,
       "commits": 350,
       "pullRequests": 0,
-      "contributors": [
-        "cspriet",
-        "jillro"
-      ]
+      "contributors": ["cspriet", "jillro"]
     },
     {
       "name": "OTP-DS-to-Grist",
@@ -892,10 +833,7 @@
       "stars": 3,
       "commits": 303,
       "pullRequests": 5,
-      "contributors": [
-        "sneko",
-        "nedbaldessin"
-      ]
+      "contributors": ["sneko", "nedbaldessin"]
     },
     {
       "name": "pass-sport",
@@ -905,10 +843,7 @@
       "stars": 2,
       "commits": 302,
       "pullRequests": 111,
-      "contributors": [
-        "Destinyyyy",
-        "dependabot[bot]"
-      ]
+      "contributors": ["Destinyyyy", "dependabot[bot]"]
     },
     {
       "name": "mle-front",
@@ -918,11 +853,7 @@
       "stars": 2,
       "commits": 299,
       "pullRequests": 155,
-      "contributors": [
-        "KGALLET",
-        "dependabot[bot]",
-        "mlvernay"
-      ]
+      "contributors": ["KGALLET", "dependabot[bot]", "mlvernay"]
     },
     {
       "name": "standards",
@@ -967,11 +898,7 @@
       "stars": 2,
       "commits": 283,
       "pullRequests": 309,
-      "contributors": [
-        "David-Guillot",
-        "dependabot[bot]",
-        "MichelJautzy"
-      ]
+      "contributors": ["David-Guillot", "dependabot[bot]", "MichelJautzy"]
     },
     {
       "name": "fondation",
@@ -981,11 +908,7 @@
       "stars": 5,
       "commits": 280,
       "pullRequests": 0,
-      "contributors": [
-        "jquagliatini",
-        "dakie62",
-        "Nmaxime"
-      ]
+      "contributors": ["jquagliatini", "dakie62", "Nmaxime"]
     },
     {
       "name": "euphrosyne-tools-api",
@@ -995,11 +918,7 @@
       "stars": 2,
       "commits": 261,
       "pullRequests": 147,
-      "contributors": [
-        "github-actions[bot]",
-        "dependabot[bot]",
-        "wiwski"
-      ]
+      "contributors": ["github-actions[bot]", "dependabot[bot]", "wiwski"]
     },
     {
       "name": "signalement-api",
@@ -1009,11 +928,7 @@
       "stars": 1,
       "commits": 257,
       "pullRequests": 187,
-      "contributors": [
-        "ssedoudbgouv",
-        "charlescd",
-        "eletallbetagouv"
-      ]
+      "contributors": ["ssedoudbgouv", "charlescd", "eletallbetagouv"]
     },
     {
       "name": "beta.gouv.fr",
@@ -1043,9 +958,7 @@
       "stars": 1,
       "commits": 242,
       "pullRequests": 0,
-      "contributors": [
-        "DashlordBetaGouvBot"
-      ]
+      "contributors": ["DashlordBetaGouvBot"]
     },
     {
       "name": "communs-de-la-transition-ecologique-des-collectivites",
@@ -1092,10 +1005,7 @@
       "stars": 9,
       "commits": 225,
       "pullRequests": 96,
-      "contributors": [
-        "goulvench",
-        "dependabot[bot]"
-      ]
+      "contributors": ["goulvench", "dependabot[bot]"]
     },
     {
       "name": "mon-suivi-justice",
@@ -1105,11 +1015,7 @@
       "stars": 7,
       "commits": 215,
       "pullRequests": 277,
-      "contributors": [
-        "dependabot[bot]",
-        "procorbin",
-        "damienlethiec"
-      ]
+      "contributors": ["dependabot[bot]", "procorbin", "damienlethiec"]
     },
     {
       "name": "publicodes-aides-velo",
@@ -1135,12 +1041,7 @@
       "stars": 3,
       "commits": 208,
       "pullRequests": 42,
-      "contributors": [
-        "NVaissaud",
-        "JeremyPinto",
-        "dependabot[bot]",
-        "Ijahman"
-      ]
+      "contributors": ["NVaissaud", "JeremyPinto", "dependabot[bot]", "Ijahman"]
     },
     {
       "name": "dsfr-kit",
@@ -1150,9 +1051,7 @@
       "stars": 2,
       "commits": 208,
       "pullRequests": 0,
-      "contributors": [
-        "kaaloo"
-      ]
+      "contributors": ["kaaloo"]
     },
     {
       "name": "science-infuse",
@@ -1162,9 +1061,7 @@
       "stars": 2,
       "commits": 199,
       "pullRequests": 0,
-      "contributors": [
-        "boehm-e"
-      ]
+      "contributors": ["boehm-e"]
     },
     {
       "name": "recoco-portails",
@@ -1189,11 +1086,7 @@
       "stars": 3,
       "commits": 179,
       "pullRequests": 7,
-      "contributors": [
-        "CamilyaDellali",
-        "mfo",
-        "colinux"
-      ]
+      "contributors": ["CamilyaDellali", "mfo", "colinux"]
     },
     {
       "name": "sites-faciles",
@@ -1225,9 +1118,7 @@
       "stars": 2,
       "commits": 172,
       "pullRequests": 0,
-      "contributors": [
-        "chloecorfmat"
-      ]
+      "contributors": ["chloecorfmat"]
     },
     {
       "name": "signalconso-dashboard-react",
@@ -1237,11 +1128,7 @@
       "stars": 2,
       "commits": 161,
       "pullRequests": 159,
-      "contributors": [
-        "ssedoudbgouv",
-        "charlescd",
-        "eletallbetagouv"
-      ]
+      "contributors": ["ssedoudbgouv", "charlescd", "eletallbetagouv"]
     },
     {
       "name": "anssi-recommandations-cyber-data",
@@ -1251,11 +1138,7 @@
       "stars": 2,
       "commits": 154,
       "pullRequests": 0,
-      "contributors": [
-        "pie-leroy",
-        "bbougon",
-        "Pamplemousse"
-      ]
+      "contributors": ["pie-leroy", "bbougon", "Pamplemousse"]
     },
     {
       "name": "dsfr-chart",
@@ -1298,12 +1181,7 @@
       "stars": 7,
       "commits": 152,
       "pullRequests": 0,
-      "contributors": [
-        "nicolasSagon",
-        "boehm-e",
-        "Rhmaric",
-        "odulcy"
-      ]
+      "contributors": ["nicolasSagon", "boehm-e", "Rhmaric", "odulcy"]
     },
     {
       "name": "grist-custom-widgets-fr-admin",
@@ -1330,10 +1208,7 @@
       "stars": 0,
       "commits": 132,
       "pullRequests": 0,
-      "contributors": [
-        "guillett",
-        "dependabot[bot]"
-      ]
+      "contributors": ["guillett", "dependabot[bot]"]
     },
     {
       "name": "decoupage-administratif-gem",
@@ -1343,10 +1218,7 @@
       "stars": 2,
       "commits": 131,
       "pullRequests": 10,
-      "contributors": [
-        "LucienMLD",
-        "nicolasleger"
-      ]
+      "contributors": ["LucienMLD", "nicolasleger"]
     },
     {
       "name": "signalconso-website",
@@ -1356,11 +1228,7 @@
       "stars": 3,
       "commits": 130,
       "pullRequests": 121,
-      "contributors": [
-        "charlescd",
-        "ssedoudbgouv",
-        "eletallbetagouv"
-      ]
+      "contributors": ["charlescd", "ssedoudbgouv", "eletallbetagouv"]
     },
     {
       "name": "eva",
@@ -1461,11 +1329,7 @@
       "stars": 8,
       "commits": 112,
       "pullRequests": 233,
-      "contributors": [
-        "niladic",
-        "scala-steward",
-        "dependabot[bot]"
-      ]
+      "contributors": ["niladic", "scala-steward", "dependabot[bot]"]
     },
     {
       "name": "ranking_methods",
@@ -1475,11 +1339,7 @@
       "stars": 0,
       "commits": 108,
       "pullRequests": 0,
-      "contributors": [
-        "ketsapiwiq",
-        "Axolotle",
-        "nrolin"
-      ]
+      "contributors": ["ketsapiwiq", "Axolotle", "nrolin"]
     },
     {
       "name": "anssi-nis2",
@@ -1505,10 +1365,7 @@
       "stars": 1,
       "commits": 96,
       "pullRequests": 0,
-      "contributors": [
-        "WoWo79",
-        "EmileRolley"
-      ]
+      "contributors": ["WoWo79", "EmileRolley"]
     },
     {
       "name": "campus-numerique-cms",
@@ -1536,12 +1393,7 @@
       "stars": 42,
       "commits": 94,
       "pullRequests": 0,
-      "contributors": [
-        "AntoineGirard",
-        "freesteph",
-        "goulvench",
-        "cprodhomme"
-      ]
+      "contributors": ["AntoineGirard", "freesteph", "goulvench", "cprodhomme"]
     },
     {
       "name": "suivi_dtnum_datapass",
@@ -1551,10 +1403,7 @@
       "stars": 0,
       "commits": 93,
       "pullRequests": 11,
-      "contributors": [
-        "SamiDTNumDGFiP",
-        "JeSuisUnCaillou"
-      ]
+      "contributors": ["SamiDTNumDGFiP", "JeSuisUnCaillou"]
     },
     {
       "name": "msj-public-back",
@@ -1564,10 +1413,7 @@
       "stars": 0,
       "commits": 85,
       "pullRequests": 0,
-      "contributors": [
-        "damienlethiec",
-        "dependabot[bot]"
-      ]
+      "contributors": ["damienlethiec", "dependabot[bot]"]
     },
     {
       "name": "depots-sauvages",
@@ -1577,10 +1423,7 @@
       "stars": 0,
       "commits": 76,
       "pullRequests": 102,
-      "contributors": [
-        "lazybird",
-        "elba-octo"
-      ]
+      "contributors": ["lazybird", "elba-octo"]
     },
     {
       "name": "mon-profil-anssi",
@@ -1608,9 +1451,7 @@
       "stars": 2,
       "commits": 72,
       "pullRequests": 0,
-      "contributors": [
-        "sandcha"
-      ]
+      "contributors": ["sandcha"]
     },
     {
       "name": "kube-dev",
@@ -1620,9 +1461,7 @@
       "stars": 0,
       "commits": 70,
       "pullRequests": 0,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "agnostic-ai",
@@ -1632,9 +1471,7 @@
       "stars": 17,
       "commits": 66,
       "pullRequests": 0,
-      "contributors": [
-        "martinratinaud"
-      ]
+      "contributors": ["martinratinaud"]
     },
     {
       "name": "sante-psy",
@@ -1644,11 +1481,7 @@
       "stars": 11,
       "commits": 65,
       "pullRequests": 0,
-      "contributors": [
-        "anaisalt",
-        "dependabot[bot]",
-        "Doniaab"
-      ]
+      "contributors": ["anaisalt", "dependabot[bot]", "Doniaab"]
     },
     {
       "name": "recoco-sync",
@@ -1658,11 +1491,7 @@
       "stars": 0,
       "commits": 64,
       "pullRequests": 0,
-      "contributors": [
-        "alice-telescoop",
-        "etchegom",
-        "dependabot[bot]"
-      ]
+      "contributors": ["alice-telescoop", "etchegom", "dependabot[bot]"]
     },
     {
       "name": "euphrosyne-digilab",
@@ -1672,10 +1501,7 @@
       "stars": 0,
       "commits": 63,
       "pullRequests": 0,
-      "contributors": [
-        "wiwski",
-        "dependabot[bot]"
-      ]
+      "contributors": ["wiwski", "dependabot[bot]"]
     },
     {
       "name": "betamap",
@@ -1685,9 +1511,7 @@
       "stars": 2,
       "commits": 60,
       "pullRequests": 2,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "schema-projet-collectivites-transition-ecologique",
@@ -1697,10 +1521,7 @@
       "stars": 0,
       "commits": 60,
       "pullRequests": 0,
-      "contributors": [
-        "lboiv1",
-        "dxb"
-      ]
+      "contributors": ["lboiv1", "dxb"]
     },
     {
       "name": "poc-communs-projets-levier",
@@ -1710,10 +1531,7 @@
       "stars": 0,
       "commits": 56,
       "pullRequests": 7,
-      "contributors": [
-        "lboiv1",
-        "MatthieuVeillon"
-      ]
+      "contributors": ["lboiv1", "MatthieuVeillon"]
     },
     {
       "name": "msj-public-front",
@@ -1723,10 +1541,7 @@
       "stars": 0,
       "commits": 55,
       "pullRequests": 0,
-      "contributors": [
-        "dependabot[bot]",
-        "damienlethiec"
-      ]
+      "contributors": ["dependabot[bot]", "damienlethiec"]
     },
     {
       "name": "anssi-lab-utilitaires",
@@ -1754,9 +1569,7 @@
       "stars": 2,
       "commits": 53,
       "pullRequests": 0,
-      "contributors": [
-        "Atheane"
-      ]
+      "contributors": ["Atheane"]
     },
     {
       "name": "france-chaleur-urbaine-publicodes",
@@ -1766,11 +1579,7 @@
       "stars": 0,
       "commits": 47,
       "pullRequests": 0,
-      "contributors": [
-        "remi-beaulieu",
-        "totakoko",
-        "martinratinaud"
-      ]
+      "contributors": ["remi-beaulieu", "totakoko", "martinratinaud"]
     },
     {
       "name": "lab-anssi-lib",
@@ -1798,9 +1607,7 @@
       "stars": 1,
       "commits": 46,
       "pullRequests": 14,
-      "contributors": [
-        "lutangar"
-      ]
+      "contributors": ["lutangar"]
     },
     {
       "name": "aide-a-just",
@@ -1810,10 +1617,7 @@
       "stars": 0,
       "commits": 46,
       "pullRequests": 0,
-      "contributors": [
-        "MrJimmyChevallier",
-        "fxmontigny"
-      ]
+      "contributors": ["MrJimmyChevallier", "fxmontigny"]
     },
     {
       "name": "classifia",
@@ -1823,10 +1627,7 @@
       "stars": 1,
       "commits": 45,
       "pullRequests": 0,
-      "contributors": [
-        "ThomasDos",
-        "renovate[bot]"
-      ]
+      "contributors": ["ThomasDos", "renovate[bot]"]
     },
     {
       "name": "doctorat-gouv",
@@ -1836,9 +1637,7 @@
       "stars": 1,
       "commits": 45,
       "pullRequests": 0,
-      "contributors": [
-        "mohamed-beta-dev"
-      ]
+      "contributors": ["mohamed-beta-dev"]
     },
     {
       "name": "mon-service-securise-journal",
@@ -1864,9 +1663,7 @@
       "stars": 26,
       "commits": 44,
       "pullRequests": 2,
-      "contributors": [
-        "sneko"
-      ]
+      "contributors": ["sneko"]
     },
     {
       "name": "dsfr-form-builder",
@@ -1929,12 +1726,7 @@
       "stars": 2,
       "commits": 36,
       "pullRequests": 0,
-      "contributors": [
-        "ikarius",
-        "sblondon",
-        "emillumine",
-        "FBullier"
-      ]
+      "contributors": ["ikarius", "sblondon", "emillumine", "FBullier"]
     },
     {
       "name": "multi-schema-postgres-etl",
@@ -1959,12 +1751,7 @@
       "stars": 8,
       "commits": 33,
       "pullRequests": 0,
-      "contributors": [
-        "vincentporte",
-        "Atheane",
-        "ouladhima",
-        "jmaupetit"
-      ]
+      "contributors": ["vincentporte", "Atheane", "ouladhima", "jmaupetit"]
     },
     {
       "name": "aplypro-mock-data",
@@ -1974,11 +1761,7 @@
       "stars": 1,
       "commits": 31,
       "pullRequests": 0,
-      "contributors": [
-        "pskl",
-        "dependabot[bot]",
-        "tnicolas1"
-      ]
+      "contributors": ["pskl", "dependabot[bot]", "tnicolas1"]
     },
     {
       "name": "grist-cron-grist-to-brevo",
@@ -1988,11 +1771,7 @@
       "stars": 0,
       "commits": 31,
       "pullRequests": 9,
-      "contributors": [
-        "fflorent",
-        "hexaltation",
-        "ohemelaar"
-      ]
+      "contributors": ["fflorent", "hexaltation", "ohemelaar"]
     },
     {
       "name": "lab-anssi-admin",
@@ -2002,12 +1781,7 @@
       "stars": 0,
       "commits": 26,
       "pullRequests": 17,
-      "contributors": [
-        "bbougon",
-        "Pamplemousse",
-        "pgrange",
-        "ThibaudMZN"
-      ]
+      "contributors": ["bbougon", "Pamplemousse", "pgrange", "ThibaudMZN"]
     },
     {
       "name": "sillon",
@@ -2034,11 +1808,7 @@
       "stars": 1,
       "commits": 25,
       "pullRequests": 5,
-      "contributors": [
-        "freesteph",
-        "nicolasleger",
-        "goulvench"
-      ]
+      "contributors": ["freesteph", "nicolasleger", "goulvench"]
     },
     {
       "name": "a11y-generateur-declaration",
@@ -2048,11 +1818,7 @@
       "stars": 3,
       "commits": 24,
       "pullRequests": 0,
-      "contributors": [
-        "astranchet",
-        "Mintoo200",
-        "AntoineGirard"
-      ]
+      "contributors": ["astranchet", "Mintoo200", "AntoineGirard"]
     },
     {
       "name": "aides-jeunes-stats-recorder",
@@ -2062,11 +1828,7 @@
       "stars": 0,
       "commits": 23,
       "pullRequests": 60,
-      "contributors": [
-        "Shamzic",
-        "dependabot[bot]",
-        "jenovateurs"
-      ]
+      "contributors": ["Shamzic", "dependabot[bot]", "jenovateurs"]
     },
     {
       "name": "publicodes-voiture",
@@ -2076,9 +1838,7 @@
       "stars": 0,
       "commits": 23,
       "pullRequests": 0,
-      "contributors": [
-        "EmileRolley"
-      ]
+      "contributors": ["EmileRolley"]
     },
     {
       "name": "agir-voiture",
@@ -2088,9 +1848,7 @@
       "stars": 0,
       "commits": 22,
       "pullRequests": 0,
-      "contributors": [
-        "EmileRolley"
-      ]
+      "contributors": ["EmileRolley"]
     },
     {
       "name": "maestro-wordpress",
@@ -2100,9 +1858,7 @@
       "stars": 0,
       "commits": 22,
       "pullRequests": 0,
-      "contributors": [
-        "jrivals"
-      ]
+      "contributors": ["jrivals"]
     },
     {
       "name": "datas-a-just",
@@ -2112,9 +1868,7 @@
       "stars": 0,
       "commits": 22,
       "pullRequests": 0,
-      "contributors": [
-        "fxmontigny"
-      ]
+      "contributors": ["fxmontigny"]
     },
     {
       "name": "django-grist-loader",
@@ -2124,9 +1878,7 @@
       "stars": 1,
       "commits": 21,
       "pullRequests": 9,
-      "contributors": [
-        "David-Guillot"
-      ]
+      "contributors": ["David-Guillot"]
     },
     {
       "name": "oauth2-deploy-demo",
@@ -2136,9 +1888,7 @@
       "stars": 0,
       "commits": 21,
       "pullRequests": 0,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "mailpit-buildpack",
@@ -2148,9 +1898,7 @@
       "stars": 0,
       "commits": 20,
       "pullRequests": 0,
-      "contributors": [
-        "benjlevesque"
-      ]
+      "contributors": ["benjlevesque"]
     },
     {
       "name": "api.gouv.fr",
@@ -2176,9 +1924,7 @@
       "stars": 0,
       "commits": 19,
       "pullRequests": 7,
-      "contributors": [
-        "WoWo79"
-      ]
+      "contributors": ["WoWo79"]
     },
     {
       "name": "api_gouv_swaggers",
@@ -2204,9 +1950,7 @@
       "stars": 0,
       "commits": 19,
       "pullRequests": 3,
-      "contributors": [
-        "LucasCharrier"
-      ]
+      "contributors": ["LucasCharrier"]
     },
     {
       "name": "activerecord_defer_persist",
@@ -2216,9 +1960,7 @@
       "stars": 1,
       "commits": 19,
       "pullRequests": 0,
-      "contributors": [
-        "adipasquale"
-      ]
+      "contributors": ["adipasquale"]
     },
     {
       "name": "mes-aides-analytics",
@@ -2228,11 +1970,7 @@
       "stars": 1,
       "commits": 18,
       "pullRequests": 72,
-      "contributors": [
-        "jenovateurs",
-        "dependabot[bot]",
-        "Shamzic"
-      ]
+      "contributors": ["jenovateurs", "dependabot[bot]", "Shamzic"]
     },
     {
       "name": "omniauth-proconnect",
@@ -2242,9 +1980,7 @@
       "stars": 1,
       "commits": 18,
       "pullRequests": 2,
-      "contributors": [
-        "freesteph"
-      ]
+      "contributors": ["freesteph"]
     },
     {
       "name": "SCDL-subventions-DataSubvention",
@@ -2254,9 +1990,7 @@
       "stars": 0,
       "commits": 17,
       "pullRequests": 0,
-      "contributors": [
-        "gcarra"
-      ]
+      "contributors": ["gcarra"]
     },
     {
       "name": "dsfr-assets",
@@ -2266,9 +2000,7 @@
       "stars": 1,
       "commits": 17,
       "pullRequests": 1,
-      "contributors": [
-        "freesteph"
-      ]
+      "contributors": ["freesteph"]
     },
     {
       "name": "Resultats-Elections-FPT",
@@ -2278,9 +2010,7 @@
       "stars": 0,
       "commits": 17,
       "pullRequests": 0,
-      "contributors": [
-        "Charline-L"
-      ]
+      "contributors": ["Charline-L"]
     },
     {
       "name": "awesome-betagouv",
@@ -2290,12 +2020,7 @@
       "stars": 23,
       "commits": 15,
       "pullRequests": 14,
-      "contributors": [
-        "revolunet",
-        "raphodn",
-        "lsagetlethias",
-        "MichaelBitard"
-      ]
+      "contributors": ["revolunet", "raphodn", "lsagetlethias", "MichaelBitard"]
     },
     {
       "name": "1jeune1arbre",
@@ -2305,10 +2030,7 @@
       "stars": 1,
       "commits": 15,
       "pullRequests": 0,
-      "contributors": [
-        "vinyll",
-        "ctrl-hexa"
-      ]
+      "contributors": ["vinyll", "ctrl-hexa"]
     },
     {
       "name": "docurba-nuxt3",
@@ -2318,11 +2040,7 @@
       "stars": 0,
       "commits": 15,
       "pullRequests": 0,
-      "contributors": [
-        "celine-m-s",
-        "rik",
-        "UngererFabien"
-      ]
+      "contributors": ["celine-m-s", "rik", "UngererFabien"]
     },
     {
       "name": "compte-rendu-vif",
@@ -2332,9 +2050,7 @@
       "stars": 1,
       "commits": 14,
       "pullRequests": 19,
-      "contributors": [
-        "ledouxm"
-      ]
+      "contributors": ["ledouxm"]
     },
     {
       "name": "penpot-dsfr",
@@ -2344,9 +2060,7 @@
       "stars": 2,
       "commits": 14,
       "pullRequests": 0,
-      "contributors": [
-        "sneko"
-      ]
+      "contributors": ["sneko"]
     },
     {
       "name": "commits",
@@ -2356,9 +2070,7 @@
       "stars": 1,
       "commits": 14,
       "pullRequests": 0,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "grist-grav",
@@ -2368,10 +2080,7 @@
       "stars": 0,
       "commits": 14,
       "pullRequests": 5,
-      "contributors": [
-        "ohemelaar",
-        "fflorent"
-      ]
+      "contributors": ["ohemelaar", "fflorent"]
     },
     {
       "name": "betagouv-cucumber-steps",
@@ -2381,10 +2090,7 @@
       "stars": 1,
       "commits": 14,
       "pullRequests": 2,
-      "contributors": [
-        "freesteph",
-        "Josyann"
-      ]
+      "contributors": ["freesteph", "Josyann"]
     },
     {
       "name": "atelier-formulaires-a11y",
@@ -2394,9 +2100,7 @@
       "stars": 0,
       "commits": 14,
       "pullRequests": 0,
-      "contributors": [
-        "Mintoo200"
-      ]
+      "contributors": ["Mintoo200"]
     },
     {
       "name": "blog.beta.gouv.fr",
@@ -2406,10 +2110,7 @@
       "stars": 11,
       "commits": 13,
       "pullRequests": 5,
-      "contributors": [
-        "charlottelecuit",
-        "guillett"
-      ]
+      "contributors": ["charlottelecuit", "guillett"]
     },
     {
       "name": "publicodes-decoupage-administratif",
@@ -2419,9 +2120,7 @@
       "stars": 0,
       "commits": 10,
       "pullRequests": 0,
-      "contributors": [
-        "EmileRolley"
-      ]
+      "contributors": ["EmileRolley"]
     },
     {
       "name": "lasuite-guest-guesser",
@@ -2431,9 +2130,7 @@
       "stars": 0,
       "commits": 10,
       "pullRequests": 0,
-      "contributors": [
-        "vviers"
-      ]
+      "contributors": ["vviers"]
     },
     {
       "name": "eclauses",
@@ -2443,9 +2140,7 @@
       "stars": 0,
       "commits": 10,
       "pullRequests": 0,
-      "contributors": [
-        "Thibaud-DT"
-      ]
+      "contributors": ["Thibaud-DT"]
     },
     {
       "name": "aides-jeunes-ops",
@@ -2455,10 +2150,7 @@
       "stars": 0,
       "commits": 9,
       "pullRequests": 26,
-      "contributors": [
-        "Shamzic",
-        "jenovateurs"
-      ]
+      "contributors": ["Shamzic", "jenovateurs"]
     },
     {
       "name": "ansible-pole-api",
@@ -2468,9 +2160,7 @@
       "stars": 0,
       "commits": 9,
       "pullRequests": 0,
-      "contributors": [
-        "am-beta"
-      ]
+      "contributors": ["am-beta"]
     },
     {
       "name": "anssi-nis2-journal",
@@ -2480,11 +2170,7 @@
       "stars": 0,
       "commits": 8,
       "pullRequests": 8,
-      "contributors": [
-        "Pamplemousse",
-        "dependabot[bot]",
-        "CadiChris"
-      ]
+      "contributors": ["Pamplemousse", "dependabot[bot]", "CadiChris"]
     },
     {
       "name": "mastra-beta",
@@ -2494,9 +2180,7 @@
       "stars": 1,
       "commits": 8,
       "pullRequests": 0,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "mon-aide-cyber-journal",
@@ -2506,11 +2190,7 @@
       "stars": 0,
       "commits": 7,
       "pullRequests": 4,
-      "contributors": [
-        "Pamplemousse",
-        "bbougon",
-        "CadiChris"
-      ]
+      "contributors": ["Pamplemousse", "bbougon", "CadiChris"]
     },
     {
       "name": "france-chaleur-urbaine-scalingo-buildpack",
@@ -2520,9 +2200,7 @@
       "stars": 0,
       "commits": 7,
       "pullRequests": 0,
-      "contributors": [
-        "totakoko"
-      ]
+      "contributors": ["totakoko"]
     },
     {
       "name": "anssi-mes-questions-cyber-journal",
@@ -2532,10 +2210,7 @@
       "stars": 0,
       "commits": 7,
       "pullRequests": 0,
-      "contributors": [
-        "Pamplemousse",
-        "ThibaudMZN"
-      ]
+      "contributors": ["Pamplemousse", "ThibaudMZN"]
     },
     {
       "name": "eva-metabase",
@@ -2545,10 +2220,7 @@
       "stars": 0,
       "commits": 6,
       "pullRequests": 0,
-      "contributors": [
-        "etienneCharignon",
-        "Frzk"
-      ]
+      "contributors": ["etienneCharignon", "Frzk"]
     },
     {
       "name": "template-nextjs",
@@ -2558,9 +2230,7 @@
       "stars": 8,
       "commits": 6,
       "pullRequests": 5,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "mes-services-cyber-journal",
@@ -2570,10 +2240,7 @@
       "stars": 2,
       "commits": 6,
       "pullRequests": 2,
-      "contributors": [
-        "Pamplemousse",
-        "ThibaudMZN"
-      ]
+      "contributors": ["Pamplemousse", "ThibaudMZN"]
     },
     {
       "name": "grist-doc-wk-exporter",
@@ -2583,9 +2250,7 @@
       "stars": 0,
       "commits": 6,
       "pullRequests": 2,
-      "contributors": [
-        "ohemelaar"
-      ]
+      "contributors": ["ohemelaar"]
     },
     {
       "name": "euphrosyne-herma",
@@ -2595,9 +2260,7 @@
       "stars": 0,
       "commits": 6,
       "pullRequests": 0,
-      "contributors": [
-        "wiwski"
-      ]
+      "contributors": ["wiwski"]
     },
     {
       "name": "redirections",
@@ -2622,9 +2285,7 @@
       "stars": 10,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "sneko"
-      ]
+      "contributors": ["sneko"]
     },
     {
       "name": "anssi-lab-entretien-technique",
@@ -2634,10 +2295,7 @@
       "stars": 1,
       "commits": 5,
       "pullRequests": 2,
-      "contributors": [
-        "ThibaudMZN",
-        "Pamplemousse"
-      ]
+      "contributors": ["ThibaudMZN", "Pamplemousse"]
     },
     {
       "name": "seves-schemas",
@@ -2647,9 +2305,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "tglatt"
-      ]
+      "contributors": ["tglatt"]
     },
     {
       "name": "chordee-proxy",
@@ -2659,9 +2315,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "guillett"
-      ]
+      "contributors": ["guillett"]
     },
     {
       "name": "Mistral-penal",
@@ -2671,9 +2325,7 @@
       "stars": 2,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "graphein13"
-      ]
+      "contributors": ["graphein13"]
     },
     {
       "name": "omniauth-proconnect-demo",
@@ -2683,9 +2335,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 27,
-      "contributors": [
-        "freesteph"
-      ]
+      "contributors": ["freesteph"]
     },
     {
       "name": "grist-static",
@@ -2695,10 +2345,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "dsagal",
-        "paulfitz"
-      ]
+      "contributors": ["dsagal", "paulfitz"]
     },
     {
       "name": "anssi-demain-specialiste-cyber-journal",
@@ -2708,10 +2355,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "Pamplemousse",
-        "bbougon"
-      ]
+      "contributors": ["Pamplemousse", "bbougon"]
     },
     {
       "name": "2ddoc-parser",
@@ -2721,9 +2365,7 @@
       "stars": 2,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "nicolasSagon"
-      ]
+      "contributors": ["nicolasSagon"]
     },
     {
       "name": "oauth2-proxy-buildpack",
@@ -2733,10 +2375,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "revolunet",
-        "romain-pix-cyber"
-      ]
+      "contributors": ["revolunet", "romain-pix-cyber"]
     },
     {
       "name": "pompidou",
@@ -2746,9 +2385,7 @@
       "stars": 0,
       "commits": 5,
       "pullRequests": 0,
-      "contributors": [
-        "freesteph"
-      ]
+      "contributors": ["freesteph"]
     },
     {
       "name": "help-mattermost-bot",
@@ -2758,10 +2395,7 @@
       "stars": 1,
       "commits": 4,
       "pullRequests": 1,
-      "contributors": [
-        "AmelAlili",
-        "LucasCharrier"
-      ]
+      "contributors": ["AmelAlili", "LucasCharrier"]
     },
     {
       "name": "seves-documentation",
@@ -2771,9 +2405,7 @@
       "stars": 0,
       "commits": 4,
       "pullRequests": 0,
-      "contributors": [
-        "Ash-Crow"
-      ]
+      "contributors": ["Ash-Crow"]
     },
     {
       "name": "braveau-grist-widget",
@@ -2783,11 +2415,7 @@
       "stars": 0,
       "commits": 4,
       "pullRequests": 0,
-      "contributors": [
-        "davidbgk",
-        "SevereOverfl0w",
-        "berhalak"
-      ]
+      "contributors": ["davidbgk", "SevereOverfl0w", "berhalak"]
     },
     {
       "name": "dj-importmap",
@@ -2797,9 +2425,7 @@
       "stars": 4,
       "commits": 4,
       "pullRequests": 0,
-      "contributors": [
-        "christophehenry"
-      ]
+      "contributors": ["christophehenry"]
     },
     {
       "name": "capybara-autodoc",
@@ -2809,9 +2435,7 @@
       "stars": 2,
       "commits": 4,
       "pullRequests": 0,
-      "contributors": [
-        "victormours"
-      ]
+      "contributors": ["victormours"]
     },
     {
       "name": "euphrosyne-tools-infra",
@@ -2821,9 +2445,7 @@
       "stars": 0,
       "commits": 3,
       "pullRequests": 0,
-      "contributors": [
-        "wiwski"
-      ]
+      "contributors": ["wiwski"]
     },
     {
       "name": "pentesting-simulator",
@@ -2833,9 +2455,7 @@
       "stars": 2,
       "commits": 3,
       "pullRequests": 0,
-      "contributors": [
-        "BenoitSerrano"
-      ]
+      "contributors": ["BenoitSerrano"]
     },
     {
       "name": "signalconso-siret-extractor",
@@ -2845,9 +2465,7 @@
       "stars": 2,
       "commits": 3,
       "pullRequests": 3,
-      "contributors": [
-        "charlescd"
-      ]
+      "contributors": ["charlescd"]
     },
     {
       "name": "sentry-mattermost",
@@ -2857,10 +2475,7 @@
       "stars": 1,
       "commits": 3,
       "pullRequests": 0,
-      "contributors": [
-        "MatthieuVeillon",
-        "revolunet"
-      ]
+      "contributors": ["MatthieuVeillon", "revolunet"]
     },
     {
       "name": "archeologia-pipeline",
@@ -2870,9 +2485,7 @@
       "stars": 0,
       "commits": 3,
       "pullRequests": 0,
-      "contributors": [
-        "ValentinVieux"
-      ]
+      "contributors": ["ValentinVieux"]
     },
     {
       "name": "slack-ovh",
@@ -2882,10 +2495,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 1,
-      "contributors": [
-        "revolunet",
-        "MathieuFV"
-      ]
+      "contributors": ["revolunet", "MathieuFV"]
     },
     {
       "name": "pop",
@@ -2895,10 +2505,7 @@
       "stars": 17,
       "commits": 2,
       "pullRequests": 1,
-      "contributors": [
-        "nedbaldessin",
-        "johnoppenheimer"
-      ]
+      "contributors": ["nedbaldessin", "johnoppenheimer"]
     },
     {
       "name": "aides-jeunes-files",
@@ -2908,10 +2515,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 1,
-      "contributors": [
-        "Shamzic",
-        "yasmine-glitch"
-      ]
+      "contributors": ["Shamzic", "yasmine-glitch"]
     },
     {
       "name": "agir.github.io",
@@ -2921,9 +2525,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 0,
-      "contributors": [
-        "Matteo-OCTO"
-      ]
+      "contributors": ["Matteo-OCTO"]
     },
     {
       "name": "agir-mesaidesvelo",
@@ -2933,9 +2535,7 @@
       "stars": 1,
       "commits": 2,
       "pullRequests": 0,
-      "contributors": [
-        "EmileRolley"
-      ]
+      "contributors": ["EmileRolley"]
     },
     {
       "name": "mon-devis-sans-oublis",
@@ -2945,9 +2545,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 0,
-      "contributors": [
-        "freesteph"
-      ]
+      "contributors": ["freesteph"]
     },
     {
       "name": "anssi-tutelles",
@@ -2957,10 +2555,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 0,
-      "contributors": [
-        "pgrange",
-        "pgrange-lab"
-      ]
+      "contributors": ["pgrange", "pgrange-lab"]
     },
     {
       "name": "publicodes-entreprise-innovation",
@@ -2970,9 +2565,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 0,
-      "contributors": [
-        "ShallowRed"
-      ]
+      "contributors": ["ShallowRed"]
     },
     {
       "name": "assistant-declaration-metabase-scalingo",
@@ -2982,9 +2575,7 @@
       "stars": 0,
       "commits": 2,
       "pullRequests": 0,
-      "contributors": [
-        "Frzk"
-      ]
+      "contributors": ["Frzk"]
     },
     {
       "name": "monstage",
@@ -2994,9 +2585,7 @@
       "stars": 3,
       "commits": 1,
       "pullRequests": 1,
-      "contributors": [
-        "fitchMitch"
-      ]
+      "contributors": ["fitchMitch"]
     },
     {
       "name": "matomo-scalingo-deploy",
@@ -3006,9 +2595,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 2,
-      "contributors": [
-        "LucasCharrier"
-      ]
+      "contributors": ["LucasCharrier"]
     },
     {
       "name": "delta-v",
@@ -3018,9 +2605,7 @@
       "stars": 2,
       "commits": 1,
       "pullRequests": 1,
-      "contributors": [
-        "farid1111"
-      ]
+      "contributors": ["farid1111"]
     },
     {
       "name": "signalement-entreprise",
@@ -3030,9 +2615,7 @@
       "stars": 1,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "ssedoudbgouv"
-      ]
+      "contributors": ["ssedoudbgouv"]
     },
     {
       "name": "signalconso-statsrefill",
@@ -3042,9 +2625,7 @@
       "stars": 1,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "charlescd"
-      ]
+      "contributors": ["charlescd"]
     },
     {
       "name": "api-particulier-demonstrateur",
@@ -3054,9 +2635,7 @@
       "stars": 4,
       "commits": 1,
       "pullRequests": 7,
-      "contributors": [
-        "Samuelfaure"
-      ]
+      "contributors": ["Samuelfaure"]
     },
     {
       "name": "matomo-to-pg",
@@ -3066,9 +2645,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "revolunet"
-      ]
+      "contributors": ["revolunet"]
     },
     {
       "name": "hackaton-ds-exploration",
@@ -3078,9 +2655,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "JeSuisUnCaillou"
-      ]
+      "contributors": ["JeSuisUnCaillou"]
     },
     {
       "name": "schema-aide",
@@ -3090,9 +2665,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "lutangar"
-      ]
+      "contributors": ["lutangar"]
     },
     {
       "name": "publicodes-aides-voiture",
@@ -3102,9 +2675,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "EmileRolley"
-      ]
+      "contributors": ["EmileRolley"]
     },
     {
       "name": "lab-anssi-anti-typosquatting",
@@ -3114,9 +2685,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "ThibaudMZN"
-      ]
+      "contributors": ["ThibaudMZN"]
     },
     {
       "name": "document-ia-grafana-loki",
@@ -3126,9 +2695,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "nicolasSagon"
-      ]
+      "contributors": ["nicolasSagon"]
     },
     {
       "name": "datagouv-visualizations",
@@ -3138,9 +2705,7 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "geoffreyaldebert"
-      ]
+      "contributors": ["geoffreyaldebert"]
     },
     {
       "name": "base-agrement-back",
@@ -3150,1077 +2715,11 @@
       "stars": 0,
       "commits": 1,
       "pullRequests": 0,
-      "contributors": [
-        "dxb"
-      ]
+      "contributors": ["dxb"]
     }
   ],
-  "securityTopics": [
-    {
-      "title": "SQL Injection Potential",
-      "description": "The commit message 'fix(Imports): corrige des erreurs de formats des cellules d'Excel et autorise les majuscule dans le nom de colonnes' suggests potential input validation issues when processing Excel files.  Improper handling of cell formats or column names could lead to SQL injection if the data is used in database queries without proper sanitization.",
-      "severity": "medium",
-      "relatedRepos": [
-        "ma-cantine",
-        "mon-service-securise"
-      ]
-    },
-    {
-      "title": "Dependency Vulnerabilities",
-      "description": "Several commits mention updating dependencies (e.g., 'fix(app): upgrade React / Next (CVE-2025-66478)', 'chore(staging): release 2025.45.1').  While updating dependencies is good practice, it's crucial to ensure the updates don't introduce new vulnerabilities. The CVE reference specifically indicates a security fix.",
-      "severity": "medium",
-      "relatedRepos": [
-        "api-engagement",
-        "euphrosyne",
-        "jeveuxaider-back",
-        "signalconso-website",
-        "collective-objets",
-        "msj-public-back",
-        "eva-metabase",
-        "aplypro",
-        "mon-aide-cyber",
-        "anssi-nis2",
-        "espace-membre-next",
-        "dsfr-form-builder",
-        "schema-projet-collectivites-transition-ecologique",
-        "lab-anssi-ui-kit",
-        "sites-faciles-spe",
-        "recoco-sync",
-        "omniauth-proconnect",
-        "OTP-DS-to-Grist"
-      ]
-    },
-    {
-      "title": "Broken Authentication/Session Management",
-      "description": "The commit 'fix(Utilisateurs): Brevo: ne pas tenter de synchroniser le champ email vu qu'il est déjà connu par Brevo' indicates a potential issue with user authentication or session management.  Attempting to re-synchronize email addresses could lead to account takeover or other authentication-related vulnerabilities.",
-      "severity": "medium",
-      "relatedRepos": [
-        "ma-cantine"
-      ]
-    },
-    {
-      "title": "Sensitive Data Exposure",
-      "description": "The commit 'feat(Utilisateurs): stocker toutes les nuits des données calculées en lien avec les cantines gérées' suggests storing potentially sensitive data.  Proper encryption and access controls are essential to prevent unauthorized access.",
-      "severity": "medium",
-      "relatedRepos": [
-        "ma-cantine",
-        "mon-aide-cyber"
-      ]
-    },
-    {
-      "title": "Cross-Site Scripting (XSS)",
-      "description": "The commit 'fix(Imports): Achats: rendre le champ caracteristiques obligatoire' and similar commits related to input validation in imports could potentially be vulnerable to XSS if user-supplied data is not properly sanitized before being displayed or used in the application.",
-      "severity": "low",
-      "relatedRepos": [
-        "ma-cantine"
-      ]
-    },
-    {
-      "title": "Security Misconfiguration",
-      "description": "The commit 'chore(CI): permet à la variable GIT_BRANCH d'être une config d'environnement' suggests a change in CI/CD configuration. Incorrectly configured CI/CD pipelines can lead to security misconfigurations, such as exposing sensitive credentials or allowing unauthorized code deployments.",
-      "severity": "medium",
-      "relatedRepos": [
-        "ma-cantine",
-        "service-national-universel",
-        "mon-aide-cyber",
-        "anssi-nis2",
-        "dashlord-operateur",
-        "msj-public-back",
-        "seves-documentation",
-        "OTP-DS-to-Grist"
-      ]
-    },
-    {
-      "title": "API Security",
-      "description": "Multiple commits related to API changes (e.g., 'feat(api): add mission compensation ability', 'refactor(api): migrate MissionEvent models to postgres') require careful review to ensure proper authentication, authorization, and input validation are implemented to prevent API-related vulnerabilities.",
-      "severity": "medium",
-      "relatedRepos": [
-        "api-engagement",
-        "service-national-universel",
-        "dashlord-operateur",
-        "mon-aide-cyber",
-        "diagbruit.beta.gouv.fr",
-        "aides-simplifiees-app",
-        "document-ia"
-      ]
-    },
-    {
-      "title": "Insecure Deserialization",
-      "description": "The commit 'fix(Imports): Cantines: supprime le type \"Cuisine centrale et site\"' and other import related commits could potentially introduce insecure deserialization vulnerabilities if the imported data is not properly validated and sanitized.",
-      "severity": "low",
-      "relatedRepos": [
-        "ma-cantine"
-      ]
-    },
-    {
-      "title": "CI/CD Pipeline Security",
-      "description": "Commits like 'fix(CI): corrige les tests en erreur de l'import diagnostic' and 'chore(CI): évite d'avoir en parallèle plusieurs Github Actions de test pour la même PR' highlight the importance of securing the CI/CD pipeline.  Compromised pipelines can lead to malicious code being deployed.",
-      "severity": "medium",
-      "relatedRepos": [
-        "ma-cantine",
-        "api-engagement",
-        "jeveuxaider-back",
-        "anssi-nis2",
-        "espace-membre-next",
-        "dsfr-assets",
-        "acces-cible",
-        "publicodes-decoupage-administratif",
-        "bhasile",
-        "tous-a-bord-data",
-        "lab-anssi-lib",
-        "OTP-DS-to-Grist",
-        "document-ia",
-        "dsfr-kit"
-      ]
-    },
-    {
-      "title": "Secrets Management",
-      "description": "The commit 'chore(jobs): remove link to JVA Linkedin page for every mission' could be related to managing secrets or sensitive information.  Proper secrets management practices are crucial to prevent unauthorized access.",
-      "severity": "medium",
-      "relatedRepos": [
-        "api-engagement",
-        "signalconso-website",
-        "mon-aide-cyber",
-        "eva-metabase",
-        "dsfr-assets",
-        "aides-calculatrice-back",
-        "document-ia",
-        "oauth2-proxy-buildpack"
-      ]
-    },
-    {
-      "title": "Cross-Site Scripting (XSS) Prevention",
-      "description": "The commit message 'fix(podcast) secure link' suggests a potential XSS vulnerability was addressed by securing a link.  This indicates a previous risk of injecting malicious scripts through the link.",
-      "severity": "medium",
-      "relatedRepos": [
-        "sante-psy"
-      ]
-    },
-    {
-      "title": "Input Validation & Sanitization",
-      "description": "The commit message 'fix(api): 1024 - Correction de la validation de date' indicates date validation was implemented.  Proper input validation is crucial to prevent various attacks.",
-      "severity": "medium",
-      "relatedRepos": [
-        "service-national-universel",
-        "portail-rse",
-        "mon-aide-cyber",
-        "standards",
-        "document-ia"
-      ]
-    },
-    {
-      "title": "Broken Access Control",
-      "description": "The commit message 'fix(admin): 1145 fix status update permissions for responsible and su…' suggests a fix for access control issues related to status updates. This indicates a potential vulnerability where unauthorized users could modify status.",
-      "severity": "medium",
-      "relatedRepos": [
-        "service-national-universel",
-        "seves"
-      ]
-    },
-    {
-      "title": "HTTPS / TLS Configuration",
-      "description": "The commit message 'fix: update button styles for disabled state and simplify alert creation logic' and related commits suggest a potential XSS vulnerability was addressed by securing a link.  This indicates a previous risk of injecting malicious scripts through the link.",
-      "severity": "low",
-      "relatedRepos": [
-        "jeveuxaider-front",
-        "portail-rse",
-        "maestro-wordpress",
-        "OTP-DS-to-Grist"
-      ]
-    },
-    {
-      "title": "Authentication Token Security (JWT/OAuth)",
-      "description": "The commit message 'Valide la payload de la désinscription de l'infolettre' and 'Valide la payload de la recherche d'organisations' indicates validation of authentication payloads. This is important for preventing attacks related to compromised tokens.",
-      "severity": "medium",
-      "relatedRepos": [
-        "mon-service-securise",
-        "grist-help",
-        "document-ia"
-      ]
-    },
-    {
-      "title": "File Upload Security",
-      "description": "The commit message 'feat(admin): 1016 - Permettre de télécharger les exports légers directement depuis la plateforme admin' indicates file upload functionality. It's crucial to implement proper file validation and sanitization to prevent malicious file uploads.",
-      "severity": "medium",
-      "relatedRepos": [
-        "service-national-universel",
-        "mon-aide-cyber",
-        "dsfr-form-builder"
-      ]
-    },
-    {
-      "title": "Broken Authentication",
-      "description": "Commits related to ProConnect integration and email authentication in `espace-membre-next` address potential authentication issues.",
-      "severity": "medium",
-      "relatedRepos": [
-        "espace-membre-next",
-        "sites-faciles-spe"
-      ]
-    },
-    {
-      "title": "Insufficient Logging & Monitoring",
-      "description": "Commits adding logs and improving monitoring in `msj-public-back` and `mon-aide-cyber` address insufficient logging and monitoring.",
-      "severity": "low",
-      "relatedRepos": [
-        "msj-public-back",
-        "mon-aide-cyber"
-      ]
-    },
-    {
-      "title": "React Vulnerability",
-      "description": "Fixes a vulnerability in the React library (react-dom).",
-      "severity": "high",
-      "relatedRepos": [
-        "infomedicament"
-      ]
-    },
-    {
-      "title": "Potential XSS - Event Handlers in Client Components",
-      "description": "Addresses an issue where event handlers were incorrectly passed to Client Components, potentially leading to XSS vulnerabilities.",
-      "severity": "high",
-      "relatedRepos": [
-        "infomedicament"
-      ]
-    },
-    {
-      "title": "Dependency Vulnerability - npm Packages",
-      "description": "Multiple commits address dependency vulnerabilities by updating npm packages (e.g., pg, nodemailer, vite, playwright).",
-      "severity": "medium",
-      "relatedRepos": [
-        "monstagedeseconde",
-        "comparia",
-        "hackaton-ds-exploration",
-        "SCDL-subventions-DataSubvention"
-      ]
-    },
-    {
-      "title": "Sentry Integration",
-      "description": "Adds Sentry integration for error tracking and monitoring.",
-      "severity": "medium",
-      "relatedRepos": [
-        "anssi-lab-entretien-technique",
-        "pass-sport"
-      ]
-    },
-    {
-      "title": "SSRF Potential - URL Handling",
-      "description": "Disables aseptisation of URLs, potentially introducing SSRF vulnerabilities if not handled carefully.",
-      "severity": "medium",
-      "relatedRepos": [
-        "anssi-lab-utilitaires"
-      ]
-    },
-    {
-      "title": "API Security - Rate Limiting",
-      "description": "Adds throttling to the LVAO API to prevent abuse.",
-      "severity": "medium",
-      "relatedRepos": [
-        "agir-ref"
-      ]
-    },
-    {
-      "title": "Authentication/Authorization - OIDC",
-      "description": "Work on implementing and securing OIDC authentication.",
-      "severity": "medium",
-      "relatedRepos": [
-        "zacharie"
-      ]
-    },
-    {
-      "title": "Data Exposure - CSV Export",
-      "description": "Fixes related to CSV export functionality, potentially addressing sensitive data exposure if not handled correctly.",
-      "severity": "medium",
-      "relatedRepos": [
-        "SCDL-subventions-DataSubvention"
-      ]
-    },
-    {
-      "title": "Input Validation - File Uploads",
-      "description": "Fixes related to file uploads and data validation, potentially mitigating risks associated with malicious file uploads.",
-      "severity": "medium",
-      "relatedRepos": [
-        "pitchou"
-      ]
-    },
-    {
-      "title": "Security Misconfiguration - Default Settings",
-      "description": "Changes default settings (e.g., port) to improve security.",
-      "severity": "low",
-      "relatedRepos": [
-        "agir-voiture"
-      ]
-    },
-    {
-      "title": "CI/CD Pipeline Security - Git Checks",
-      "description": "Disables git checks in the CI/CD pipeline to address potential issues.",
-      "severity": "low",
-      "relatedRepos": [
-        "publicodes-voiture"
-      ]
-    },
-    {
-      "title": "HTTPS/TLS Configuration",
-      "description": "Fixes related to HTTPS and TLS configuration.",
-      "severity": "low",
-      "relatedRepos": [
-        "zacharie"
-      ]
-    },
-    {
-      "title": "SQL Injection",
-      "description": "Fixes related to SQL queries, potentially mitigating SQL injection vulnerabilities.",
-      "severity": "medium",
-      "relatedRepos": [
-        "agir-ref"
-      ]
-    },
-    {
-      "title": "Potential Secret Exposure (anssi-recommandations-cyber)",
-      "description": "Migrated from node-talisman to gitleaks for secret scanning. This suggests a proactive effort to identify and prevent the accidental commit of secrets to the repository.",
-      "severity": "medium",
-      "relatedRepos": [
-        "anssi-recommandations-cyber"
-      ]
-    },
-    {
-      "title": "Potential XSS (sites-facables)",
-      "description": "Fixes related to rendering serializable images and removing old comments could address potential XSS vulnerabilities if user-supplied data isn't properly sanitized.",
-      "severity": "low",
-      "relatedRepos": [
-        "sites-faciles"
-      ]
-    },
-    {
-      "title": "Potential CSRF (kube-dev)",
-      "description": "Changes related to CORS configuration and enabling XAuthRequest and Authorization Header could be related to CSRF protection. Incorrect configuration could introduce vulnerabilities.",
-      "severity": "medium",
-      "relatedRepos": [
-        "kube-dev"
-      ]
-    },
-    {
-      "title": "Potential SQL Injection (gestion-des-subventions-locales)",
-      "description": "Fix: renames \"dossier\" into \"session\" + typo in sql.  This suggests a potential SQL injection vulnerability was addressed, or a typo could have led to one.",
-      "severity": "medium",
-      "relatedRepos": [
-        "gestion-des-subventions-locales"
-      ]
-    },
-    {
-      "title": "Potential Broken Access Control (gestion-des-subventions-locales)",
-      "description": "Grant access to member using domain object. This change could introduce or fix access control issues if not implemented correctly.",
-      "severity": "medium",
-      "relatedRepos": [
-        "gestion-des-subventions-locales"
-      ]
-    },
-    {
-      "title": "Potential Sensitive Data Exposure (anssi-portail)",
-      "description": "Multiple commits related to encrypting interactions and data in the database, as well as adding a script to re-hash data, indicate a focus on protecting sensitive user data.  This suggests a previous or potential risk of data exposure.",
-      "severity": "high",
-      "relatedRepos": [
-        "anssi-portail"
-      ]
-    },
-    {
-      "title": "Potential Authentication/Authorization Issues (mle-back)",
-      "description": "Multiple commits related to OAuth, JWT, user authentication, and access control suggest ongoing efforts to secure the API and user data.  Fixes and changes in these areas could address vulnerabilities.",
-      "severity": "medium",
-      "relatedRepos": [
-        "mle-back"
-      ]
-    },
-    {
-      "title": "Dependency Vulnerabilities (multiple repos)",
-      "description": "Numerous commits across multiple repositories (aides-agri, schema-aide, mle-front, etc.) explicitly bump dependencies.  This is a good practice to address known vulnerabilities in third-party libraries.",
-      "severity": "low",
-      "relatedRepos": [
-        "aides-agri",
-        "schema-aide",
-        "mle-front",
-        "decoupage-administratif-gem",
-        "mon-indemnisation-justice",
-        "mon-profil-anssi",
-        "assistant-declaration"
-      ]
-    },
-    {
-      "title": "Potential Security Misconfiguration (kube-dev)",
-      "description": "Changes to CORS configuration and reverse proxy settings could introduce security misconfigurations if not properly implemented.",
-      "severity": "medium",
-      "relatedRepos": [
-        "kube-dev"
-      ]
-    },
-    {
-      "title": "Potential Input Validation Issues (sites-faciles)",
-      "description": "Fixes related to prefilled links and image rendering could address potential input validation issues if user-supplied data isn't properly sanitized.",
-      "severity": "low",
-      "relatedRepos": [
-        "sites-faciles"
-      ]
-    },
-    {
-      "title": "Potential File Upload Security Issues (fondation)",
-      "description": "feat(FON-131): adds file sanitizers. This suggests a potential risk of malicious file uploads was addressed.",
-      "severity": "medium",
-      "relatedRepos": [
-        "fondation"
-      ]
-    },
-    {
-      "title": "Potential Session Management Issues (fondation)",
-      "description": "fix(FON-28): members non affected sessions. This suggests a potential issue with session management was addressed.",
-      "severity": "medium",
-      "relatedRepos": [
-        "fondation"
-      ]
-    },
-    {
-      "title": "Rate Limiting & Brute Force Protection",
-      "description": "The `diagbruit.beta.gouv.fr` repository has commits related to rate limiting ('fix: add a new env variable for test env').",
-      "severity": "low",
-      "relatedRepos": [
-        "diagbruit.beta.gouv.fr"
-      ]
-    },
-    {
-      "title": "XSS Prevention",
-      "description": "Commit 'fix(Sécurité): activer ignore-scripts (protection Shai-Hulud)' likely addresses a potential XSS vulnerability by disabling script execution in certain contexts.",
-      "severity": "medium",
-      "relatedRepos": [
-        "OTP-DS-to-Grist"
-      ]
-    },
-    {
-      "title": "Potential SSRF",
-      "description": "The commit 'feat: add webhook secret variable' in 'oauth2-deploy-demo' could potentially introduce SSRF if the webhook URL is not properly validated.",
-      "severity": "low",
-      "relatedRepos": [
-        "oauth2-deploy-demo"
-      ]
-    },
-    {
-      "title": "Potential SQL Injection",
-      "description": "The commit 'fix: nom de naissance et nom d'usage dans avis d'imposition schema' in 'document-ia' could potentially introduce SQL injection if the schema is not properly validated.",
-      "severity": "low",
-      "relatedRepos": [
-        "document-ia"
-      ]
-    }
-  ],
-  "features": [
-    {
-      "title": "Data & Analytics Pipeline",
-      "description": "Significant work on building and refining the data analytics pipeline, including new pipelines for various data sources (campaigns, publishers, organizations), incremental synchronization, and migration to more efficient data models.  Includes improvements to data quality, performance, and integration with Metabase.",
-      "category": "Analytics & Data Export",
-      "relatedRepos": [
-        "api-engagement",
-        "datapass"
-      ]
-    },
-    {
-      "title": "User Interface & Experience Improvements",
-      "description": "Numerous UI/UX improvements across multiple applications, including updates to forms (using DSFR components), navigation, accessibility, and visual design. Focus on improving the user experience for both administrators and end-users.",
-      "category": "Responsive Design & Accessibility (a11y)",
-      "relatedRepos": [
-        "a11y-generateur-declaration",
-        "ma-cantine",
-        "rdv-service-public",
-        "monstage",
-        "eva",
-        "mon-entreprise",
-        "datapass"
-      ]
-    },
-    {
-      "title": "Télédéclaration (Digital Declaration) Enhancements",
-      "description": "Extensive work on the Télédéclaration feature, including new endpoints, improved data handling, UI updates, and integration with the diagnostic process.  Focus on streamlining the declaration process and improving data accuracy.",
-      "category": "Feature Flags",
-      "relatedRepos": [
-        "ma-cantine"
-      ]
-    },
-    {
-      "title": "Imports & Data Validation",
-      "description": "Improvements to data import functionality, including integration with Validata for data validation, handling of various file formats (Excel), and schema updates. Focus on ensuring data quality and preventing errors during import.",
-      "category": "Data Import & Bulk Operations",
-      "relatedRepos": [
-        "ma-cantine"
-      ]
-    },
-    {
-      "title": "Security & Infrastructure",
-      "description": "Security enhancements including dependency updates, disabling unused features, and improving authentication and authorization mechanisms.  Also includes infrastructure updates like migrating to newer versions of Ruby and Rails, and improving CI/CD pipelines.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "datapass",
-        "rdv-service-public",
-        "ma-cantine"
-      ]
-    },
-    {
-      "title": "API Development & Refactoring",
-      "description": "Significant API development and refactoring efforts, including migrating models to service layers, improving endpoint performance, and adding new API endpoints for various features.  Focus on improving API scalability and maintainability.",
-      "category": "API Endpoints (REST/GraphQL)",
-      "relatedRepos": [
-        "api-engagement",
-        "datapass"
-      ]
-    },
-    {
-      "title": "Documentation & Maintenance",
-      "description": "Updates to documentation, including API documentation, README files, and comments.  Also includes general maintenance tasks such as dependency updates and code cleanup.",
-      "category": "Documentation & API Docs",
-      "relatedRepos": [
-        "doc.incubateur.net-communaute",
-        "datapass"
-      ]
-    },
-    {
-      "title": "Open Data & Integrations",
-      "description": "Work on exposing data through open data APIs, integrating with external services (Brevo, Gitbook), and improving data sharing capabilities.",
-      "category": "Third-Party Integrations",
-      "relatedRepos": [
-        "ma-cantine",
-        "datapass"
-      ]
-    },
-    {
-      "title": "API & Backend Development",
-      "description": "Significant work on API endpoints, data handling, and backend logic. Includes features like data export, import, security enhancements, and integration with external services (S3, databases). Focus on performance optimization, error handling, and scalability.",
-      "category": "API Endpoints (REST/GraphQL)",
-      "relatedRepos": [
-        "api-subventions-asso",
-        "euphrosyne-tools-api",
-        "jeveuxaider-back"
-      ]
-    },
-    {
-      "title": "User Interface (UI) & Frontend Development",
-      "description": "Extensive work on the user interface, including new features, bug fixes, accessibility improvements, and visual enhancements.  Focus on responsiveness, usability, and adherence to design standards. Includes component creation, state management, and integration with backend APIs.",
-      "category": "Responsive Design",
-      "relatedRepos": [
-        "jeveuxaider-front",
-        "msj-public-front",
-        "recommandations-collaboratives"
-      ]
-    },
-    {
-      "title": "Accessibility Improvements",
-      "description": "A major theme across multiple repositories, focusing on improving the accessibility of the applications for users with disabilities. This includes adding ARIA attributes, improving keyboard navigation, ensuring sufficient color contrast, and providing alternative text for images.",
-      "category": "Accessibility (a11y)",
-      "relatedRepos": [
-        "jeveuxaider-front",
-        "msj-public-front",
-        "recommandations-collaboratives"
-      ]
-    },
-    {
-      "title": "Testing & CI/CD",
-      "description": "Improvements to testing frameworks, CI/CD pipelines, and automated testing procedures. Includes adding new tests, fixing flaky tests, and ensuring code quality. Focus on reliability and automation.",
-      "category": "Automated Testing",
-      "relatedRepos": [
-        "recommandations-collaboratives",
-        "euphrosyne-tools-api",
-        "jeveuxaider-front"
-      ]
-    },
-    {
-      "title": "Dependency Management & Security",
-      "description": "Regular updates to dependencies, security patches, and vulnerability scanning. Includes updating libraries, addressing security concerns, and ensuring the applications are protected against known threats.",
-      "category": "Security",
-      "relatedRepos": [
-        "euphrosyne-tools-api",
-        "jeveuxaider-front",
-        "recommandations-collaboratives",
-        "msj-public-front"
-      ]
-    },
-    {
-      "title": "Feature Development - Mission & Organization Management",
-      "description": "New features and enhancements related to mission management, organization management, and user roles. Includes adding new fields, improving search functionality, and streamlining workflows.",
-      "category": "Feature Flags",
-      "relatedRepos": [
-        "jeveuxaider-back",
-        "euphrosyne-tools-api"
-      ]
-    },
-    {
-      "title": "Documentation & Configuration",
-      "description": "Updates to documentation, configuration files, and build processes. Includes adding new documentation, clarifying existing documentation, and streamlining the build process.",
-      "category": "Documentation & API Docs",
-      "relatedRepos": [
-        "doc.demarches-simplifiees.fr",
-        "awesome-betagouv"
-      ]
-    },
-    {
-      "title": "Infrastructure & Deployment",
-      "description": "Changes related to infrastructure, deployment, and scaling. Includes updating Dockerfiles, configuring CI/CD pipelines, and optimizing deployment processes.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "euphrosyne-tools-infra",
-        "delta-v"
-      ]
-    },
-    {
-      "title": "Dependency Updates & Security Patches",
-      "description": "Numerous commits focus on updating dependencies (npm, yarn, various libraries) and addressing security vulnerabilities. This indicates a strong emphasis on maintaining a secure and up-to-date codebase.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "msj-public-back",
-        "eva-metabase",
-        "dashlord-operateur",
-        "mon-aide-cyber",
-        "anssi-nis2",
-        "espace-membre-next"
-      ]
-    },
-    {
-      "title": "Feature Development - User Interface & Experience",
-      "description": "Significant work is being done on improving the user interface, adding new features, and refining the user experience. This includes enhancements to forms, navigation, accessibility, and visual design.",
-      "category": "Responsive Design",
-      "relatedRepos": [
-        "recoco-portails",
-        "dsfr-view-components",
-        "dashlord-operateur",
-        "mon-aide-cyber-journal",
-        "espace-membre-next"
-      ]
-    },
-    {
-      "title": "Data Management & ETL Processes",
-      "description": "Several repositories demonstrate work related to data import, export, transformation, and synchronization. This includes updating data sources, improving data quality, and building ETL pipelines.",
-      "category": "Data Import & Bulk Operations",
-      "relatedRepos": [
-        "signalconso-statsrefill",
-        "portail-rse",
-        "mon-aide-cyber",
-        "mon-aide-cyber-journal",
-        "campus-numerique-cms",
-        "espace-membre-next"
-      ]
-    },
-    {
-      "title": "API Integrations & Webhooks",
-      "description": "Integration with external APIs (e.g., FranceConnect, MAIF, Livestorm) and the implementation of webhooks are prominent themes. This suggests a focus on connecting the system with other services and automating workflows.",
-      "category": "Webhooks",
-      "relatedRepos": [
-        "dashlord-operateur",
-        "mon-aide-cyber",
-        "espace-membre-next"
-      ]
-    },
-    {
-      "title": "Security Enhancements",
-      "description": "Numerous commits address security concerns, including input validation, data sanitization, access control, and vulnerability patching. This highlights a strong commitment to security best practices.",
-      "category": "Logging & Error Tracking",
-      "relatedRepos": [
-        "mon-aide-cyber",
-        "anssi-nis2",
-        "espace-membre-next",
-        "diagbruit.beta.gouv.fr",
-        "standards-front",
-        "aides-simplifiees-app",
-        "anssi-mes-questions-cyber-journal",
-        "eudat-catalog-api"
-      ]
-    },
-    {
-      "title": "CMS Content Updates & Management",
-      "description": "The `campus-numerique-cms` and `agir-cms` repositories show a lot of activity related to content updates, page creation, and CMS configuration. This indicates ongoing content management and website maintenance.",
-      "category": "Content Management (CMS)",
-      "relatedRepos": [
-        "campus-numerique-cms",
-        "agir-cms"
-      ]
-    },
-    {
-      "title": "Testing & CI/CD Improvements",
-      "description": "Commits related to CI/CD pipelines, automated testing, and code quality checks demonstrate a focus on improving the development process and ensuring code reliability.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "eva-metabase",
-        "agir-front",
-        "anssi-nis2",
-        "espace-membre-next",
-        "monstagedeseconde",
-        "maestro",
-        "pitchou"
-      ]
-    },
-    {
-      "title": "Feature Flags & Configuration",
-      "description": "The use of feature flags and environment configuration suggests a desire for greater control over feature releases and the ability to adapt the system to different environments.",
-      "category": "Feature Flags",
-      "relatedRepos": [
-        "espace-membre-next"
-      ]
-    },
-    {
-      "title": "User Interface & Design Updates",
-      "description": "Numerous commits focus on UI improvements, styling, accessibility, and responsiveness across multiple projects (pitchou, euphrosyne-digilab, monprojetsup, infomedicament, agir-voiture, hackaton-ds-exploration). Includes updates to DSFR, theming (dark mode), and layout adjustments.",
-      "category": "Responsive Design",
-      "relatedRepos": [
-        "pitchou",
-        "euphrosyne-digilab",
-        "monprojetsup",
-        "infomedicament",
-        "agir-voiture",
-        "hackaton-ds-exploration"
-      ]
-    },
-    {
-      "title": "API Integrations & Data Management",
-      "description": "Significant work on integrating and managing data from various APIs and sources. This includes updates to data schemas, data import/export processes, and handling data transformations.  Projects involved: agir-ref, science-infuse, publicodes-voiture, SCDL-subventions-DataSubvention, api_gouv_swaggers.",
-      "category": "API Endpoints (REST/GraphQL)",
-      "relatedRepos": [
-        "agir-ref",
-        "science-infuse",
-        "publicodes-voiture",
-        "SCDL-subventions-DataSubvention",
-        "api_gouv_swaggers"
-      ]
-    },
-    {
-      "title": "Security Enhancements & Bug Fixes",
-      "description": "Numerous commits address security vulnerabilities, fix bugs, and improve code quality. This includes dependency updates, input validation, and protection against attacks (e.g., Shai-Hulud).  Seen across many repositories.",
-      "category": "Logging & Error Tracking",
-      "relatedRepos": [
-        "complements-alimentaires",
-        "anssi-lab-utilitaires",
-        "etabli",
-        "monstagedeseconde",
-        "pass-sport",
-        "seves",
-        "audiodescription",
-        "agir-voiture"
-      ]
-    },
-    {
-      "title": "Feature Development - Specific Applications",
-      "description": "Development of new features and enhancements for specific applications. This includes improvements to user authentication, data visualization, and functionality related to specific domains (e.g., education, healthcare).",
-      "category": "Feature Flags",
-      "relatedRepos": [
-        "euphrosyne-digilab",
-        "reno",
-        "grist-custom-widgets-fr-admin",
-        "pitchou",
-        "monprojetsup",
-        "infomedicament",
-        "audiodescription"
-      ]
-    },
-    {
-      "title": "Dependency Management & Infrastructure",
-      "description": "Updates to dependencies, infrastructure configuration, and deployment processes. Includes upgrading libraries, configuring CI/CD pipelines, and managing environment variables.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "anssi-lab-entretien-technique",
-        "docker / Containerization",
-        "monstagedeseconde",
-        "pass-sport",
-        "science-infuse"
-      ]
-    },
-    {
-      "title": "Documentation & Code Quality",
-      "description": "Improvements to documentation, code formatting, and code quality. Includes adding comments, updating README files, and running linters.",
-      "category": "Documentation & API Docs",
-      "relatedRepos": [
-        "complements-alimentaires",
-        "euphrosyne-digilab",
-        "pitchou",
-        "science-infuse",
-        "audiodescription"
-      ]
-    },
-    {
-      "title": "File Upload & Storage",
-      "description": "Several commits relate to file uploads, storage in S3, handling of attachments, and associated fixes (e.g., original file names, signed URLs, PDF uploads).",
-      "category": "File Upload & Storage",
-      "relatedRepos": [
-        "fondation",
-        "mon-indemnisation-justice"
-      ]
-    },
-    {
-      "title": "User Authentication & Login",
-      "description": "Includes commits related to OAuth, password reset, user management, and security improvements like 2FA and rate limiting.",
-      "category": "User Authentication & Login",
-      "relatedRepos": [
-        "anssi-recommandations-cyber",
-        "mle-front",
-        "mon-profil-anssi"
-      ]
-    },
-    {
-      "title": "API Endpoints (REST/GraphQL)",
-      "description": "Focuses on creating, updating, and securing API endpoints, including those for user management, data retrieval, and integration with external services.",
-      "category": "API Endpoints (REST/GraphQL)",
-      "relatedRepos": [
-        "communs-de-la-transition-ecologique-des-collectivites",
-        "mle-back"
-      ]
-    },
-    {
-      "title": "Form Handling & Validation",
-      "description": "Commits addressing form validation, error handling, and UI improvements related to forms.",
-      "category": "Form Handling & Validation",
-      "relatedRepos": [
-        "anssi-recommandations-cyber",
-        "mon-indemnisation-justice",
-        "aides-agri"
-      ]
-    },
-    {
-      "title": "Database Migrations",
-      "description": "Commits related to database schema changes, migrations, and data integrity.",
-      "category": "Database Migrations",
-      "relatedRepos": [
-        "anssi-recommandations-cyber",
-        "aides-agri"
-      ]
-    },
-    {
-      "title": "Logging & Error Tracking",
-      "description": "Improvements to logging, error reporting (Sentry integration), and monitoring.",
-      "category": "Logging & Error Tracking",
-      "relatedRepos": [
-        "gestion-des-subventions-locales",
-        "anssi-recommandations-cyber",
-        "mle-back"
-      ]
-    },
-    {
-      "title": "CI/CD Pipeline",
-      "description": "Changes to the CI/CD pipeline, including build processes, testing, and deployment.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "kube-dev",
-        "anssi-recommandations-cyber",
-        "mle-front",
-        "aides-agri"
-      ]
-    },
-    {
-      "title": "Third-Party Integrations",
-      "description": "Integration with external services like OAuth providers, payment gateways, and other APIs.",
-      "category": "Third-Party Integrations",
-      "relatedRepos": [
-        "anssi-recommandations-cyber",
-        "mle-front"
-      ]
-    },
-    {
-      "title": "Frontend Development",
-      "description": "UI/UX improvements, component updates, and bug fixes related to the frontend.",
-      "category": "Responsive Design",
-      "relatedRepos": [
-        "mle-front",
-        "anssi-portail"
-      ]
-    },
-    {
-      "title": "Dependency Management",
-      "description": "Updating and managing project dependencies.",
-      "category": "Automated Testing",
-      "relatedRepos": [
-        "aides-agri",
-        "mle-front",
-        "schema-aide",
-        "decoupage-administratif-gem"
-      ]
-    },
-    {
-      "title": "Data Management",
-      "description": "Importing, exporting, and managing data, including CSV exports and data synchronization.",
-      "category": "Data Export (CSV/PDF)",
-      "relatedRepos": [
-        "aides-agri"
-      ]
-    },
-    {
-      "title": "Testing",
-      "description": "Adding and improving unit, integration, and end-to-end tests.",
-      "category": "Automated Testing",
-      "relatedRepos": [
-        "grist-utils",
-        "anssi-recommandations-cyber",
-        "mle-front"
-      ]
-    },
-    {
-      "title": "Form Builder Component Library",
-      "description": "Development of a component library (`dsfr-form-builder`) for building forms, including various input types (buttons, selects, radio buttons, checkboxes, file fields, textareas) and improvements to existing components. Focus on DSFR integration.",
-      "category": "UI Components",
-      "relatedRepos": [
-        "dsfr-form-builder"
-      ]
-    },
-    {
-      "title": "Documentation Updates & Tooling",
-      "description": "Updates to documentation, build processes, and dependencies across multiple repositories. Includes improvements to CI/CD pipelines, dependency management, and documentation generation.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "seves-documentation",
-        "standards",
-        "lab-anssi-ui-kit",
-        "datas-a-just"
-      ]
-    },
-    {
-      "title": "DSFR Integration & Updates",
-      "description": "Integration and updates related to the French Design System (DSFR) across several projects. This includes asset management, component integration, and theming.",
-      "category": "UI Components",
-      "relatedRepos": [
-        "dsfr-assets",
-        "new-rails-template",
-        "lab-anssi-ui-kit",
-        "sites-faciles-spe"
-      ]
-    },
-    {
-      "title": "Data Management & Processing",
-      "description": "Development and maintenance of data processing pipelines, including data import/export, schema management, and data validation. Focus on Grist integration and data transformation.",
-      "category": "Data Import & Bulk Operations",
-      "relatedRepos": [
-        "grist-budget-agriculture",
-        "recoco-sync",
-        "tous-a-bord-data",
-        "grist-doc-wk-exporter"
-      ]
-    },
-    {
-      "title": "Authentication & Authorization",
-      "description": "Implementation and updates to authentication and authorization mechanisms, including ProConnect integration, session management, and API security.",
-      "category": "User Authentication & Login",
-      "relatedRepos": [
-        "aides-simplifiees-app",
-        "omniauth-proconnect",
-        "diagbruit.beta.gouv.fr",
-        "lab-anssi-admin"
-      ]
-    },
-    {
-      "title": "API Development & Integration",
-      "description": "Development and maintenance of REST APIs, including endpoint creation, data serialization, and API security. Focus on integration with external services and data sources.",
-      "category": "API Endpoints (REST/GraphQL)",
-      "relatedRepos": [
-        "aides-calculatrice-back",
-        "diagbruit.beta.gouv.fr",
-        "datas-a-just",
-        "document-ia",
-        "anssi-mes-questions-cyber-journal",
-        "eudat-catalog-api"
-      ]
-    },
-    {
-      "title": "Frontend Development & UI/UX",
-      "description": "Development and improvement of frontend user interfaces, including component creation, styling, and user experience enhancements. Focus on accessibility and responsiveness.",
-      "category": "Responsive Design",
-      "relatedRepos": [
-        "sites-faciles-spe",
-        "lab-anssi-ui-kit",
-        "diagbruit.beta.gouv.fr",
-        "mistral-penal"
-      ]
-    },
-    {
-      "title": "Deployment & Infrastructure",
-      "description": "Updates to deployment processes, infrastructure configuration, and containerization. Focus on Docker, CI/CD pipelines, and Scalingo integration.",
-      "category": "Docker / Containerization",
-      "relatedRepos": [
-        "new-rails-template",
-        "diagbruit.beta.gouv.fr",
-        "self-hosted",
-        "datas-a-just"
-      ]
-    },
-    {
-      "title": "Testing & Quality Assurance",
-      "description": "Implementation and improvement of automated tests, including unit tests, integration tests, and end-to-end tests. Focus on code quality and test coverage.",
-      "category": "Automated Testing",
-      "relatedRepos": [
-        "dsfr-form-builder",
-        "aides-simplifiees-app",
-        "recoco-sync",
-        "activerecord_defer_persist",
-        "eudat-catalog-api",
-        "capybara-autodoc",
-        "ranking_methods"
-      ]
-    },
-    {
-      "title": "Configuration & Dependency Management",
-      "description": "Numerous commits focus on updating dependencies, managing build configurations (e.g., Docker, CI/CD), and environment variables.  This includes updates to package managers (npm, pip, poetry), build tools, and configuration files.",
-      "category": "CI/CD Pipeline",
-      "relatedRepos": [
-        "france-chaleur-urbaine-scalingo-buildpack",
-        "oauth2-proxy-buildpack",
-        "document-ia-grafana-loki",
-        "capybara-autodoc",
-        "doctorat-gouv",
-        "eudat-catalog-api"
-      ]
-    },
-    {
-      "title": "Feature Development - Configuration & Filters",
-      "description": "Significant work is being done on configuration management, particularly around filters and settings. This includes adding, modifying, and saving filters, handling configuration updates, and managing user settings.  This is prominent in 'OTP-DS-to-Grist' and 'document-ia'.",
-      "category": "Form Handling & Validation",
-      "relatedRepos": [
-        "OTP-DS-to-Grist",
-        "document-ia"
-      ]
-    },
-    {
-      "title": "Documentation & Knowledge Base",
-      "description": "A substantial amount of effort is dedicated to creating, updating, and improving documentation, including API documentation, user guides, and internal documentation.  'grist-help' and 'document-ia' are key repositories here.",
-      "category": "Documentation & API Docs",
-      "relatedRepos": [
-        "grist-help",
-        "document-ia"
-      ]
-    },
-    {
-      "title": "UI/UX Improvements & Component Development",
-      "description": "Many commits focus on improving the user interface and user experience, including adding new components, fixing bugs, and enhancing existing features.  'dsfr-chart' and 'doctorat-gouv' are heavily involved in this.",
-      "category": "Responsive Design",
-      "relatedRepos": [
-        "dsfr-chart",
-        "doctorat-gouv",
-        "eudat-catalog-api"
-      ]
-    },
-    {
-      "title": "Data Processing & Pipelines",
-      "description": "Repositories like 'ranking_methods' and 'document-ia' demonstrate significant work on data processing pipelines, including data ingestion, transformation, and analysis. This involves using tools like Polars and integrating with data sources.",
-      "category": "Background Jobs & Queues",
-      "relatedRepos": [
-        "ranking_methods",
-        "document-ia"
-      ]
-    },
-    {
-      "title": "Database Management & Migrations",
-      "description": "Commits related to database schema changes, migrations, and data management.  This includes adding new tables, modifying existing ones, and optimizing database performance.",
-      "category": "Database Migrations",
-      "relatedRepos": [
-        "document-ia",
-        "eudat-catalog-api"
-      ]
-    },
-    {
-      "title": "AI & Machine Learning Integration",
-      "description": "Integration of AI and machine learning components, including using OpenAI, Albert, and developing custom AI models. This is particularly evident in 'document-ia' and 'ranking_methods'.",
-      "category": "Real-Time Updates (WebSockets)",
-      "relatedRepos": [
-        "document-ia",
-        "ranking_methods"
-      ]
-    }
-  ],
+  "securityTopics": [],
+  "features": [],
   "authors": [
     {
       "login": "dependabot[bot]",
@@ -4300,9 +2799,7 @@
       "login": "maximallain",
       "avatarUrl": "https://github.com/maximallain.png",
       "commits": 1372,
-      "repos": [
-        "gestion-des-subventions-locales"
-      ]
+      "repos": ["gestion-des-subventions-locales"]
     },
     {
       "login": "martinratinaud",
@@ -4318,10 +2815,7 @@
       "login": "ketsapiwiq",
       "avatarUrl": "https://github.com/ketsapiwiq.png",
       "commits": 1264,
-      "repos": [
-        "ComparIA",
-        "ranking_methods"
-      ]
+      "repos": ["ComparIA", "ranking_methods"]
     },
     {
       "login": "goulvench",
@@ -4339,9 +2833,7 @@
       "login": "agarbe",
       "avatarUrl": "https://github.com/agarbe.png",
       "commits": 1195,
-      "repos": [
-        "reva"
-      ]
+      "repos": ["reva"]
     },
     {
       "login": "totakoko",
@@ -4379,18 +2871,13 @@
       "login": "alemangui",
       "avatarUrl": "https://github.com/alemangui.png",
       "commits": 1007,
-      "repos": [
-        "complements-alimentaires"
-      ]
+      "repos": ["complements-alimentaires"]
     },
     {
       "login": "glibersat",
       "avatarUrl": "https://github.com/glibersat.png",
       "commits": 1000,
-      "repos": [
-        "recommandations-collaboratives",
-        "recoco-portails"
-      ]
+      "repos": ["recommandations-collaboratives", "recoco-portails"]
     },
     {
       "login": "fbezagu",
@@ -4409,27 +2896,19 @@
       "login": "Axolotle",
       "avatarUrl": "https://github.com/Axolotle.png",
       "commits": 924,
-      "repos": [
-        "ComparIA",
-        "ranking_methods"
-      ]
+      "repos": ["ComparIA", "ranking_methods"]
     },
     {
       "login": "morganmerzouk",
       "avatarUrl": "https://github.com/morganmerzouk.png",
       "commits": 919,
-      "repos": [
-        "reno"
-      ]
+      "repos": ["reno"]
     },
     {
       "login": "hfroot",
       "avatarUrl": "https://github.com/hfroot.png",
       "commits": 891,
-      "repos": [
-        "ma-cantine",
-        "complements-alimentaires"
-      ]
+      "repos": ["ma-cantine", "complements-alimentaires"]
     },
     {
       "login": "CadiChris",
@@ -4452,45 +2931,31 @@
       "login": "WoWo79",
       "avatarUrl": "https://github.com/WoWo79.png",
       "commits": 870,
-      "repos": [
-        "agir-back",
-        "agir-cms",
-        "agir-ref"
-      ]
+      "repos": ["agir-back", "agir-cms", "agir-ref"]
     },
     {
       "login": "pierrax",
       "avatarUrl": "https://github.com/pierrax.png",
       "commits": 831,
-      "repos": [
-        "monstagedeseconde"
-      ]
+      "repos": ["monstagedeseconde"]
     },
     {
       "login": "Jeremy-Bojko",
       "avatarUrl": "https://github.com/Jeremy-Bojko.png",
       "commits": 829,
-      "repos": [
-        "recommandations-collaboratives",
-        "recoco-portails"
-      ]
+      "repos": ["recommandations-collaboratives", "recoco-portails"]
     },
     {
       "login": "arnaudambro",
       "avatarUrl": "https://github.com/arnaudambro.png",
       "commits": 828,
-      "repos": [
-        "zacharie"
-      ]
+      "repos": ["zacharie"]
     },
     {
       "login": "ThomasDos",
       "avatarUrl": "https://github.com/ThomasDos.png",
       "commits": 818,
-      "repos": [
-        "reva",
-        "classifia"
-      ]
+      "repos": ["reva", "classifia"]
     },
     {
       "login": "freesteph",
@@ -4520,10 +2985,7 @@
       "login": "fitchMitch",
       "avatarUrl": "https://github.com/fitchMitch.png",
       "commits": 728,
-      "repos": [
-        "monstage",
-        "monstagedeseconde"
-      ]
+      "repos": ["monstage", "monstagedeseconde"]
     },
     {
       "login": "Nephtys",
@@ -4586,53 +3048,37 @@
       "login": "Anto59290",
       "avatarUrl": "https://github.com/Anto59290.png",
       "commits": 585,
-      "repos": [
-        "seves"
-      ]
+      "repos": ["seves"]
     },
     {
       "login": "fxmontigny",
       "avatarUrl": "https://github.com/fxmontigny.png",
       "commits": 573,
-      "repos": [
-        "a-just",
-        "datas-a-just",
-        "aide-a-just"
-      ]
+      "repos": ["a-just", "datas-a-just", "aide-a-just"]
     },
     {
       "login": "pierreavizou",
       "avatarUrl": "https://github.com/pierreavizou.png",
       "commits": 555,
-      "repos": [
-        "reva"
-      ]
+      "repos": ["reva"]
     },
     {
       "login": "lsaudon",
       "avatarUrl": "https://github.com/lsaudon.png",
       "commits": 552,
-      "repos": [
-        "agir-front",
-        "jagis-mobile"
-      ]
+      "repos": ["agir-front", "jagis-mobile"]
     },
     {
       "login": "Louifine",
       "avatarUrl": "https://github.com/Louifine.png",
       "commits": 550,
-      "repos": [
-        "recommandations-collaboratives",
-        "recoco-portails"
-      ]
+      "repos": ["recommandations-collaboratives", "recoco-portails"]
     },
     {
       "login": "laem",
       "avatarUrl": "https://github.com/laem.png",
       "commits": 540,
-      "repos": [
-        "reno"
-      ]
+      "repos": ["reno"]
     },
     {
       "login": "LucienMLD",
@@ -4668,79 +3114,55 @@
       "login": "liliced",
       "avatarUrl": "https://github.com/liliced.png",
       "commits": 531,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "pskl",
       "avatarUrl": "https://github.com/pskl.png",
       "commits": 497,
-      "repos": [
-        "aplypro",
-        "aplypro-mock-data"
-      ]
+      "repos": ["aplypro", "aplypro-mock-data"]
     },
     {
       "login": "pierrelemee",
       "avatarUrl": "https://github.com/pierrelemee.png",
       "commits": 492,
-      "repos": [
-        "mon-indemnisation-justice"
-      ]
+      "repos": ["mon-indemnisation-justice"]
     },
     {
       "login": "ClementNumericite",
       "avatarUrl": "https://github.com/ClementNumericite.png",
       "commits": 480,
-      "repos": [
-        "diagbruit.beta.gouv.fr"
-      ]
+      "repos": ["diagbruit.beta.gouv.fr"]
     },
     {
       "login": "MrJimmyChevallier",
       "avatarUrl": "https://github.com/MrJimmyChevallier.png",
       "commits": 476,
-      "repos": [
-        "a-just",
-        "aide-a-just"
-      ]
+      "repos": ["a-just", "aide-a-just"]
     },
     {
       "login": "theolemague",
       "avatarUrl": "https://github.com/theolemague.png",
       "commits": 469,
-      "repos": [
-        "api-engagement"
-      ]
+      "repos": ["api-engagement"]
     },
     {
       "login": "cprodhomme",
       "avatarUrl": "https://github.com/cprodhomme.png",
       "commits": 458,
-      "repos": [
-        "eva",
-        "eva-serveur",
-        "dsfr-view-components"
-      ]
+      "repos": ["eva", "eva-serveur", "dsfr-view-components"]
     },
     {
       "login": "raphodn",
       "avatarUrl": "https://github.com/raphodn.png",
       "commits": 443,
-      "repos": [
-        "ma-cantine",
-        "awesome-betagouv"
-      ]
+      "repos": ["ma-cantine", "awesome-betagouv"]
     },
     {
       "login": "NVaissaud",
       "avatarUrl": "https://github.com/NVaissaud.png",
       "commits": 442,
-      "repos": [
-        "jeveuxaider-front",
-        "jeveuxaider-back"
-      ]
+      "repos": ["jeveuxaider-front", "jeveuxaider-back"]
     },
     {
       "login": "firefly33",
@@ -4758,9 +3180,7 @@
       "login": "tut-tuuut",
       "avatarUrl": "https://github.com/tut-tuuut.png",
       "commits": 405,
-      "repos": [
-        "gestion-des-subventions-locales"
-      ]
+      "repos": ["gestion-des-subventions-locales"]
     },
     {
       "login": "etienneCharignon",
@@ -4777,18 +3197,13 @@
       "login": "emillumine",
       "avatarUrl": "https://github.com/emillumine.png",
       "commits": 382,
-      "repos": [
-        "portail-rse",
-        "portail-rse-externe"
-      ]
+      "repos": ["portail-rse", "portail-rse-externe"]
     },
     {
       "login": "rzafari42",
       "avatarUrl": "https://github.com/rzafari42.png",
       "commits": 371,
-      "repos": [
-        "a-just"
-      ]
+      "repos": ["a-just"]
     },
     {
       "login": "revolunet",
@@ -4820,29 +3235,19 @@
       "login": "sneko",
       "avatarUrl": "https://github.com/sneko.png",
       "commits": 365,
-      "repos": [
-        "etabli",
-        "figpot",
-        "penpot-dsfr",
-        "assistant-declaration"
-      ]
+      "repos": ["etabli", "figpot", "penpot-dsfr", "assistant-declaration"]
     },
     {
       "login": "cedricss",
       "avatarUrl": "https://github.com/cedricss.png",
       "commits": 361,
-      "repos": [
-        "reva"
-      ]
+      "repos": ["reva"]
     },
     {
       "login": "etchegom",
       "avatarUrl": "https://github.com/etchegom.png",
       "commits": 357,
-      "repos": [
-        "recommandations-collaboratives",
-        "recoco-sync"
-      ]
+      "repos": ["recommandations-collaboratives", "recoco-sync"]
     },
     {
       "login": "wiwski",
@@ -4884,54 +3289,37 @@
       "login": "ShallowRed",
       "avatarUrl": "https://github.com/ShallowRed.png",
       "commits": 332,
-      "repos": [
-        "aides-simplifiees-app",
-        "publicodes-entreprise-innovation"
-      ]
+      "repos": ["aides-simplifiees-app", "publicodes-entreprise-innovation"]
     },
     {
       "login": "cspriet",
       "avatarUrl": "https://github.com/cspriet.png",
       "commits": 324,
-      "repos": [
-        "api-subventions-asso",
-        "infomedicament"
-      ]
+      "repos": ["api-subventions-asso", "infomedicament"]
     },
     {
       "login": "tiloyi",
       "avatarUrl": "https://github.com/tiloyi.png",
       "commits": 309,
-      "repos": [
-        "anssi-demain-specialiste-cyber",
-        "lab-anssi-ui-kit"
-      ]
+      "repos": ["anssi-demain-specialiste-cyber", "lab-anssi-ui-kit"]
     },
     {
       "login": "Charline-L",
       "avatarUrl": "https://github.com/Charline-L.png",
       "commits": 308,
-      "repos": [
-        "ma-cantine",
-        "Resultats-Elections-FPT"
-      ]
+      "repos": ["ma-cantine", "Resultats-Elections-FPT"]
     },
     {
       "login": "KGALLET",
       "avatarUrl": "https://github.com/KGALLET.png",
       "commits": 303,
-      "repos": [
-        "mle-front",
-        "mle-back"
-      ]
+      "repos": ["mle-front", "mle-back"]
     },
     {
       "login": "Numero7",
       "avatarUrl": "https://github.com/Numero7.png",
       "commits": 298,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "Pamplemousse",
@@ -4973,34 +3361,25 @@
       "login": "Destinyyyy",
       "avatarUrl": "https://github.com/Destinyyyy.png",
       "commits": 290,
-      "repos": [
-        "pass-sport"
-      ]
+      "repos": ["pass-sport"]
     },
     {
       "login": "fbonniec",
       "avatarUrl": "https://github.com/fbonniec.png",
       "commits": 289,
-      "repos": [
-        "reva"
-      ]
+      "repos": ["reva"]
     },
     {
       "login": "Alezco",
       "avatarUrl": "https://github.com/Alezco.png",
       "commits": 287,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "bhasile"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "bhasile"]
     },
     {
       "login": "at-github",
       "avatarUrl": "https://github.com/at-github.png",
       "commits": 279,
-      "repos": [
-        "OTP-DS-to-Grist"
-      ]
+      "repos": ["OTP-DS-to-Grist"]
     },
     {
       "login": "AntoineGirard",
@@ -5017,27 +3396,19 @@
       "login": "mrjmad",
       "avatarUrl": "https://github.com/mrjmad.png",
       "commits": 274,
-      "repos": [
-        "Aidants_Connect"
-      ]
+      "repos": ["Aidants_Connect"]
     },
     {
       "login": "Atheane",
       "avatarUrl": "https://github.com/Atheane.png",
       "commits": 268,
-      "repos": [
-        "Aidants_Connect",
-        "tous-a-bord-data",
-        "csplab"
-      ]
+      "repos": ["Aidants_Connect", "tous-a-bord-data", "csplab"]
     },
     {
       "login": "clairezed",
       "avatarUrl": "https://github.com/clairezed.png",
       "commits": 264,
-      "repos": [
-        "conseillers-entreprises"
-      ]
+      "repos": ["conseillers-entreprises"]
     },
     {
       "login": "victormours",
@@ -5053,52 +3424,37 @@
       "login": "valentinbourgoin",
       "avatarUrl": "https://github.com/valentinbourgoin.png",
       "commits": 255,
-      "repos": [
-        "api-engagement"
-      ]
+      "repos": ["api-engagement"]
     },
     {
       "login": "vmaubert",
       "avatarUrl": "https://github.com/vmaubert.png",
       "commits": 250,
-      "repos": [
-        "maestro"
-      ]
+      "repos": ["maestro"]
     },
     {
       "login": "ikarius",
       "avatarUrl": "https://github.com/ikarius.png",
       "commits": 246,
-      "repos": [
-        "portail-rse",
-        "portail-rse-externe"
-      ]
+      "repos": ["portail-rse", "portail-rse-externe"]
     },
     {
       "login": "DashlordBetaGouvBot",
       "avatarUrl": "https://github.com/DashlordBetaGouvBot.png",
       "commits": 242,
-      "repos": [
-        "dashlord-operateur"
-      ]
+      "repos": ["dashlord-operateur"]
     },
     {
       "login": "mlvernay",
       "avatarUrl": "https://github.com/mlvernay.png",
       "commits": 241,
-      "repos": [
-        "mle-front",
-        "mle-back"
-      ]
+      "repos": ["mle-front", "mle-back"]
     },
     {
       "login": "boehm-e",
       "avatarUrl": "https://github.com/boehm-e.png",
       "commits": 235,
-      "repos": [
-        "science-infuse",
-        "document-ia"
-      ]
+      "repos": ["science-infuse", "document-ia"]
     },
     {
       "login": "charlescd",
@@ -5116,9 +3472,7 @@
       "login": "pletelli",
       "avatarUrl": "https://github.com/pletelli.png",
       "commits": 226,
-      "repos": [
-        "complements-alimentaires"
-      ]
+      "repos": ["complements-alimentaires"]
     },
     {
       "login": "adipasquale",
@@ -5135,26 +3489,19 @@
       "login": "David-Guillot",
       "avatarUrl": "https://github.com/David-Guillot.png",
       "commits": 209,
-      "repos": [
-        "aides-agri",
-        "django-grist-loader"
-      ]
+      "repos": ["aides-agri", "django-grist-loader"]
     },
     {
       "login": "kaaloo",
       "avatarUrl": "https://github.com/kaaloo.png",
       "commits": 208,
-      "repos": [
-        "dsfr-kit"
-      ]
+      "repos": ["dsfr-kit"]
     },
     {
       "login": "francois-ferrandis",
       "avatarUrl": "https://github.com/francois-ferrandis.png",
       "commits": 207,
-      "repos": [
-        "rdv-service-public"
-      ]
+      "repos": ["rdv-service-public"]
     },
     {
       "login": "Ash-Crow",
@@ -5171,9 +3518,7 @@
       "login": "JalilArfaoui",
       "avatarUrl": "https://github.com/JalilArfaoui.png",
       "commits": 191,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "eletallbetagouv",
@@ -5189,36 +3534,25 @@
       "login": "n-b",
       "avatarUrl": "https://github.com/n-b.png",
       "commits": 190,
-      "repos": [
-        "conseillers-entreprises"
-      ]
+      "repos": ["conseillers-entreprises"]
     },
     {
       "login": "Guitguitou",
       "avatarUrl": "https://github.com/Guitguitou.png",
       "commits": 190,
-      "repos": [
-        "eva",
-        "eva-serveur"
-      ]
+      "repos": ["eva", "eva-serveur"]
     },
     {
       "login": "paulfitz",
       "avatarUrl": "https://github.com/paulfitz.png",
       "commits": 186,
-      "repos": [
-        "grist-core",
-        "grist-help",
-        "grist-static"
-      ]
+      "repos": ["grist-core", "grist-help", "grist-static"]
     },
     {
       "login": "achorein",
       "avatarUrl": "https://github.com/achorein.png",
       "commits": 183,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "pie-leroy",
@@ -5233,34 +3567,25 @@
       "login": "Ijahman",
       "avatarUrl": "https://github.com/Ijahman.png",
       "commits": 180,
-      "repos": [
-        "jeveuxaider-front",
-        "jeveuxaider-back"
-      ]
+      "repos": ["jeveuxaider-front", "jeveuxaider-back"]
     },
     {
       "login": "chloecorfmat",
       "avatarUrl": "https://github.com/chloecorfmat.png",
       "commits": 172,
-      "repos": [
-        "audiodescription"
-      ]
+      "repos": ["audiodescription"]
     },
     {
       "login": "secretariat-bot",
       "avatarUrl": "https://github.com/secretariat-bot.png",
       "commits": 170,
-      "repos": [
-        "beta.gouv.fr"
-      ]
+      "repos": ["beta.gouv.fr"]
     },
     {
       "login": "alanzirek",
       "avatarUrl": "https://github.com/alanzirek.png",
       "commits": 168,
-      "repos": [
-        "seves"
-      ]
+      "repos": ["seves"]
     },
     {
       "login": "LucasCharrier",
@@ -5280,9 +3605,7 @@
       "login": "mxmeunier",
       "avatarUrl": "https://github.com/mxmeunier.png",
       "commits": 160,
-      "repos": [
-        "api-subventions-asso"
-      ]
+      "repos": ["api-subventions-asso"]
     },
     {
       "login": "MatthieuVeillon",
@@ -5310,54 +3633,37 @@
       "login": "jrivals",
       "avatarUrl": "https://github.com/jrivals.png",
       "commits": 153,
-      "repos": [
-        "maestro",
-        "maestro-wordpress"
-      ]
+      "repos": ["maestro", "maestro-wordpress"]
     },
     {
       "login": "Matteo-OCTO",
       "avatarUrl": "https://github.com/Matteo-OCTO.png",
       "commits": 152,
-      "repos": [
-        "agir-front",
-        "agir.github.io"
-      ]
+      "repos": ["agir-front", "agir.github.io"]
     },
     {
       "login": "logic-fabric",
       "avatarUrl": "https://github.com/logic-fabric.png",
       "commits": 150,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "newick",
       "avatarUrl": "https://github.com/newick.png",
       "commits": 149,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "qloridant",
       "avatarUrl": "https://github.com/qloridant.png",
       "commits": 145,
-      "repos": [
-        "ma-cantine",
-        "complements-alimentaires",
-        "OTP-DS-to-Grist"
-      ]
+      "repos": ["ma-cantine", "complements-alimentaires", "OTP-DS-to-Grist"]
     },
     {
       "login": "jordigh",
       "avatarUrl": "https://github.com/jordigh.png",
       "commits": 143,
-      "repos": [
-        "grist-core",
-        "grist-help"
-      ]
+      "repos": ["grist-core", "grist-help"]
     },
     {
       "login": "ssedoudbgouv",
@@ -5384,45 +3690,31 @@
       "login": "tnicolas1",
       "avatarUrl": "https://github.com/tnicolas1.png",
       "commits": 131,
-      "repos": [
-        "aplypro",
-        "aplypro-mock-data"
-      ]
+      "repos": ["aplypro", "aplypro-mock-data"]
     },
     {
       "login": "ttdm",
       "avatarUrl": "https://github.com/ttdm.png",
       "commits": 127,
-      "repos": [
-        "mission-transition-ecologique"
-      ]
+      "repos": ["mission-transition-ecologique"]
     },
     {
       "login": "LauraMondoloni31",
       "avatarUrl": "https://github.com/LauraMondoloni31.png",
       "commits": 122,
-      "repos": [
-        "mon-service-securise",
-        "anssi-nis2",
-        "anssi-portail"
-      ]
+      "repos": ["mon-service-securise", "anssi-nis2", "anssi-portail"]
     },
     {
       "login": "DavidBruant",
       "avatarUrl": "https://github.com/DavidBruant.png",
       "commits": 121,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "christophehenry",
       "avatarUrl": "https://github.com/christophehenry.png",
       "commits": 116,
-      "repos": [
-        "seves",
-        "dj-importmap"
-      ]
+      "repos": ["seves", "dj-importmap"]
     },
     {
       "login": "fflorent",
@@ -5443,26 +3735,19 @@
       "login": "dlamande",
       "avatarUrl": "https://github.com/dlamande.png",
       "commits": 112,
-      "repos": [
-        "agir-front"
-      ]
+      "repos": ["agir-front"]
     },
     {
       "login": "florianpanchout",
       "avatarUrl": "https://github.com/florianpanchout.png",
       "commits": 106,
-      "repos": [
-        "bhasile"
-      ]
+      "repos": ["bhasile"]
     },
     {
       "login": "JeremyPinto",
       "avatarUrl": "https://github.com/JeremyPinto.png",
       "commits": 104,
-      "repos": [
-        "jeveuxaider-front",
-        "jeveuxaider-back"
-      ]
+      "repos": ["jeveuxaider-front", "jeveuxaider-back"]
     },
     {
       "login": "pgrange",
@@ -5486,87 +3771,61 @@
       "login": "Nicolas-Tourneur35",
       "avatarUrl": "https://github.com/Nicolas-Tourneur35.png",
       "commits": 101,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "espace-membre-next"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "espace-membre-next"]
     },
     {
       "login": "C2Chandelier",
       "avatarUrl": "https://github.com/C2Chandelier.png",
       "commits": 101,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "Josyann",
       "avatarUrl": "https://github.com/Josyann.png",
       "commits": 99,
-      "repos": [
-        "acces-cible",
-        "betagouv-cucumber-steps"
-      ]
+      "repos": ["acces-cible", "betagouv-cucumber-steps"]
     },
     {
       "login": "georgegevoian",
       "avatarUrl": "https://github.com/georgegevoian.png",
       "commits": 98,
-      "repos": [
-        "grist-core",
-        "grist-help"
-      ]
+      "repos": ["grist-core", "grist-help"]
     },
     {
       "login": "pitiscarf",
       "avatarUrl": "https://github.com/pitiscarf.png",
       "commits": 97,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "MichelJautzy",
       "avatarUrl": "https://github.com/MichelJautzy.png",
       "commits": 95,
-      "repos": [
-        "aides-agri",
-        "aides-simplifiees-app"
-      ]
+      "repos": ["aides-agri", "aides-simplifiees-app"]
     },
     {
       "login": "clemencefrz",
       "avatarUrl": "https://github.com/clemencefrz.png",
       "commits": 93,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "Maxenceee",
       "avatarUrl": "https://github.com/Maxenceee.png",
       "commits": 93,
-      "repos": [
-        "dsfr-chart"
-      ]
+      "repos": ["dsfr-chart"]
     },
     {
       "login": "dsagal",
       "avatarUrl": "https://github.com/dsagal.png",
       "commits": 92,
-      "repos": [
-        "grist-core",
-        "grist-help",
-        "grist-static"
-      ]
+      "repos": ["grist-core", "grist-help", "grist-static"]
     },
     {
       "login": "yvalentin",
       "avatarUrl": "https://github.com/yvalentin.png",
       "commits": 91,
-      "repos": [
-        "mission-transition-ecologique"
-      ]
+      "repos": ["mission-transition-ecologique"]
     },
     {
       "login": "thomasguillory-betagouv",
@@ -5593,36 +3852,25 @@
       "login": "pouredfromamold",
       "avatarUrl": "https://github.com/pouredfromamold.png",
       "commits": 83,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "doc.incubateur.net-alliance"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "doc.incubateur.net-alliance"]
     },
     {
       "login": "Johannbr",
       "avatarUrl": "https://github.com/Johannbr.png",
       "commits": 83,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "manuhabitela",
       "avatarUrl": "https://github.com/manuhabitela.png",
       "commits": 82,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "nicolasSagon",
       "avatarUrl": "https://github.com/nicolasSagon.png",
       "commits": 81,
-      "repos": [
-        "document-ia",
-        "2ddoc-parser",
-        "document-ia-grafana-loki"
-      ]
+      "repos": ["document-ia", "2ddoc-parser", "document-ia-grafana-loki"]
     },
     {
       "login": "JeSuisUnCaillou",
@@ -5640,9 +3888,7 @@
       "login": "nicobret",
       "avatarUrl": "https://github.com/nicobret.png",
       "commits": 78,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "lboiv1",
@@ -5658,42 +3904,31 @@
       "login": "berhalak",
       "avatarUrl": "https://github.com/berhalak.png",
       "commits": 76,
-      "repos": [
-        "grist-core",
-        "braveau-grist-widget"
-      ]
+      "repos": ["grist-core", "braveau-grist-widget"]
     },
     {
       "login": "kevinr-onisep",
       "avatarUrl": "https://github.com/kevinr-onisep.png",
       "commits": 73,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "sandcha",
       "avatarUrl": "https://github.com/sandcha.png",
       "commits": 72,
-      "repos": [
-        "aides-calculatrice-back"
-      ]
+      "repos": ["aides-calculatrice-back"]
     },
     {
       "login": "AlexTensorer",
       "avatarUrl": "https://github.com/AlexTensorer.png",
       "commits": 67,
-      "repos": [
-        "api-engagement"
-      ]
+      "repos": ["api-engagement"]
     },
     {
       "login": "CamilyaDellali",
       "avatarUrl": "https://github.com/CamilyaDellali.png",
       "commits": 63,
-      "repos": [
-        "doc.demarches-simplifiees.fr"
-      ]
+      "repos": ["doc.demarches-simplifiees.fr"]
     },
     {
       "login": "jenovateurs",
@@ -5711,17 +3946,13 @@
       "login": "acostes",
       "avatarUrl": "https://github.com/acostes.png",
       "commits": 62,
-      "repos": [
-        "api-engagement"
-      ]
+      "repos": ["api-engagement"]
     },
     {
       "login": "lazybird",
       "avatarUrl": "https://github.com/lazybird.png",
       "commits": 62,
-      "repos": [
-        "depots-sauvages"
-      ]
+      "repos": ["depots-sauvages"]
     },
     {
       "login": "damienlethiec",
@@ -5738,17 +3969,13 @@
       "login": "simonaszilinskas",
       "avatarUrl": "https://github.com/simonaszilinskas.png",
       "commits": 60,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "BmnQuentin",
       "avatarUrl": "https://github.com/BmnQuentin.png",
       "commits": 59,
-      "repos": [
-        "bhasile"
-      ]
+      "repos": ["bhasile"]
     },
     {
       "login": "marinepurson2",
@@ -5776,9 +4003,7 @@
       "login": "niladic",
       "avatarUrl": "https://github.com/niladic.png",
       "commits": 56,
-      "repos": [
-        "aplus"
-      ]
+      "repos": ["aplus"]
     },
     {
       "login": "Shamzic",
@@ -5797,17 +4022,13 @@
       "login": "nataliemisasi",
       "avatarUrl": "https://github.com/nataliemisasi.png",
       "commits": 52,
-      "repos": [
-        "grist-help"
-      ]
+      "repos": ["grist-help"]
     },
     {
       "login": "e-lie",
       "avatarUrl": "https://github.com/e-lie.png",
       "commits": 51,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "ohemelaar",
@@ -5825,34 +4046,25 @@
       "login": "461OceanBd",
       "avatarUrl": "https://github.com/461OceanBd.png",
       "commits": 47,
-      "repos": [
-        "api-subventions-asso"
-      ]
+      "repos": ["api-subventions-asso"]
     },
     {
       "login": "lslaroche",
       "avatarUrl": "https://github.com/lslaroche.png",
       "commits": 47,
-      "repos": [
-        "reno"
-      ]
+      "repos": ["reno"]
     },
     {
       "login": "lutangar",
       "avatarUrl": "https://github.com/lutangar.png",
       "commits": 47,
-      "repos": [
-        "VApp",
-        "schema-aide"
-      ]
+      "repos": ["VApp", "schema-aide"]
     },
     {
       "login": "jquagliatini",
       "avatarUrl": "https://github.com/jquagliatini.png",
       "commits": 46,
-      "repos": [
-        "fondation"
-      ]
+      "repos": ["fondation"]
     },
     {
       "login": "vviers",
@@ -5872,552 +4084,403 @@
       "login": "SebastienReuiller",
       "avatarUrl": "https://github.com/SebastienReuiller.png",
       "commits": 45,
-      "repos": [
-        "campus-numerique-cms"
-      ]
+      "repos": ["campus-numerique-cms"]
     },
     {
       "login": "mohamed-beta-dev",
       "avatarUrl": "https://github.com/mohamed-beta-dev.png",
       "commits": 45,
-      "repos": [
-        "doctorat-gouv"
-      ]
+      "repos": ["doctorat-gouv"]
     },
     {
       "login": "scala-steward",
       "avatarUrl": "https://github.com/scala-steward.png",
       "commits": 44,
-      "repos": [
-        "aplus"
-      ]
+      "repos": ["aplus"]
     },
     {
       "login": "nbush",
       "avatarUrl": "https://github.com/nbush.png",
       "commits": 44,
-      "repos": [
-        "grist-core",
-        "grist-help"
-      ]
+      "repos": ["grist-core", "grist-help"]
     },
     {
       "login": "yasmine-glitch",
       "avatarUrl": "https://github.com/yasmine-glitch.png",
       "commits": 43,
-      "repos": [
-        "aides-jeunes",
-        "aides-jeunes-files",
-        "publicodes-aides-velo"
-      ]
+      "repos": ["aides-jeunes", "aides-jeunes-files", "publicodes-aides-velo"]
     },
     {
       "login": "mpiac",
       "avatarUrl": "https://github.com/mpiac.png",
       "commits": 42,
-      "repos": [
-        "mission-transition-ecologique"
-      ]
+      "repos": ["mission-transition-ecologique"]
     },
     {
       "login": "ledjay",
       "avatarUrl": "https://github.com/ledjay.png",
       "commits": 41,
-      "repos": [
-        "bhasile"
-      ]
+      "repos": ["bhasile"]
     },
     {
       "login": "Eric013",
       "avatarUrl": "https://github.com/Eric013.png",
       "commits": 40,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "anaisalt",
       "avatarUrl": "https://github.com/anaisalt.png",
       "commits": 40,
-      "repos": [
-        "sante-psy"
-      ]
+      "repos": ["sante-psy"]
     },
     {
       "login": "Rhmaric",
       "avatarUrl": "https://github.com/Rhmaric.png",
       "commits": 39,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "document-ia"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "document-ia"]
     },
     {
       "login": "Spoffy",
       "avatarUrl": "https://github.com/Spoffy.png",
       "commits": 37,
-      "repos": [
-        "grist-core",
-        "grist-help"
-      ]
+      "repos": ["grist-core", "grist-help"]
     },
     {
       "login": "GuiPich91",
       "avatarUrl": "https://github.com/GuiPich91.png",
       "commits": 34,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "weblate",
       "avatarUrl": "https://github.com/weblate.png",
       "commits": 34,
-      "repos": [
-        "ComparIA",
-        "grist-core"
-      ]
+      "repos": ["ComparIA", "grist-core"]
     },
     {
       "login": "JDureau",
       "avatarUrl": "https://github.com/JDureau.png",
       "commits": 33,
-      "repos": [
-        "a-just"
-      ]
+      "repos": ["a-just"]
     },
     {
       "login": "tangimds",
       "avatarUrl": "https://github.com/tangimds.png",
       "commits": 33,
-      "repos": [
-        "zacharie"
-      ]
+      "repos": ["zacharie"]
     },
     {
       "login": "jlllyfish",
       "avatarUrl": "https://github.com/jlllyfish.png",
       "commits": 33,
-      "repos": [
-        "OTP-DS-to-Grist"
-      ]
+      "repos": ["OTP-DS-to-Grist"]
     },
     {
       "login": "philippearnaud",
       "avatarUrl": "https://github.com/philippearnaud.png",
       "commits": 32,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "Luzzzi",
       "avatarUrl": "https://github.com/Luzzzi.png",
       "commits": 32,
-      "repos": [
-        "sites-faciles",
-        "sites-faciles-spe"
-      ]
+      "repos": ["sites-faciles", "sites-faciles-spe"]
     },
     {
       "login": "audez",
       "avatarUrl": "https://github.com/audez.png",
       "commits": 31,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "oumeimaelisbihani",
       "avatarUrl": "https://github.com/oumeimaelisbihani.png",
       "commits": 30,
-      "repos": [
-        "mission-transition-ecologique"
-      ]
+      "repos": ["mission-transition-ecologique"]
     },
     {
       "login": "fkeloks",
       "avatarUrl": "https://github.com/fkeloks.png",
       "commits": 30,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "hlechevallier-betagouv",
       "avatarUrl": "https://github.com/hlechevallier-betagouv.png",
       "commits": 29,
-      "repos": [
-        "beta.gouv.fr",
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["beta.gouv.fr", "doc.incubateur.net-communaute"]
     },
     {
       "login": "Maiana8L",
       "avatarUrl": "https://github.com/Maiana8L.png",
       "commits": 29,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "Benjamin-Doberset",
       "avatarUrl": "https://github.com/Benjamin-Doberset.png",
       "commits": 28,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "standards"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "standards"]
     },
     {
       "login": "gcarra",
       "avatarUrl": "https://github.com/gcarra.png",
       "commits": 28,
-      "repos": [
-        "api-subventions-asso",
-        "SCDL-subventions-DataSubvention"
-      ]
+      "repos": ["api-subventions-asso", "SCDL-subventions-DataSubvention"]
     },
     {
       "login": "CamilleLegeron",
       "avatarUrl": "https://github.com/CamilleLegeron.png",
       "commits": 28,
-      "repos": [
-        "grist-custom-widgets-fr-admin"
-      ]
+      "repos": ["grist-custom-widgets-fr-admin"]
     },
     {
       "login": "VanessaRispal",
       "avatarUrl": "https://github.com/VanessaRispal.png",
       "commits": 28,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "dakie62",
       "avatarUrl": "https://github.com/dakie62.png",
       "commits": 27,
-      "repos": [
-        "fondation"
-      ]
+      "repos": ["fondation"]
     },
     {
       "login": "actions-user",
       "avatarUrl": "https://github.com/actions-user.png",
       "commits": 27,
-      "repos": [
-        "communs-de-la-transition-ecologique-des-collectivites"
-      ]
+      "repos": ["communs-de-la-transition-ecologique-des-collectivites"]
     },
     {
       "login": "skelz0r",
       "avatarUrl": "https://github.com/skelz0r.png",
       "commits": 26,
-      "repos": [
-        "datapass"
-      ]
+      "repos": ["datapass"]
     },
     {
       "login": "julielcr",
       "avatarUrl": "https://github.com/julielcr.png",
       "commits": 25,
-      "repos": [
-        "portail-rse"
-      ]
+      "repos": ["portail-rse"]
     },
     {
       "login": "pierre-chene44",
       "avatarUrl": "https://github.com/pierre-chene44.png",
       "commits": 25,
-      "repos": [
-        "mle-back"
-      ]
+      "repos": ["mle-back"]
     },
     {
       "login": "jbledevehat",
       "avatarUrl": "https://github.com/jbledevehat.png",
       "commits": 24,
-      "repos": [
-        "mission-transition-ecologique"
-      ]
+      "repos": ["mission-transition-ecologique"]
     },
     {
       "login": "maxamieux",
       "avatarUrl": "https://github.com/maxamieux.png",
       "commits": 24,
-      "repos": [
-        "reno"
-      ]
+      "repos": ["reno"]
     },
     {
       "login": "Tibo-aplus",
       "avatarUrl": "https://github.com/Tibo-aplus.png",
       "commits": 23,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "hannaeko",
       "avatarUrl": "https://github.com/hannaeko.png",
       "commits": 22,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "maksim2005UKR",
       "avatarUrl": "https://github.com/maksim2005UKR.png",
       "commits": 22,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "QuentiumYT",
       "avatarUrl": "https://github.com/QuentiumYT.png",
       "commits": 22,
-      "repos": [
-        "dsfr-chart"
-      ]
+      "repos": ["dsfr-chart"]
     },
     {
       "login": "paulburgun",
       "avatarUrl": "https://github.com/paulburgun.png",
       "commits": 20,
-      "repos": [
-        "beta.gouv.fr",
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["beta.gouv.fr", "doc.incubateur.net-communaute"]
     },
     {
       "login": "SchweisguthN",
       "avatarUrl": "https://github.com/SchweisguthN.png",
       "commits": 20,
-      "repos": [
-        "api.gouv.fr",
-        "datapass",
-        "api_gouv_swaggers"
-      ]
+      "repos": ["api.gouv.fr", "datapass", "api_gouv_swaggers"]
     },
     {
       "login": "pcheng-1012",
       "avatarUrl": "https://github.com/pcheng-1012.png",
       "commits": 20,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "benjlevesque",
       "avatarUrl": "https://github.com/benjlevesque.png",
       "commits": 20,
-      "repos": [
-        "mailpit-buildpack"
-      ]
+      "repos": ["mailpit-buildpack"]
     },
     {
       "login": "jerome-onisep",
       "avatarUrl": "https://github.com/jerome-onisep.png",
       "commits": 19,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "zellerbaptiste",
       "avatarUrl": "https://github.com/zellerbaptiste.png",
       "commits": 19,
-      "repos": [
-        "dsfr-chart"
-      ]
+      "repos": ["dsfr-chart"]
     },
     {
       "login": "hatchuel",
       "avatarUrl": "https://github.com/hatchuel.png",
       "commits": 18,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "dolemoine",
       "avatarUrl": "https://github.com/dolemoine.png",
       "commits": 18,
-      "repos": [
-        "mission-transition-ecologique"
-      ]
+      "repos": ["mission-transition-ecologique"]
     },
     {
       "login": "PlugNPush",
       "avatarUrl": "https://github.com/PlugNPush.png",
       "commits": 18,
-      "repos": [
-        "dsfr-chart"
-      ]
+      "repos": ["dsfr-chart"]
     },
     {
       "login": "Mintoo200",
       "avatarUrl": "https://github.com/Mintoo200.png",
       "commits": 17,
-      "repos": [
-        "a11y-generateur-declaration",
-        "atelier-formulaires-a11y"
-      ]
+      "repos": ["a11y-generateur-declaration", "atelier-formulaires-a11y"]
     },
     {
       "login": "mpsisback",
       "avatarUrl": "https://github.com/mpsisback.png",
       "commits": 16,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "KennethEnevoldsen",
       "avatarUrl": "https://github.com/KennethEnevoldsen.png",
       "commits": 15,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "NiklasZechner",
       "avatarUrl": "https://github.com/NiklasZechner.png",
       "commits": 15,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "h0r0m",
       "avatarUrl": "https://github.com/h0r0m.png",
       "commits": 15,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "BYK",
       "avatarUrl": "https://github.com/BYK.png",
       "commits": 15,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "Vladimir-Va",
       "avatarUrl": "https://github.com/Vladimir-Va.png",
       "commits": 14,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "elba-octo",
       "avatarUrl": "https://github.com/elba-octo.png",
       "commits": 14,
-      "repos": [
-        "depots-sauvages"
-      ]
+      "repos": ["depots-sauvages"]
     },
     {
       "login": "Karel2",
       "avatarUrl": "https://github.com/Karel2.png",
       "commits": 13,
-      "repos": [
-        "Aidants_Connect"
-      ]
+      "repos": ["Aidants_Connect"]
     },
     {
       "login": "ledouxm",
       "avatarUrl": "https://github.com/ledouxm.png",
       "commits": 13,
-      "repos": [
-        "compte-rendu-vif"
-      ]
+      "repos": ["compte-rendu-vif"]
     },
     {
       "login": "vinyll",
       "avatarUrl": "https://github.com/vinyll.png",
       "commits": 13,
-      "repos": [
-        "1jeune1arbre"
-      ]
+      "repos": ["1jeune1arbre"]
     },
     {
       "login": "vonbraun22",
       "avatarUrl": "https://github.com/vonbraun22.png",
       "commits": 13,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "xabirequejo",
       "avatarUrl": "https://github.com/xabirequejo.png",
       "commits": 13,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "matteo-goracci",
       "avatarUrl": "https://github.com/matteo-goracci.png",
       "commits": 12,
-      "repos": [
-        "Aidants_Connect"
-      ]
+      "repos": ["Aidants_Connect"]
     },
     {
       "login": "mfo",
       "avatarUrl": "https://github.com/mfo.png",
       "commits": 11,
-      "repos": [
-        "doc.demarches-simplifiees.fr"
-      ]
+      "repos": ["doc.demarches-simplifiees.fr"]
     },
     {
       "login": "arnaud-robin",
       "avatarUrl": "https://github.com/arnaud-robin.png",
       "commits": 11,
-      "repos": [
-        "grist-custom-widgets-fr-admin"
-      ]
+      "repos": ["grist-custom-widgets-fr-admin"]
     },
     {
       "login": "jmaupetit",
       "avatarUrl": "https://github.com/jmaupetit.png",
       "commits": 11,
-      "repos": [
-        "csplab"
-      ]
+      "repos": ["csplab"]
     },
     {
       "login": "Holist",
       "avatarUrl": "https://github.com/Holist.png",
       "commits": 10,
-      "repos": [
-        "rdv-service-public"
-      ]
+      "repos": ["rdv-service-public"]
     },
     {
       "login": "Thibaud-DT",
       "avatarUrl": "https://github.com/Thibaud-DT.png",
       "commits": 10,
-      "repos": [
-        "eclauses"
-      ]
+      "repos": ["eclauses"]
     },
     {
       "login": "johangirod",
       "avatarUrl": "https://github.com/johangirod.png",
       "commits": 9,
-      "repos": [
-        "mon-entreprise",
-        "aides-simplifiees-app"
-      ]
+      "repos": ["mon-entreprise", "aides-simplifiees-app"]
     },
     {
       "login": "dxb",
@@ -6433,25 +4496,19 @@
       "login": "Clemog",
       "avatarUrl": "https://github.com/Clemog.png",
       "commits": 9,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "dgedj",
       "avatarUrl": "https://github.com/dgedj.png",
       "commits": 9,
-      "repos": [
-        "reno"
-      ]
+      "repos": ["reno"]
     },
     {
       "login": "am-beta",
       "avatarUrl": "https://github.com/am-beta.png",
       "commits": 9,
-      "repos": [
-        "ansible-pole-api"
-      ]
+      "repos": ["ansible-pole-api"]
     },
     {
       "login": "AmelAlili",
@@ -6468,212 +4525,157 @@
       "login": "Michaelvilleneuve",
       "avatarUrl": "https://github.com/Michaelvilleneuve.png",
       "commits": 8,
-      "repos": [
-        "rdv-service-public",
-        "multi-schema-postgres-etl"
-      ]
+      "repos": ["rdv-service-public", "multi-schema-postgres-etl"]
     },
     {
       "login": "creativeeyestudio",
       "avatarUrl": "https://github.com/creativeeyestudio.png",
       "commits": 8,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "aides-jeunes-bot",
       "avatarUrl": "https://github.com/aides-jeunes-bot.png",
       "commits": 7,
-      "repos": [
-        "aides-jeunes"
-      ]
+      "repos": ["aides-jeunes"]
     },
     {
       "login": "SabrinaAure",
       "avatarUrl": "https://github.com/SabrinaAure.png",
       "commits": 7,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "renovate[bot]",
       "avatarUrl": "https://github.com/renovate[bot].png",
       "commits": 7,
-      "repos": [
-        "service-national-universel",
-        "classifia"
-      ]
+      "repos": ["service-national-universel", "classifia"]
     },
     {
       "login": "MartinVeronSSI",
       "avatarUrl": "https://github.com/MartinVeronSSI.png",
       "commits": 7,
-      "repos": [
-        "mon-aide-cyber"
-      ]
+      "repos": ["mon-aide-cyber"]
     },
     {
       "login": "AudreyBramy",
       "avatarUrl": "https://github.com/AudreyBramy.png",
       "commits": 7,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "lucie4culture",
       "avatarUrl": "https://github.com/lucie4culture.png",
       "commits": 7,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "RapidShade",
       "avatarUrl": "https://github.com/RapidShade.png",
       "commits": 7,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "eliott07",
       "avatarUrl": "https://github.com/eliott07.png",
       "commits": 7,
-      "repos": [
-        "doc.incubateur.net-alliance"
-      ]
+      "repos": ["doc.incubateur.net-alliance"]
     },
     {
       "login": "nrolin",
       "avatarUrl": "https://github.com/nrolin.png",
       "commits": 7,
-      "repos": [
-        "ranking_methods"
-      ]
+      "repos": ["ranking_methods"]
     },
     {
       "login": "fmata",
       "avatarUrl": "https://github.com/fmata.png",
       "commits": 6,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "Isalafont",
       "avatarUrl": "https://github.com/Isalafont.png",
       "commits": 6,
-      "repos": [
-        "datapass"
-      ]
+      "repos": ["datapass"]
     },
     {
       "login": "Doniaab",
       "avatarUrl": "https://github.com/Doniaab.png",
       "commits": 6,
-      "repos": [
-        "sante-psy"
-      ]
+      "repos": ["sante-psy"]
     },
     {
       "login": "procorbin",
       "avatarUrl": "https://github.com/procorbin.png",
       "commits": 6,
-      "repos": [
-        "mon-suivi-justice"
-      ]
+      "repos": ["mon-suivi-justice"]
     },
     {
       "login": "jdauphant-dinum",
       "avatarUrl": "https://github.com/jdauphant-dinum.png",
       "commits": 6,
-      "repos": [
-        "sillon"
-      ]
+      "repos": ["sillon"]
     },
     {
       "login": "marihihii",
       "avatarUrl": "https://github.com/marihihii.png",
       "commits": 6,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "celine-m-s",
       "avatarUrl": "https://github.com/celine-m-s.png",
       "commits": 6,
-      "repos": [
-        "docurba-nuxt3"
-      ]
+      "repos": ["docurba-nuxt3"]
     },
     {
       "login": "rik",
       "avatarUrl": "https://github.com/rik.png",
       "commits": 6,
-      "repos": [
-        "docurba-nuxt3"
-      ]
+      "repos": ["docurba-nuxt3"]
     },
     {
       "login": "umam15",
       "avatarUrl": "https://github.com/umam15.png",
       "commits": 6,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "dok1kun",
       "avatarUrl": "https://github.com/dok1kun.png",
       "commits": 6,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "charles-le-prevost",
       "avatarUrl": "https://github.com/charles-le-prevost.png",
       "commits": 6,
-      "repos": [
-        "standards"
-      ]
+      "repos": ["standards"]
     },
     {
       "login": "SamiDTNumDGFiP",
       "avatarUrl": "https://github.com/SamiDTNumDGFiP.png",
       "commits": 6,
-      "repos": [
-        "suivi_dtnum_datapass"
-      ]
+      "repos": ["suivi_dtnum_datapass"]
     },
     {
       "login": "odulcy",
       "avatarUrl": "https://github.com/odulcy.png",
       "commits": 6,
-      "repos": [
-        "document-ia"
-      ]
+      "repos": ["document-ia"]
     },
     {
       "login": "felhix",
       "avatarUrl": "https://github.com/felhix.png",
       "commits": 5,
-      "repos": [
-        "datapass",
-        "campus-numerique-cms"
-      ]
+      "repos": ["datapass", "campus-numerique-cms"]
     },
     {
       "login": "colinux",
       "avatarUrl": "https://github.com/colinux.png",
       "commits": 5,
-      "repos": [
-        "doc.demarches-simplifiees.fr"
-      ]
+      "repos": ["doc.demarches-simplifiees.fr"]
     },
     {
       "login": "tristanrobert",
@@ -6690,1024 +4692,757 @@
       "login": "maiwann",
       "avatarUrl": "https://github.com/maiwann.png",
       "commits": 5,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "adjbrt",
       "avatarUrl": "https://github.com/adjbrt.png",
       "commits": 5,
-      "repos": [
-        "monstagedeseconde"
-      ]
+      "repos": ["monstagedeseconde"]
     },
     {
       "login": "tglatt",
       "avatarUrl": "https://github.com/tglatt.png",
       "commits": 5,
-      "repos": [
-        "seves-schemas"
-      ]
+      "repos": ["seves-schemas"]
     },
     {
       "login": "winjie0618",
       "avatarUrl": "https://github.com/winjie0618.png",
       "commits": 5,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "aldy505",
       "avatarUrl": "https://github.com/aldy505.png",
       "commits": 5,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "graphein13",
       "avatarUrl": "https://github.com/graphein13.png",
       "commits": 5,
-      "repos": [
-        "Mistral-penal"
-      ]
+      "repos": ["Mistral-penal"]
     },
     {
       "login": "Samuelfaure",
       "avatarUrl": "https://github.com/Samuelfaure.png",
       "commits": 4,
-      "repos": [
-        "api.gouv.fr",
-        "api-particulier-demonstrateur"
-      ]
+      "repos": ["api.gouv.fr", "api-particulier-demonstrateur"]
     },
     {
       "login": "dtende",
       "avatarUrl": "https://github.com/dtende.png",
       "commits": 4,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "alicebeta",
       "avatarUrl": "https://github.com/alicebeta.png",
       "commits": 4,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "standards"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "standards"]
     },
     {
       "login": "AlicePoggioli",
       "avatarUrl": "https://github.com/AlicePoggioli.png",
       "commits": 4,
-      "repos": [
-        "ma-cantine"
-      ]
+      "repos": ["ma-cantine"]
     },
     {
       "login": "lsagetlethias",
       "avatarUrl": "https://github.com/lsagetlethias.png",
       "commits": 4,
-      "repos": [
-        "awesome-betagouv",
-        "espace-membre-next"
-      ]
+      "repos": ["awesome-betagouv", "espace-membre-next"]
     },
     {
       "login": "Frzk",
       "avatarUrl": "https://github.com/Frzk.png",
       "commits": 4,
-      "repos": [
-        "eva-metabase",
-        "assistant-declaration-metabase-scalingo"
-      ]
+      "repos": ["eva-metabase", "assistant-declaration-metabase-scalingo"]
     },
     {
       "login": "heroinedor",
       "avatarUrl": "https://github.com/heroinedor.png",
       "commits": 4,
-      "repos": [
-        "sillon"
-      ]
+      "repos": ["sillon"]
     },
     {
       "login": "SAADDGFIP2024",
       "avatarUrl": "https://github.com/SAADDGFIP2024.png",
       "commits": 4,
-      "repos": [
-        "api_gouv_swaggers"
-      ]
+      "repos": ["api_gouv_swaggers"]
     },
     {
       "login": "oliverne",
       "avatarUrl": "https://github.com/oliverne.png",
       "commits": 4,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "jonathanperret",
       "avatarUrl": "https://github.com/jonathanperret.png",
       "commits": 4,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "Arthurpanck",
       "avatarUrl": "https://github.com/Arthurpanck.png",
       "commits": 4,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "aminvakil",
       "avatarUrl": "https://github.com/aminvakil.png",
       "commits": 4,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "Albannne",
       "avatarUrl": "https://github.com/Albannne.png",
       "commits": 4,
-      "repos": [
-        "doc.incubateur.net-alliance"
-      ]
+      "repos": ["doc.incubateur.net-alliance"]
     },
     {
       "login": "yowamuzadi",
       "avatarUrl": "https://github.com/yowamuzadi.png",
       "commits": 3,
-      "repos": [
-        "beta.gouv.fr",
-        "aides-simplifiees-app"
-      ]
+      "repos": ["beta.gouv.fr", "aides-simplifiees-app"]
     },
     {
       "login": "MarinePetroline",
       "avatarUrl": "https://github.com/MarinePetroline.png",
       "commits": 3,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "philippedemangoubeta",
       "avatarUrl": "https://github.com/philippedemangoubeta.png",
       "commits": 3,
-      "repos": [
-        "service-national-universel"
-      ]
+      "repos": ["service-national-universel"]
     },
     {
       "login": "BenoitSerrano",
       "avatarUrl": "https://github.com/BenoitSerrano.png",
       "commits": 3,
-      "repos": [
-        "pentesting-simulator"
-      ]
+      "repos": ["pentesting-simulator"]
     },
     {
       "login": "fabienheureux",
       "avatarUrl": "https://github.com/fabienheureux.png",
       "commits": 3,
-      "repos": [
-        "campus-numerique-cms",
-        "sites-faciles",
-        "sites-faciles-spe"
-      ]
+      "repos": ["campus-numerique-cms", "sites-faciles", "sites-faciles-spe"]
     },
     {
       "login": "saffarh",
       "avatarUrl": "https://github.com/saffarh.png",
       "commits": 3,
-      "repos": [
-        "reno"
-      ]
+      "repos": ["reno"]
     },
     {
       "login": "majjinbuu",
       "avatarUrl": "https://github.com/majjinbuu.png",
       "commits": 3,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "UngererFabien",
       "avatarUrl": "https://github.com/UngererFabien.png",
       "commits": 3,
-      "repos": [
-        "docurba-nuxt3"
-      ]
+      "repos": ["docurba-nuxt3"]
     },
     {
       "login": "nicolasleger",
       "avatarUrl": "https://github.com/nicolasleger.png",
       "commits": 3,
-      "repos": [
-        "decoupage-administratif-gem",
-        "new-rails-template"
-      ]
+      "repos": ["decoupage-administratif-gem", "new-rails-template"]
     },
     {
       "login": "Atalanttore",
       "avatarUrl": "https://github.com/Atalanttore.png",
       "commits": 3,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "SantosSi",
       "avatarUrl": "https://github.com/SantosSi.png",
       "commits": 3,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "tanguy-launay",
       "avatarUrl": "https://github.com/tanguy-launay.png",
       "commits": 3,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "Varamil",
       "avatarUrl": "https://github.com/Varamil.png",
       "commits": 3,
-      "repos": [
-        "grist-core",
-        "grist-help"
-      ]
+      "repos": ["grist-core", "grist-help"]
     },
     {
       "login": "VojtechKrystek",
       "avatarUrl": "https://github.com/VojtechKrystek.png",
       "commits": 3,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "hubertdeng123",
       "avatarUrl": "https://github.com/hubertdeng123.png",
       "commits": 3,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "Juliengbt23",
       "avatarUrl": "https://github.com/Juliengbt23.png",
       "commits": 3,
-      "repos": [
-        "doc.incubateur.net-alliance"
-      ]
+      "repos": ["doc.incubateur.net-alliance"]
     },
     {
       "login": "vincentporte",
       "avatarUrl": "https://github.com/vincentporte.png",
       "commits": 3,
-      "repos": [
-        "csplab"
-      ]
+      "repos": ["csplab"]
     },
     {
       "login": "ValentinVieux",
       "avatarUrl": "https://github.com/ValentinVieux.png",
       "commits": 3,
-      "repos": [
-        "archeologia-pipeline"
-      ]
+      "repos": ["archeologia-pipeline"]
     },
     {
       "login": "arslanegharout",
       "avatarUrl": "https://github.com/arslanegharout.png",
       "commits": 2,
-      "repos": [
-        "api.gouv.fr",
-        "api_gouv_swaggers"
-      ]
+      "repos": ["api.gouv.fr", "api_gouv_swaggers"]
     },
     {
       "login": "wiinxt",
       "avatarUrl": "https://github.com/wiinxt.png",
       "commits": 2,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "nedbaldessin",
       "avatarUrl": "https://github.com/nedbaldessin.png",
       "commits": 2,
-      "repos": [
-        "pop",
-        "assistant-declaration"
-      ]
+      "repos": ["pop", "assistant-declaration"]
     },
     {
       "login": "aminedhobb",
       "avatarUrl": "https://github.com/aminedhobb.png",
       "commits": 2,
-      "repos": [
-        "rdv-service-public"
-      ]
+      "repos": ["rdv-service-public"]
     },
     {
       "login": "jbfeldis",
       "avatarUrl": "https://github.com/jbfeldis.png",
       "commits": 2,
-      "repos": [
-        "datapass"
-      ]
+      "repos": ["datapass"]
     },
     {
       "login": "neraun",
       "avatarUrl": "https://github.com/neraun.png",
       "commits": 2,
-      "repos": [
-        "doc.incubateur.net-communaute",
-        "standards"
-      ]
+      "repos": ["doc.incubateur.net-communaute", "standards"]
     },
     {
       "login": "louije",
       "avatarUrl": "https://github.com/louije.png",
       "commits": 2,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "FabGir",
       "avatarUrl": "https://github.com/FabGir.png",
       "commits": 2,
-      "repos": [
-        "mon-service-securise"
-      ]
+      "repos": ["mon-service-securise"]
     },
     {
       "login": "pom421",
       "avatarUrl": "https://github.com/pom421.png",
       "commits": 2,
-      "repos": [
-        "sillon"
-      ]
+      "repos": ["sillon"]
     },
     {
       "login": "omahs",
       "avatarUrl": "https://github.com/omahs.png",
       "commits": 2,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "ctrl-hexa",
       "avatarUrl": "https://github.com/ctrl-hexa.png",
       "commits": 2,
-      "repos": [
-        "1jeune1arbre"
-      ]
+      "repos": ["1jeune1arbre"]
     },
     {
       "login": "remi-beaulieu",
       "avatarUrl": "https://github.com/remi-beaulieu.png",
       "commits": 2,
-      "repos": [
-        "france-chaleur-urbaine-publicodes"
-      ]
+      "repos": ["france-chaleur-urbaine-publicodes"]
     },
     {
       "login": "Mdi0uf",
       "avatarUrl": "https://github.com/Mdi0uf.png",
       "commits": 2,
-      "repos": [
-        "api_gouv_swaggers"
-      ]
+      "repos": ["api_gouv_swaggers"]
     },
     {
       "login": "chaibax",
       "avatarUrl": "https://github.com/chaibax.png",
       "commits": 2,
-      "repos": [
-        "sites-faciles",
-        "sites-faciles-spe"
-      ]
+      "repos": ["sites-faciles", "sites-faciles-spe"]
     },
     {
       "login": "luskay595",
       "avatarUrl": "https://github.com/luskay595.png",
       "commits": 2,
-      "repos": [
-        "sites-faciles",
-        "sites-faciles-spe"
-      ]
+      "repos": ["sites-faciles", "sites-faciles-spe"]
     },
     {
       "login": "this-is-tobi",
       "avatarUrl": "https://github.com/this-is-tobi.png",
       "commits": 2,
-      "repos": [
-        "sites-faciles",
-        "sites-faciles-spe"
-      ]
+      "repos": ["sites-faciles", "sites-faciles-spe"]
     },
     {
       "login": "sylvaingi",
       "avatarUrl": "https://github.com/sylvaingi.png",
       "commits": 2,
-      "repos": [
-        "communs-de-la-transition-ecologique-des-collectivites"
-      ]
+      "repos": ["communs-de-la-transition-ecologique-des-collectivites"]
     },
     {
       "login": "mirithilion",
       "avatarUrl": "https://github.com/mirithilion.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "V3rB0se",
       "avatarUrl": "https://github.com/V3rB0se.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "lilyroselavender",
       "avatarUrl": "https://github.com/lilyroselavender.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "wiktorpyk",
       "avatarUrl": "https://github.com/wiktorpyk.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "Maksim2005UA2",
       "avatarUrl": "https://github.com/Maksim2005UA2.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "scytacki",
       "avatarUrl": "https://github.com/scytacki.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "florentinap",
       "avatarUrl": "https://github.com/florentinap.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "BorATICI",
       "avatarUrl": "https://github.com/BorATICI.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "gmarsay",
       "avatarUrl": "https://github.com/gmarsay.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "agilgur5",
       "avatarUrl": "https://github.com/agilgur5.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "remileblond67076",
       "avatarUrl": "https://github.com/remileblond67076.png",
       "commits": 2,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "davidbgk",
       "avatarUrl": "https://github.com/davidbgk.png",
       "commits": 2,
-      "repos": [
-        "braveau-grist-widget"
-      ]
+      "repos": ["braveau-grist-widget"]
     },
     {
       "login": "getsentry-bot",
       "avatarUrl": "https://github.com/getsentry-bot.png",
       "commits": 2,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "mazalaigue",
       "avatarUrl": "https://github.com/mazalaigue.png",
       "commits": 1,
-      "repos": [
-        "api.gouv.fr"
-      ]
+      "repos": ["api.gouv.fr"]
     },
     {
       "login": "mquandalle",
       "avatarUrl": "https://github.com/mquandalle.png",
       "commits": 1,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "AEtheve",
       "avatarUrl": "https://github.com/AEtheve.png",
       "commits": 1,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "rikles",
       "avatarUrl": "https://github.com/rikles.png",
       "commits": 1,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "AntoineAugusti",
       "avatarUrl": "https://github.com/AntoineAugusti.png",
       "commits": 1,
-      "repos": [
-        "mon-entreprise"
-      ]
+      "repos": ["mon-entreprise"]
     },
     {
       "login": "MathieuFV",
       "avatarUrl": "https://github.com/MathieuFV.png",
       "commits": 1,
-      "repos": [
-        "slack-ovh"
-      ]
+      "repos": ["slack-ovh"]
     },
     {
       "login": "marouria",
       "avatarUrl": "https://github.com/marouria.png",
       "commits": 1,
-      "repos": [
-        "eva"
-      ]
+      "repos": ["eva"]
     },
     {
       "login": "charlottelecuit",
       "avatarUrl": "https://github.com/charlottelecuit.png",
       "commits": 1,
-      "repos": [
-        "blog.beta.gouv.fr"
-      ]
+      "repos": ["blog.beta.gouv.fr"]
     },
     {
       "login": "johnoppenheimer",
       "avatarUrl": "https://github.com/johnoppenheimer.png",
       "commits": 1,
-      "repos": [
-        "pop"
-      ]
+      "repos": ["pop"]
     },
     {
       "login": "guillaumebriday",
       "avatarUrl": "https://github.com/guillaumebriday.png",
       "commits": 1,
-      "repos": [
-        "rdv-service-public"
-      ]
+      "repos": ["rdv-service-public"]
     },
     {
       "login": "mekaidmekaid",
       "avatarUrl": "https://github.com/mekaidmekaid.png",
       "commits": 1,
-      "repos": [
-        "rdv-service-public"
-      ]
+      "repos": ["rdv-service-public"]
     },
     {
       "login": "renardpal",
       "avatarUrl": "https://github.com/renardpal.png",
       "commits": 1,
-      "repos": [
-        "datapass"
-      ]
+      "repos": ["datapass"]
     },
     {
       "login": "Flightan",
       "avatarUrl": "https://github.com/Flightan.png",
       "commits": 1,
-      "repos": [
-        "redirections"
-      ]
+      "repos": ["redirections"]
     },
     {
       "login": "margot-sanchez",
       "avatarUrl": "https://github.com/margot-sanchez.png",
       "commits": 1,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "nlewo",
       "avatarUrl": "https://github.com/nlewo.png",
       "commits": 1,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "shours",
       "avatarUrl": "https://github.com/shours.png",
       "commits": 1,
-      "repos": [
-        "doc.incubateur.net-communaute"
-      ]
+      "repos": ["doc.incubateur.net-communaute"]
     },
     {
       "login": "JoeSlain",
       "avatarUrl": "https://github.com/JoeSlain.png",
       "commits": 1,
-      "repos": [
-        "api-engagement"
-      ]
+      "repos": ["api-engagement"]
     },
     {
       "login": "felixat13",
       "avatarUrl": "https://github.com/felixat13.png",
       "commits": 1,
-      "repos": [
-        "ma-cantine"
-      ]
+      "repos": ["ma-cantine"]
     },
     {
       "login": "farid1111",
       "avatarUrl": "https://github.com/farid1111.png",
       "commits": 1,
-      "repos": [
-        "delta-v"
-      ]
+      "repos": ["delta-v"]
     },
     {
       "login": "MichaelBitard",
       "avatarUrl": "https://github.com/MichaelBitard.png",
       "commits": 1,
-      "repos": [
-        "awesome-betagouv"
-      ]
+      "repos": ["awesome-betagouv"]
     },
     {
       "login": "FunkyDev-Factory",
       "avatarUrl": "https://github.com/FunkyDev-Factory.png",
       "commits": 1,
-      "repos": [
-        "recoco-portails"
-      ]
+      "repos": ["recoco-portails"]
     },
     {
       "login": "HeleneDubourdieu",
       "avatarUrl": "https://github.com/HeleneDubourdieu.png",
       "commits": 1,
-      "repos": [
-        "complements-alimentaires"
-      ]
+      "repos": ["complements-alimentaires"]
     },
     {
       "login": "Ynote",
       "avatarUrl": "https://github.com/Ynote.png",
       "commits": 1,
-      "repos": [
-        "pitchou"
-      ]
+      "repos": ["pitchou"]
     },
     {
       "login": "Polasson",
       "avatarUrl": "https://github.com/Polasson.png",
       "commits": 1,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "guillaume-lagarde",
       "avatarUrl": "https://github.com/guillaume-lagarde.png",
       "commits": 1,
-      "repos": [
-        "monprojetsup"
-      ]
+      "repos": ["monprojetsup"]
     },
     {
       "login": "saattrupdan",
       "avatarUrl": "https://github.com/saattrupdan.png",
       "commits": 1,
-      "repos": [
-        "ComparIA"
-      ]
+      "repos": ["ComparIA"]
     },
     {
       "login": "sylvainlg",
       "avatarUrl": "https://github.com/sylvainlg.png",
       "commits": 1,
-      "repos": [
-        "multi-schema-postgres-etl"
-      ]
+      "repos": ["multi-schema-postgres-etl"]
     },
     {
       "login": "Nmaxime",
       "avatarUrl": "https://github.com/Nmaxime.png",
       "commits": 1,
-      "repos": [
-        "fondation"
-      ]
+      "repos": ["fondation"]
     },
     {
       "login": "francoisfreitag",
       "avatarUrl": "https://github.com/francoisfreitag.png",
       "commits": 1,
-      "repos": [
-        "sites-faciles"
-      ]
+      "repos": ["sites-faciles"]
     },
     {
       "login": "AdrienZmr",
       "avatarUrl": "https://github.com/AdrienZmr.png",
       "commits": 1,
-      "repos": [
-        "communs-de-la-transition-ecologique-des-collectivites"
-      ]
+      "repos": ["communs-de-la-transition-ecologique-des-collectivites"]
     },
     {
       "login": "qleroy",
       "avatarUrl": "https://github.com/qleroy.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "Blubberland",
       "avatarUrl": "https://github.com/Blubberland.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "ipovos",
       "avatarUrl": "https://github.com/ipovos.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "mrdev023",
       "avatarUrl": "https://github.com/mrdev023.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "00041275",
       "avatarUrl": "https://github.com/00041275.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "dsferruzza",
       "avatarUrl": "https://github.com/dsferruzza.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "mattifaye",
       "avatarUrl": "https://github.com/mattifaye.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "ricpol",
       "avatarUrl": "https://github.com/ricpol.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "virgile-dev",
       "avatarUrl": "https://github.com/virgile-dev.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "lshalon",
       "avatarUrl": "https://github.com/lshalon.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "seven-of-eleven",
       "avatarUrl": "https://github.com/seven-of-eleven.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "AmirhosseinAmeri",
       "avatarUrl": "https://github.com/AmirhosseinAmeri.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "pitersky",
       "avatarUrl": "https://github.com/pitersky.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "Scandiravian",
       "avatarUrl": "https://github.com/Scandiravian.png",
       "commits": 1,
-      "repos": [
-        "grist-core"
-      ]
+      "repos": ["grist-core"]
     },
     {
       "login": "SevereOverfl0w",
       "avatarUrl": "https://github.com/SevereOverfl0w.png",
       "commits": 1,
-      "repos": [
-        "braveau-grist-widget"
-      ]
+      "repos": ["braveau-grist-widget"]
     },
     {
       "login": "Erwan-le-Gall",
       "avatarUrl": "https://github.com/Erwan-le-Gall.png",
       "commits": 1,
-      "repos": [
-        "acces-cible"
-      ]
+      "repos": ["acces-cible"]
     },
     {
       "login": "FBullier",
       "avatarUrl": "https://github.com/FBullier.png",
       "commits": 1,
-      "repos": [
-        "portail-rse-externe"
-      ]
+      "repos": ["portail-rse-externe"]
     },
     {
       "login": "brettdh",
       "avatarUrl": "https://github.com/brettdh.png",
       "commits": 1,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "leeoocca",
       "avatarUrl": "https://github.com/leeoocca.png",
       "commits": 1,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "chadwhitacre",
       "avatarUrl": "https://github.com/chadwhitacre.png",
       "commits": 1,
-      "repos": [
-        "self-hosted"
-      ]
+      "repos": ["self-hosted"]
     },
     {
       "login": "MathieuLoutre",
       "avatarUrl": "https://github.com/MathieuLoutre.png",
       "commits": 1,
-      "repos": [
-        "standards-front"
-      ]
+      "repos": ["standards-front"]
     },
     {
       "login": "gitbook-bot",
       "avatarUrl": "https://github.com/gitbook-bot.png",
       "commits": 1,
-      "repos": [
-        "doc.incubateur.net-alliance"
-      ]
+      "repos": ["doc.incubateur.net-alliance"]
     },
     {
       "login": "pgrange-lab",
       "avatarUrl": "https://github.com/pgrange-lab.png",
       "commits": 1,
-      "repos": [
-        "anssi-tutelles"
-      ]
+      "repos": ["anssi-tutelles"]
     },
     {
       "login": "QazCetelic",
       "avatarUrl": "https://github.com/QazCetelic.png",
       "commits": 1,
-      "repos": [
-        "grist-help"
-      ]
+      "repos": ["grist-help"]
     },
     {
       "login": "combinatorist",
       "avatarUrl": "https://github.com/combinatorist.png",
       "commits": 1,
-      "repos": [
-        "grist-help"
-      ]
+      "repos": ["grist-help"]
     },
     {
       "login": "ouladhima",
       "avatarUrl": "https://github.com/ouladhima.png",
       "commits": 1,
-      "repos": [
-        "csplab"
-      ]
+      "repos": ["csplab"]
     },
     {
       "login": "tonai",
       "avatarUrl": "https://github.com/tonai.png",
       "commits": 1,
-      "repos": [
-        "dsfr-chart"
-      ]
+      "repos": ["dsfr-chart"]
     },
     {
       "login": "geoffreyaldebert",
       "avatarUrl": "https://github.com/geoffreyaldebert.png",
       "commits": 1,
-      "repos": [
-        "datagouv-visualizations"
-      ]
+      "repos": ["datagouv-visualizations"]
     },
     {
       "login": "romain-pix-cyber",
       "avatarUrl": "https://github.com/romain-pix-cyber.png",
       "commits": 1,
-      "repos": [
-        "oauth2-proxy-buildpack"
-      ]
+      "repos": ["oauth2-proxy-buildpack"]
     }
   ],
   "commitMessages": {
