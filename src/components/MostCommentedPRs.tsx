@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import type { MostCommentedPR } from "../types.ts";
 
 interface MostCommentedPRsProps {
@@ -78,6 +78,7 @@ const EMOJI_MAP: Record<string, string> = {
   money_with_wings: "\u{1F4B8}",
   thread: "\u{1F9F5}",
   safety_vest: "\u{1F9BA}",
+  mag_right: "\u{1F50E}",
 };
 
 function replaceEmojiShortcodes(text: string): string {
@@ -99,29 +100,49 @@ export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
   const shuffled = useMemo(() => shuffle(prs), [prs]);
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
+  const cycleRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const fadingRef = useRef(false);
+
+  const cycle = useCallback(() => {
+    if (fadingRef.current) return;
+    fadingRef.current = true;
+    setVisible(false);
+    setTimeout(() => {
+      setIndex((prev) => (prev + 1) % shuffled.length);
+      setVisible(true);
+      fadingRef.current = false;
+    }, FADE_MS);
+  }, [shuffled.length]);
+
+  const resetTimer = useCallback(() => {
+    if (cycleRef.current) clearInterval(cycleRef.current);
+    cycleRef.current = setInterval(cycle, CYCLE_MS);
+  }, [cycle]);
 
   useEffect(() => {
     if (shuffled.length <= 1) return;
+    cycleRef.current = setInterval(cycle, CYCLE_MS);
+    return () => {
+      if (cycleRef.current) clearInterval(cycleRef.current);
+    };
+  }, [shuffled.length, cycle]);
 
-    const interval = setInterval(() => {
-      // fade out
-      setVisible(false);
-      // after fade-out, switch item and fade in
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % shuffled.length);
-        setVisible(true);
-      }, FADE_MS);
-    }, CYCLE_MS);
-
-    return () => clearInterval(interval);
-  }, [shuffled.length]);
+  const handleClick = useCallback(
+    (e: React.MouseEvent) => {
+      if ((e.target as HTMLElement).closest("a")) return;
+      if (shuffled.length <= 1) return;
+      cycle();
+      resetTimer();
+    },
+    [cycle, resetTimer, shuffled.length],
+  );
 
   if (shuffled.length === 0) return null;
 
   const pr = shuffled[index];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-900 to-red-800 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-blue-500/25">
+    <section onClick={handleClick} className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-900 to-red-800 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-blue-500/25 cursor-pointer">
       {/* Animated tricolore glow */}
       <div
         className="absolute inset-0 opacity-30"
