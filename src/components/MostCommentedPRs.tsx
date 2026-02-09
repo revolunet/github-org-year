@@ -142,7 +142,10 @@ export function MostCommentedPRs({ prs }: MostCommentedPRsProps) {
   const pr = shuffled[index];
 
   return (
-    <section onClick={handleClick} className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-900 to-red-800 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-blue-500/25 cursor-pointer">
+    <section
+      onClick={handleClick}
+      className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-900 to-red-800 text-white rounded-xl p-6 sm:p-8 shadow-lg shadow-blue-500/25 cursor-pointer"
+    >
       {/* Animated tricolore glow */}
       <div
         className="absolute inset-0 opacity-30"
